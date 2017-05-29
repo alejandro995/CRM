@@ -1,0 +1,292 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/layouts/standard.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pe="http://primefaces.org/ui/extensions"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head></head>
+    <ui:define name="content">
+            <div class="col-md-4 col-lg-3 modulos" >
+                <div class="panel panel-primary panel2">
+                    <div class="panel-heading heading2">
+                        <span class="title2">Citas para hoy</span>
+                        <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                            <div class="dropdown-content2">
+                                <a href="#">Oficina</a>
+                                <a href="#">Nombre Apellido</a>
+                                <a href="#">Nombre Apellido</a>
+                                <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                            </div>
+                        </span>
+                    </div>
+                    <div  class="panel-body body2">
+                        <div class="citas">
+                        <h:form id="table1">
+
+                        <p:dataTable var="programacion" value="#{dataTableView.programacionList}" sortBy="#{programacion.hora}"
+                                     rows="8"
+                                     paginator="true"
+                                     paginatorTemplate=" {PreviousPageLink} {PageLinks} {NextPageLink}"
+                                     rowsPerPageTemplate="5,10,15"
+                                     paginatorPosition="bottom"
+                                     sortorder = "ASCENDING"
+                                >
+                            <p:column groupRow="true">
+                                <h:outputText value="#{programacion.hora}"  />
+                            </p:column>
+                            <p:column >
+                                <h:outputText value="#{programacion.titulo}" />
+                            </p:column>
+                        </p:dataTable>
+                        </h:form>
+                        </div>
+                    </div>
+                    <div class = " citasvermas vermas ">
+                        <a href="#">Ver +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 modulos" >
+                <div class="">
+                    <div class="panel panel-primary panel2">
+                        <div class="panel-heading heading2">
+                            <span class="title2">Planificaciones</span>
+                            <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                                <div class="dropdown-content2">
+                                    <a href="#">Oficina</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="row row2 panel-body body2" style="background-color:#192647 ">
+                            <div class="col-md-6 col-lg-6 planumero1">
+                                <p class="num1">16</p>
+                                <p class="des1">Por gestionar</p>
+                            </div>
+                            <div class="col-md-6 col-lg-6 planumero2">
+                                <p class="num2">35</p>
+                                <p class="des2">Gestionado</p>
+                            </div>
+                            <div class="col-md-12 col-lg-12 divbtn">
+                                <a class="btn2" href="#">Gestionar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary panel2">
+                    <div class="row panel-heading heading2">
+                        <span class="title2">Mi cartera de clientes</span>
+                        <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                                <div class="dropdown-content2">
+                                    <a href="#">Oficina</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                                </div>
+                        </span>
+                    </div>
+                    <div>
+                        <br/>
+                        <div class="row text-center">
+                            <span style=""> <img src="../assets/img/Cartera-cliente-trans.png"  style="width: 62%;" /></span>
+                        </div>
+                    </div>
+                    <div class = "vermas">
+                        <a href="#">Ver +</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-lg-3 modulos">
+                <div class="panel-body body2">
+                    <div class="panel panel-primary panel2">
+                        <div class="row panel-heading heading2">
+                            <span class="title2">Oportunidades comerciales</span>
+                            <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                                <div class="dropdown-content2">
+                                    <a href="#">Oficina</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="oportunidades">
+                            <h:form>
+                                <p:dataTable var="preaprobados" value="#{dataTableView.preaprobadosList}" sortBy="#{preaprobados.oportunidad}" expandableRowGroups="true"
+                                             rows="6"
+                                             paginator="true"
+                                             paginatorTemplate="{PreviousPageLink} {PageLinks} {NextPageLink}"
+                                             rowsPerPageTemplate="5,10,15"
+                                             paginatorPosition="bottom"
+                                >
+                                    <p:headerRow>
+                                        <p:column colspan="2">
+                                            <h:outputText value="#{preaprobados.oportunidad}" />
+                                        </p:column>
+                                    </p:headerRow>
+                                    <p:column headerText="Year">
+                                        <h:outputText value="#{preaprobados.asignado}" />
+                                    </p:column>
+                                    <p:column headerText="Color">
+                                        <h:outputText value="#{preaprobados.planificado}" />
+                                    </p:column>
+                                </p:dataTable>
+                            </h:form>
+
+                            <div class="col-md-12 col-lg-12 divbtn">
+                                <a class="btn2" href="#">Cuadro de mando</a>
+                            </div>
+
+                        </div>
+                        <div class = "vermas">
+                            <a href="#">Ver +</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4 col-lg-3 modulos" >
+                <div class="panel panel-primary panel2">
+                    <div class="row panel-heading heading2">
+                        <span class="title2">Onboarding</span>
+                        <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                                <div class="dropdown-content2">
+                                    <a href="#">Oficina</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                                </div>
+                        </span>
+                    </div>
+                    <div  class="limenu">
+                        <ul>
+                            <li class="etapaTit">
+                                <span >Banca personal</span>
+
+                            </li>
+                            <li  >
+                                <span class="etapa">Etapa 1</span>
+
+                                <p:progressBar value="87" labelTemplate="{value} clientes" displayOnly="true"/>
+                            </li>
+                            <li  >
+                                <span class="etapa">Etapa 2</span>
+                                <p:progressBar value="72" labelTemplate="{value} clientes" displayOnly="true"/>
+                            </li>
+                            <li >
+                                <span class="etapa">Etapa 3</span>
+                                <p:progressBar value="59" labelTemplate="{value} clientes" displayOnly="true"/>
+                            </li>
+                            <li>
+                                <span class="etapa">Etapa 4</span>
+                                <p:progressBar value="31" labelTemplate="{value} clientes" displayOnly="true"/>
+                            </li>
+                            <li>
+                                <span class="etapa">Etapa 5</span>
+                                <p:progressBar value="20" labelTemplate="{value} clientes" displayOnly="true"/>
+                            </li>
+                            <li >
+                                <span class="etapa">Etapa 6</span>
+                                <p:progressBar value="9" labelTemplate="{value} clientes" displayOnly="true"/>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class = "vermas">
+                        <a href="#">Ver +</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-lg-3 modulos">
+                <div class="panel panel-primary panel2">
+                    <div class="row panel-heading heading2">
+                        <span class="title2">Alerta de fuga</span>
+                        <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                                <div class="dropdown-content2">
+                                    <a href="#">Oficina</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                                </div>
+                        </span>
+                    </div>
+                    <div  style="width: 100%;">
+                        <br/>
+                        <div class="row text-center">
+                            <div class="comovoypie">
+                              <span class="icon"> <img src="../assets/img/icon2.png" /></span>
+                              <span class="numero">199</span>
+                              <span class="des">Clientes</span>
+                                <p:chart type="pie" model="#{dataTableView.pieModel1}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "vermas">
+                        <a href="#"> Ver +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3 modulos"  >
+                <div class="panel panel-primary panel2">
+                    <div class="row panel-heading heading2">
+                        <span class="title2">¿Cómo voy?</span>
+                        <span class="dropdown2">
+                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
+                                <div class="dropdown-content2">
+                                    <a href="#">Oficina</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a href="#">Nombre Apellido</a>
+                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                                </div>
+                        </span>
+                    </div>
+                    <div>
+                        <br/>
+                        <div class="row text-center">
+                            <a target="_blank" href="#">
+                                <img src="../assets/img/comovoy.png" class="comovoyimg"/> </a>
+
+                        </div>
+                    </div>
+                    <div class = "vermas">
+                        <a href="#">Ver +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3 modulos">
+                <div class="panel panel-primary panel-a">
+                        <div class="text-center">
+                            <h2 > Portal Grannet</h2>
+                        </div>
+                    <div class="col-md-12 col-lg-12 divbtn portalmis">
+                        <a class="btn2" href="#">Portal MIS</a>
+                    </div>
+                    <!--
+                        <div class="text-center">
+                            <button  name="button" value="http://grannet.bbva/intranet/" class="btnm btn-menus2 text-center" >Portal MIS</button>
+                        </div>
+                     -->
+                </div>
+            </div>
+
+
+
+
+
+
+    </ui:define>
+</ui:composition>

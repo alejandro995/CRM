@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BBVA</title>
+        <!-- BOOTSTRAP STYLES-->
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <!-- FONTAWESOME STYLES-->
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- MORRIS CHART STYLES-->
+        <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+        <link href="assets/css/custom.css" rel="stylesheet" />
+        <!-- GOOGLE FONTS-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/login.css" />
+        <script type='text/javascript' src="assets/js/jquery-3.2.0.js"></script>
+        <script type='text/javascript' src="assets/js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="assets/js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <style type="text/css">
+            .menu ul{
+                list-style:none;
+                margin: 0;
+            }
+
+            .menu ul ul{
+                transition:all 5;
+                opacity:0;
+                position:absolute;
+                visibility:hidden;
+                left:80%;
+                top:-2%;
+                background-color:blue;
+            }
+
+            .menu ul li{
+                padding:1px;
+                position: relative;
+                width:200px;
+            }
+            .menu ul li a{
+                color:#fff;
+                text-decoration:none;
+            }
+
+            .menu ul li:hover > ul{	
+                opacity:1;
+                visibility:visible;
+            }
+
+        </style>
+    </head>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+                <p:inputText value="#{managedBeanLogIn.name}" type="text" placeholder="username"/>
+                <p:inputText value="#{managedBeanLogIn.password}" type="password" placeholder="password"/>            
+                <h:outputLink  value="onboarding"> Login</h:outputLink>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+</html>

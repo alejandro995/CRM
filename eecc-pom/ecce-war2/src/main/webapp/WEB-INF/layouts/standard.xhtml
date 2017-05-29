@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+
+        <h:head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11; IE=10; IE=9; IE=8; IE=7"/>
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+            <title>BBVA</title>
+            <!-- BOOTSTRAP STYLES-->
+            <link href="${request.contextPath}/assets/css/bootstrap.css" rel="stylesheet" media="all" />
+            <!-- Custom BBVA Theme create by: Alejandro Daza -->
+            <link href="${request.contextPath}/assets/css/style.css" rel="stylesheet" media="all" />
+            <!-- BBVA fonts -->
+            <link href="${request.contextPath}/assets/css/style2.css" rel="stylesheet" media="all" />
+
+            <!--SCRIPTS-->
+            <script src="${request.contextPath}/assets/js/bootstrap.min.js"></script>
+            <script src="${request.contextPath}/assets/js/modernizr.custom.js"></script>
+            <script src="${request.contextPath}/assets/js/style1.js"></script>
+
+
+
+            <!---Apple Safari iPad and iPhone Meta Tags-->
+            <meta name="viewport" content="width = device-width"/>
+            <meta name="viewport" content="initial-scale = 1.0"/>
+            <meta name="viewport" content="width = 320, initial-scale = 2.3, user-scalable = no"/><!--width is pixels, range 200 to 10000-->
+            <meta name="format-detection" content="telephone=no"/> <!--disables automatic detection of possible phone numbers-->
+            <meta name="apple-mobile-web-app-capable" content="yes"/><!--specifies full-screen mode-->
+            <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!--specify full-screen mode first-->
+
+
+
+        </h:head>
+
+        <h:body>
+            <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+
+            <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                <h:outputText value="Cargando información"/>
+            </p:dialog>
+            <header class="headerbbva">
+                <div class="container">
+                <span class="col-xs-2 col-sm-2 col-md-2 col-lg-2 titulocorto">AUG</span>
+                <span class="col-xs-8 col-sm-8 col-md-8 col-lg-8 titulolargo">Agenda Única de Gestión</span>
+                <span class="col-xs-2 col-sm-2 col-md-2 col-lg-2 bbvatitulo"> <img src="../assets/img/bbva-icon.png"/></span>
+                </div>
+            </header>
+            <section class="sectionheader">
+                <div class="container">
+                <h:form role="form">
+                        <span class=" col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <h:inputText id="searchString" value="#{searchCriteria.searchString}"  pt:placeholder="Buscador de clientes / Número de identicación" class="forminput"/>
+                        </span>
+                    <span class=" col-xs-2 col-sm-2 col-md-2 col-lg-2 lupa">
+
+                            <p:commandButton class="frombottoncontrol icon-search" />
+                        </span>
+                </h:form>
+                </div>
+            </section>
+            <div class="container pagina clearfix">
+                <div class="col-md-1 col-lg-1 menu2">
+                        <div class="col-md-4 information nopaddingleft nopaddingright">
+                            <ul class="information_menu">
+                                <li class="active" data-id="1"><a href="#"><i class="icon-home"></i></a></li>
+                                <li data-id="2"><a href="javascript:w3_open()"><i class="icon-menu"></i></a></li>
+                                <div class="spacing"></div>
+                                <li data-id="3"><a href="#"><i class="icon-config"></i></a></li>
+                                <li data-id="4"><a href="#"><i class="icon-preg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Sidebar -->
+                        <div class="menunivel1 " style="display:none;z-index:5" id="menunivel1">
+                            <ul class="information_menunivel1">
+                                <li class="active" data-id="1"><a href="javascript:w3_open2()">
+                                    <img src="../assets/img/perfil.png"  style="   width: 35%;  position: absolute; left: 13px;top: 13px;" />
+                                    <ul class="menuPerfil">
+                                        <li>
+                                            Luci Santodomingo
+                                        </li>
+                                        <li>
+                                            Gerente
+                                        </li>
+                                        <li>
+                                            Oficina Calle 123
+                                        </li>
+                                        <li>
+                                            Bogotá
+                                        </li>
+                                    </ul>
+                                </a></li>
+                                <li data-id="2"><a href="javascript:w3_open2()"><p>Gestion comercial <span class="icon-forward flechas"></span></p></a></li>
+                                <li data-id="3"><a href="javascript:w3_open2()"><p>Cartera de clientes <span class="icon-forward flechas"></span></p></a></li>
+                                <li data-id="4"><a href="javascript:w3_open2()"><p>Oportunidades comerciales <span class="icon-forward flechas"></span> </p></a></li>
+                                <li data-id="4"><a href="javascript:w3_open2()"><p>Portal de desarrollo comercial <span class="icon-forward flechas"></span> </p></a></li>
+                                <li data-id="4"><a href="javascript:w3_open2()"><p>Portal MIS <span class="icon-forward flechas"></span></p></a></li>
+                                <li data-id="4"><a href="#"><p>Alerta de fuga</p></a></li>
+                            </ul>
+
+                            <!-- Sidebar -->
+                            <div class="menunivel2 " style="display:none;z-index:5" id="menunivel2">
+                                <ul class="information_menunivel2">
+                                    <li class="active" data-id="1">
+                                        <a href="javascript:w3_open2()">
+                                            <ul class="menuPerfil">
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li data-id="2"><a href="javascript:w3_open3()"><p>Citas para hoy <span class="icon-forward flechas"></span></p></a></li>
+                                    <li data-id="3"><a href="javascript:w3_open3()"><p>Agenda <span class="icon-forward flechas"></span> </p></a></li>
+                                    <li data-id="4"><a href="javascript:w3_open3()"><p>Reclamos <span class="icon-forward flechas"></span> </p></a></li>
+                                </ul>
+
+                                <!-- Sidebar -->
+                                <div class="menunivel3 " style="display:none;z-index:5" id="menunivel3">
+                                    <ul class="information_menunivel3">
+                                        <li class="active" data-id="1">
+                                            <a href="javascript:w3_open2()">
+                                                <ul class="menuPerfil">
+                                                </ul>
+                                            </a>
+                                        </li>
+                                        <li data-id="2"><a href="#"><p>Propia</p></a></li>
+                                        <li data-id="3"><a href="#"><p>Mis Ejecutivos </p></a></li>
+
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                </div>
+                <!-- Page Content -->
+                <div class="col-md-11 col-lg-11 contenedorderecha clearfix">
+                    <div class="row contenedorModulos clearfix">
+                        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+
+                        <h:form id="principalForm">
+                        <ui:insert name="content"/>
+                        </h:form>
+                    </div>
+
+                </div>
+                <!-- /#page-content-wrapper -->
+            <!-- /#wrapper -->
+            </div>
+            <script src="${request.contextPath}/assets/js/classie.js"></script>
+            <script>
+                var menuLeft = document.getElementById('cbp-spmenu-s1'),
+                    menuLeft2 = document.getElementById('cbp-spmenu-s2'),
+                    showLeft = document.getElementById('showLeft'),
+                    showLeft2 = document.getElementById('showLeft2'),
+                    body = document.body;
+                showLeft.onclick = function () {
+                    classie.toggle(this, 'active');
+                    classie.toggle(menuLeft, 'cbp-spmenu-open');
+                    disableOther('showLeft');
+                    classie.toggle(this, 'active');
+                };
+
+                showLeft2.onclick = function () {
+                    classie.toggle(this, 'active');
+                    classie.toggle(menuLeft2, 'cbp-spmenu-open');
+                    disableOther('showLeft2');
+                    classie.toggle(this, 'active');
+                };
+
+                function disableOther(button) {
+                    if (button !== 'showLeft') {
+                        classie.toggle(showLeft, 'active');
+                    }
+                }
+                function w3_open() {
+                    if(document.getElementById("menunivel1").style.display == "none"){
+                        document.getElementById("menunivel1").style.display = "block";
+                        document.getElementById("myOverlay").style.display = "block";
+                    }else{
+                        document.getElementById("menunivel1").style.display = "none";
+                        document.getElementById("menunivel2").style.display = "none";
+                        document.getElementById("menunivel3").style.display = "none";
+                        document.getElementById("myOverlay").style.display = "none";
+                    }
+
+
+                }
+                function w3_open2() {
+                    if(document.getElementById("menunivel2").style.display == "none"){
+                        document.getElementById("menunivel2").style.display = "block";
+                    }else{
+                        document.getElementById("menunivel2").style.display = "none";
+                        document.getElementById("menunivel3").style.display = "none";
+                    }
+
+                }
+                function w3_open3() {
+                    if(document.getElementById("menunivel3").style.display == "none"){
+                        document.getElementById("menunivel3").style.display = "block";
+                    }else{
+                        document.getElementById("menunivel3").style.display = "none";
+                    }
+                }
+
+                function w3_close() {
+                    document.getElementById("menunivel1").style.display = "none";
+                    document.getElementById("menunivel2").style.display = "none";
+                    document.getElementById("menunivel3").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
+            </script>
+
+        </h:body>
+    </f:view>
+</html>

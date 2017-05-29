@@ -1,0 +1,898 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/layouts/standard.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="content">        
+        <div class="row">
+
+            <div class="col-md-4 col-sm-1"  style="padding-right: 0px;">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="container">
+                            <div class="row" style="width:120px;">
+                                <div class="span12">
+                                    <table style="width:335px"class="table-condensed table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="7" >
+                                                    <a class="btn"><i class="icon-chevron-left"></i></a>
+                                                    <a class="btn">February 2012</a>
+                                                    <a class="btn"><i class="icon-chevron-right"></i></a>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Su</th>
+                                                <th>Mo</th>
+                                                <th>Tu</th>
+                                                <th>We</th>
+                                                <th>Th</th>
+                                                <th>Fr</th>
+                                                <th>Sa</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="muted">29</td>
+                                                <td class="muted">30</td>
+                                                <td class="muted">31</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td><strong>20</strong></td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>26</td>
+                                                <td>27</td>		
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td class="muted">1</td>
+                                                <td class="muted">2</td>
+                                                <td class="muted">3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel-body">
+
+                        <div class="form-group">
+                            <label>Ejecutivo</label>
+                            <select class="form-control">
+                                <option>Premium</option>
+                                <option>Two Vale</option>
+                                <option>Three Vale</option>
+                                <option>Four Vale</option>
+                            </select></br>
+
+                            <label>Segemento</label>
+                            <select class="form-control">
+                                <option>Digitales</option>
+                                <option>Two Vale</option>
+                                <option>Three Vale</option>
+                                <option>Four Vale</option>
+                            </select></br>
+
+                            <label>Nombre de la campaña</label>
+                            <select class="form-control">
+                                <option>Mes</option>
+                                <option>Two Vale</option>
+                                <option>Three Vale</option>
+                                <option>Four Vale</option>
+                            </select></br>
+                            <label>Periodo</label>
+                            <select class="form-control">
+                                <option>Mes</option>
+                                <option>Two Vale</option>
+                                <option>Three Vale</option>
+                                <option>Four Vale</option>
+                            </select></br>																					
+                        </div>
+                        <div class="panel-group" id="accordion">                                     
+
+
+
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color:#1464A5; color:#fff;">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 style="text-align:cenert; color:#fff;"  class="modal-title" id="myModalLabel">Informacion del cliente</h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="col-md-12 col-sm-12">
+
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <th style="color:#002147;" >Datos Basicos</th>
+                                                            <th></th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:90%; " >Nombre :</br>
+                                                                    <span style="color:#333;">JOSE ALEJANDRO VARGAS DA SILVA DUB</span>
+                                                                </td>
+                                                                <td style="font-size:90%;" >Ciudad Nacimiento :</br>
+                                                                    <span style="color:#333;">BOGOTA</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Tipo Documento :</br>
+                                                                    <span style="color:#333;">C.C</span>
+                                                                </td>
+                                                                <td style="font-size:90%;" >Estado Civil :</br>
+                                                                    <span style="color:#333;">SOLTERO</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">#Documento :</br>
+                                                                    <span style="color:#333;">46369410</span>
+                                                                </td>
+                                                                <td>Empresa donde laboral :</br>
+                                                                    <span style="color:#333;">BBVA</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Fecha de nacimiento :</br>
+                                                                    <span style="color:#333;">1978/12/12</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Ocupacion / Profesion :</br>
+                                                                    <span style="color:#333;"> SIN/OTRA PROFESION</span>
+                                                                </td>
+                                                            </tr>										
+                                                        </tbody>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:90%;" >Edad : </br>
+                                                                    <span style="color:#333;">43</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Antiguedad Empleo : </br>
+                                                                    <span style="color:#333;">2010-01-01</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;"> Sexo : </br>
+                                                                    <span style="color:#333;">MASCULINO</span>
+                                                                </td>
+                                                                <td>Situacion Laboral : </br>
+                                                                    <span style="color:#333;">TEMPORAL</span>
+                                                                </td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Nacionalidad : </br>
+                                                                    <span style="color:#333;">COLOMBIANA</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Emisor Nomina : </br>
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Estrato : </br>
+                                                                    <span style="color:#333;">3</span>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="color:#002147;" >Datos de contacto</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Tel principal :</br>
+                                                                    <span style="color:#333;">6316729</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Direccion Principal :</br>
+                                                                    <span style="color:#333;">CRA 34 D # 32 B SUR-44</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Tel2 : </br> 
+                                                                    <span style="color:#333;">3166313729</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Correo Electronico :</br>
+                                                                    <span style="color:#333;">ALVAHE_9@HOTMAIL.COM</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Celular :</br>
+                                                                    <span style="color:#333;">3166313729</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Referencia Cliente :</br>
+                                                                    <span style="color:#333;">ALEX VARGAS</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Otros Datos de Contacto CIFIN :</br>
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>										
+                                                        </tbody>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th style="color:#002147;">Perfil BBVA</th>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">#Cliente ALtamira :</br>
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Segmento :</br>
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Gestor Ppal :</br>
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Cuadrante :</br>
+                                                                    <span style="color:#333;">CUADRANTE</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Oficina Ppal :</br>
+                                                                    <span style="color:#333;">CALLE 74</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Colectivo :</br>
+                                                                    <span style="color:#333;">OTROS</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Antiguedad Cliente :</br>
+                                                                    <span style="color:#333;">2010-01-01</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Subcolectivo :</br>
+                                                                    <span style="color:#333;">OTROS</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Puntos de gestion :</br>
+                                                                    <span style="color:#333;">003</span>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="color:#002147;">Informacion financiera</th>
+                                                                <th></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Pratrimonio :
+                                                                    <span style="color:#333;">-37,270,000.00</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">#Personas a Cargo :
+                                                                    <span style="color:#333;">1</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Activo :
+                                                                    <span style="color:#333;">0.0</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Puntaje Buro Cifin :
+                                                                    <span style="color:#333;">813</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Pasivo :
+                                                                    <span style="color:#333;">37,270,000.00</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Calificacion Financiera :
+                                                                    <span style="color:#333;">A</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Declarar Renta (SI/NO) :
+                                                                    <span style="color:#333;">SI</span>
+                                                                </td>
+                                                                <td style="font-size:90%;">Limites Vta Cruzada :
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                            </tr>
+                                                            <t	r>
+                                                                <td style="font-size:90%;">Total Ingresos :
+                                                                    <span style="color:#333;">270,000.00</span>
+                                                                </td>
+                                                                <td></td>
+                                                                </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+
+
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Onboardign -->
+
+                            <div class="modal fade" id="myModalOnboarding" tabindex="-1" role="dialog" aria-labelledby="myModalOnboarding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div style="background-color:#1464A5; color:#fff;	" class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 style="text-align:cenert;" class="modal-title" id="myModalLabel">Onboarding</h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="col-md-12 col-sm-12">
+
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Datos Basicos</th>
+                                                                <td></td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size:90%;" >Nombre : </br> 
+                                                                    <span style="color:#333;">JOSE ALEJANDRO VARGAS DA SILVA DUB</span>
+
+                                                                </td>
+                                                                <td style="font-size:90%;" ># Documento : </br> 
+                                                                    <span style="color:#333;">46369410</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:90%;">Tipo Documento : </br>
+                                                                    <span style="color:#333;">C.C</span>
+                                                                </td>
+                                                                <td>Segmento : </br>
+                                                                    <span style="color:#333;">N/A</span>
+                                                                </td>
+                                                            </tr>										
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Ofertas de la etapa 1</th>
+                                                                <td></td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Oferta 1</td>
+                                                                <td>Oferta 3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Oferta 2</td>
+                                                                <td>Oferta 4</td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Ofertas de la etapa 2</th>
+                                                                <td></td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Oferta 1</td>
+                                                                <td>Oferta 3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Oferta 2</td>
+                                                                <td>Oferta 4</td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Ofertas de la etapa 3</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Oferta 1</td>
+                                                                <td>Oferta 3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Oferta 2</td>
+                                                                <td>Oferta 4</td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Ofertas de la etapa 4</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Oferta 1</td>
+                                                                <td>Oferta 3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Oferta 2</td>
+                                                                <td>Oferta 4</td>
+                                                            </tr>								
+                                                        </tbody>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Respuesta de la gestion</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Fecha de la gestion</td>
+                                                                <td>2016-10-10</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Respuesta</td>
+                                                                <td><select class="form-control">
+                                                                        <option>Selecciona</option>
+                                                                        <option>Selecciona</option>
+                                                                        <option>Three Vale</option>
+                                                                        <option>Four Vale</option>
+                                                                    </select></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Motivo</td>
+                                                                <td><select class="form-control">
+                                                                        <option>Selecciona</option>
+                                                                        <option>Selecciona</option>
+                                                                        <option>Three Vale</option>
+                                                                        <option>Four Vale</option>
+                                                                    </select></td>
+                                                            </tr>										
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="form-group">
+                                                        <label>Comentarios</label>
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- onboarding -->
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse"  data-parent="#accordion" href="#collapseTwo">Datos basicos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" style="height: auto;">
+                                    <div class="panel-body">
+                                        <div style="font-size:90%;"><span style="float:right; ">JOSE ALEJANDRO VARGAS DA SILVA DUB</span>Nombre :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">C.C</span>Tipo de Documento :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">46369410</span># Documento :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">43</span>Edad :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">MASCULINO</span>Sexo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">1978/12/12</span>Fecha Nacimiento :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">COLOMBIANA</span>Nacionalidad :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">BOGOTA</span>Ciudad Nacimiento :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">CASADO</span>Estado Civil :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">BBVA</span>Empresa donde Laboral :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">2010-01-01</span>Antiguedad empleo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">TEMPORAL</span>Situcion Laboral :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">SIN/OTRA PROFESION</span>Ocupacion / Profesion :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">N/A</span>Emisor Nomina :</div>										
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="collapsed">Datos de contacto</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div style="font-size:90%;"><span style="float:right; ">6316729</span>Tel Principal :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">CRA 34 D # 32 B SUR-44</span>Direccion Principal :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">3166313729</span>Tel2 :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">ALVAHE_9@HOTMAIL.COM</span>Correo Electronico :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">3166313729</span>Celular :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">ALEX VARGAS</span>Referencia Cliente :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">03</span>Estrato :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">N/A</span>Otros Datos de contrato CIFIN :</div>										
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Perfil BBVA</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div style="font-size:90%;"><span style="float:right; ">N/A</span>#Cliente ALtamira :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">N/A</span>Segmento :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">N/A</span>Gestor Ppal :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">CUADRANTE</span>Cuadrante :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">CALLE 74</span>Oficina Ppal :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">OTROS</span>Colectivo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">2010-01-01</span>Antiguedad Cliente :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">OTROS</span>Subcolectivo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">003</span>Puntos de gestion :</div>                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">Informacion financiera</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div style="font-size:90%;"><span style="float:right; ">-37,270,000.00</span>#Pratrimonio :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">1</span>#Personas a Cargo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">0.0</span>Activo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">813</span>Puntaje Buro Cifin :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">CALLE 74</span>Oficina Ppal :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">37,270,000.00</span>Pasivo :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">A</span>Calificacion Financiera :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">SI</span>Declara Renta (SI/NO) :</div>
+                                        <div style="font-size:90%;"><span style="float:right; ">N/A</span>Limites Vta Cruzada :</div> 
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-8">
+                <div class="panel panel-primary">
+                    </br>
+                    <div style="text-align:right;">
+                        <a style="margin-right:10px; background-color:#002147;border: #002147" href="#" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalPlanificar" >Dia</a>
+                        <a style="margin-right:10px; background-color:#002147; border: #002147; " href="#" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalPlanificar" >Semana</a>
+                        <a style="margin-right:10px; background-color:#002147; border: #002147; " href="#" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalPlanificar" >Mes</a>
+                        <a style="margin-right:10px; background-color:#002147; border: #002147; " href="#" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalPlanificar" >Citas para hoy</a>
+                    </div>
+                    <div>
+                        <h3 style="color:#333">&nbsp; &nbsp;Agosto 2, 2016</h3>
+                        <h5>&nbsp; &nbsp;&nbsp; &nbsp;Lunes &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;clientes planificados:6 | Clientes gestionados :3 </h5>
+                        <h4 style="color:#333">&nbsp; &nbsp;&nbsp;Ejecutivo: Alvaro Botia</h4>
+                    </div>
+                    <div>						    
+                        &nbsp; &nbsp;Filtros aplicados 
+                        <select style="width: 120px; margin-right:550px; float:right;  height: 30px;" class="form-control">
+                            <option>Todos</option>
+                            <option>Sin planificar</option>
+                            <option>Gestionada</option>
+                            <option>Planificada</option>
+                            <option>Sin asignar</option>
+                        </select>
+                    </div>
+                    <div class="panel-body" style="height: 455px;" >
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <th>Campaña vigente</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Alberto Baez</td>
+                                        <td>Compra cartera</td>
+                                        <td><span href="" class="glyphicon glyphicon-dashboard"></span>
+                                            <span class="glyphicon glyphicon-cog"></span>
+                                            <span class="glyphicon glyphicon-user"></span>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Alberto Baez</td>
+                                        <td>Vencimientos CDTs</td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Ernesto Fandiño</td>
+                                        <td>Preaprobados Nomina</td>
+                                        <td><span href="" class="glyphicon glyphicon-dashboard"></span>
+                                            <span class="glyphicon glyphicon-cog"></span>
+                                            <span class="glyphicon glyphicon-user"></span></td>                                                                              
+                                    </tr>
+                                    <tr>
+                                        <td>Guillermo Hernandez</td>
+                                        <td>Seguros vehiculos</td>
+                                        <td></td>																				
+                                    </tr>
+                                    <tr>
+                                        <td>Targeta de Credito</td>
+                                        <td>Gestionada</td>
+                                        <td><span href="" class="glyphicon glyphicon-dashboard"></span>
+                                            <span class="glyphicon glyphicon-cog"></span>
+                                            <span class="glyphicon glyphicon-user"></span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Seguro Vida</td>
+                                        <td>Planificada</td>
+                                        <td></td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <td><a href="#" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalActivacionBBV"  >Replanificar</a></td>
+                        </div>
+                    </div>
+
+
+                    <!-- modal planificar -->
+                    <!--  modalActivacionBBVA -->
+                    <div class="modal fade" id="modalActivacionBBVA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Replanificar</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="col-md-12 col-sm-12">
+
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Cambia la fecha para la gestion</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Motivo</td>
+                                                            <td>Vigencia:00/00/0000 - 00/00/0000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Motivo</td>
+                                                            <td>Vigencia:00/00/0000 - 00/00/0000</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </thead>
+
+                                            </table>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <a href="#" class="btn btn-info btn-xs" data-dismiss="modal" data-toggle="modal" data-target="#modalAsignar" >Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal planificar -->
+
+                    <!--  modalActivacionBBVA -->
+                    <div class="modal fade" id="modalActivacionBBV" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Gestion de la campaña: Preaprobados</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="col-md-12 col-sm-12">
+
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Informacion del cliente</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <tbody>	
+                                                        <tr>
+                                                            <td>Nombre: Igancio Jaramillo</td>
+                                                            <td>Segmento:Premium</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tipo de identificacion:CC</td>
+                                                            <td>Sucursal:Oficina principal</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. de identificacion:00.000.000</td>
+                                                            <td>Telefono principal:000 000 0000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Edad:00</td>
+                                                            <td>Email:ijaramillo@correo.com</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Informacion de la campaña</th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Clase de campaña:Vencimiento</td>
+                                                            <td>Vigencia :00/00/0000-00/00/0000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Nombre de campaña:CDTs</td>
+                                                            <td>Prioridad:(alta - media -baja)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Origen del contacto:Centralizada</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Detalle adicional de la Campaña</th>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Limite:$000.000.00</td>
+                                                            <td>Tipo de compra:Cartera</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fecha vencimiento:00/00/0000</td>
+                                                            <td>Producto a comprar: Tarjeta de Credito</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Contrato :00/00/0000</td>
+                                                            <td>Producto a comprar: Tarjeta de Credito</td>
+                                                        </tr>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Fecha de la gestion</td>
+                                                                <td>2016-10-10</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Respuesta</td>
+                                                                <td><select class="form-control">
+                                                                        <option>Selecciona</option>
+                                                                        <option>Selecciona</option>
+                                                                        <option>Three Vale</option>
+                                                                        <option>Four Vale</option>
+                                                                    </select></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Motivo</td>
+                                                                <td><select class="form-control">
+                                                                        <option>Selecciona</option>
+                                                                        <option>Selecciona</option>
+                                                                        <option>Three Vale</option>
+                                                                        <option>Four Vale</option>
+                                                                    </select></td>
+                                                            </tr>										
+                                                        </tbody>
+                                                        </table>
+                                                        <div class="form-group">
+                                                            <label>Comentarios</label>
+                                                            <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </tbody>
+                                                </thead>
+
+                                            </table>
+                                        </div>                        						                    
+                                    </div>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <a href="#" class="btn btn-info btn-xs" data-dismiss="modal" data-toggle="modal" data-target="#modalAsignar" >Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal planificar -->
+
+
+
+                    <div class="panel-footer" style="text-align:center;">
+                        <ul class="pagination pagination-sm">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row"> 
+
+        </div>
+
+
+
+        <!-- /. ROW  -->           
+        </div>
+        <!-- /. PAGE INNER  -->
+        </div>
+
+    </ui:define>
+</ui:composition>

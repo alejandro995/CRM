@@ -1,0 +1,670 @@
+
+/*=============================================================
+    Authour URI: www.binarycart.com
+    License: Commons Attribution 3.0
+
+    http://creativecommons.org/licenses/by/3.0/
+
+    100% To use For Personal And Commercial Use.
+    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
+   
+    ========================================================  */
+/*==============================================
+    GENERAL  STYLES    
+    =============================================*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+element.style {
+    margin-left: 2px;
+}
+
+#wrapper {
+    width: 100%;
+    background:#002147;
+}
+
+#page-wrapper {
+    padding: 15px 15px;
+    min-height: 600px;
+    background:#F3F3F3;
+}
+
+#page-inner {
+    width:100%;
+    margin:10px 20px 10px 0px;
+    background-color:#fff!important;
+    padding:10px;
+    min-height:1200px;
+}
+
+.text-center {
+    text-align:center;
+}
+.no-boder {
+    border:1px solid #f3f3f3;
+}
+h2 {
+    color: #006EC1;
+}
+h4 {
+    padding-top:10px;
+}
+.square-btn-adjust {
+    border: 0px solid transparent; 
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+
+}
+p {
+    font-size:16px;
+    line-height:25px;
+}
+/*==============================================
+   DASHBOARD STYLES    
+    =============================================*/
+.panel-back {
+    background-color:#F8F8F8;
+
+}
+.noti-box {
+    min-height: 100px;
+    padding: 20px;
+}
+
+.noti-box .icon-box {
+    display: block;
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 70px;
+    height: 70px;
+    line-height: 75px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 40px;
+}
+.text-box p{
+    margin: 0 0 3px;
+}
+.main-text {
+    font-size: 25px;
+    font-weight:600;
+}
+.set-icon {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+}
+.bg-color-green {
+    background-color: #3dbfbf;
+    color: #fff;
+}
+.bg-color-blue {
+    background-color: #A95DF0;
+    color: #fff;
+}
+.bg-color-red {
+    background-color: #89D1F3;
+    color: #fff;
+}
+.bg-color-brown {
+    background-color: #B94A00;
+    color: #fff;
+}
+
+
+.icon-box-right {
+    display: block;
+    float: right;
+    margin: 0 15px 10px 0;
+    width: 70px;
+    height: 70px;
+    line-height: 75px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 40px;
+}
+
+.main-temp-back {
+    background: #8702A8;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+.main-temp-back .text-temp {
+    font-size: 40px;
+}
+.back-dash {
+    padding:20px;
+    font-size:20px;
+    font-weight:500;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color:#2EA7EB;
+    color:#fff;
+}
+.back-dash p {
+    padding-top:16px;
+    font-size:13px;
+    color:#fff;
+    line-height:25px;
+    text-align:justify;
+}
+.back-footer-green {
+    background-color: #3dbfbf;
+    border-top: 0px solid #fff;
+}
+.back-footer-red {
+    background-color: #89D1F3;
+    border-top: 0px solid #fff;
+}
+.color-bottom-txt {
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+}
+/*CHAT PANEL*/
+.chat-panel .panel-body {
+    height: 450px;
+    overflow-y: scroll;
+}
+.chat-box {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.chat-box li {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #808080;
+}
+.chat-box li.left .chat-body {
+    margin-left: 90px;
+}
+.chat-box li .chat-body p {
+    margin: 0;
+    color: #8d8888;
+}
+.chat-img>img {
+    margin-left:20px;
+}
+
+/*==============================================
+    MENU STYLES    
+    =============================================*/
+
+
+.user-image {
+    margin: 25px auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    max-height:170px;
+    max-width:170px;
+}
+
+.navbar-cls-top .navbar-brand {
+    color: #fff;
+    background: #fffff;
+    width: 260px;
+    text-align: center;
+    height: 60px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.active-menu {
+    background-color:#002147!important;
+}
+
+.arrow {
+    float: right;
+}
+
+.fa.arrow:before {
+    content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+
+.nav-second-level li,
+.nav-third-level li {
+    border-bottom: none !important;
+}
+
+.nav-second-level li a {
+    padding-left: 37px;
+}
+
+.nav-third-level li a {
+    padding-left: 55px;
+}
+.sidebar-collapse , .sidebar-collapse .nav{
+    background:none;
+}
+.sidebar-collapse .nav {
+    padding:0;
+}
+.sidebar-collapse .nav > li > a {
+    color:#fff;
+    background:#002147;
+    text-shadow:none;
+
+}
+.sidebar-collapse > .nav > li > a {
+    padding:15px 10px;
+}
+.sidebar-collapse > .nav > li {
+    border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+}
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+
+    background:#002147;
+    outline:0;
+}
+
+.nav-second-level > li > a:before ,
+.nav-third-level > li > a:before {
+    content:"";
+    display:block;
+    position:absolute;
+    left:20px;
+    width:15px;
+    height:1px;
+    background:#ff0000;
+    top:20px;
+}
+.nav-second-level > li > a:after,
+.nav-third-level > li > a:after {
+    content:"";
+    display:block;
+    position:absolute;
+    left:20px;
+    width:1px;
+    height:100%;
+    background:#ff0000;
+    top:0px;
+    z-index:10;
+}
+.nav-second-level  > li:last-child > a:after,
+.nav-third-level  > li:last-child > a:after {
+    height:50%;
+}
+.nav-third-level > li > a:after,
+.nav-third-level > li > a:before  {
+    left:40px;
+}
+.navbar-side {
+    border:none;
+    background-color: #fff;
+
+}
+.navbar-cls-top {
+    background:#4D4D4D;
+    border-bottom:none;
+
+}
+.navbar-cls-top .navbar-brand:hover {
+
+    background: #006EC1;
+    color:#fff;
+
+}
+
+.navbar-default {
+    border:0px solid black;
+
+}
+.navbar-header {
+    background: #4D4D4D;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #006EC1;
+}
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+.nav > li > a > i {
+    margin-right:10px;
+}
+/*==============================================
+    UI ELEMENTS STYLES     
+    =============================================*/
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 6px 0;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.428571429;
+}
+
+/*==============================================
+    MEDIA QUERIES     
+    =============================================*/
+
+@media(min-width:768px) {
+    #page-wrapper{
+        margin: 0 0 0 260px;
+        padding: 15px 30px;
+        min-height: 1200px;
+
+    }
+
+
+    .navbar-side {
+        z-index: 1;
+        position: absolute;
+        width: 260px;
+    }
+
+    .navbar {
+        border-radius: 0px; 
+    }
+
+
+
+
+
+
+/*    rules for the plot target div.  These will be cascaded down to all plot elements according to css rules
+    .jqplot-target {
+        position: relative;
+        color: #666666;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 1em;
+            height: 300px;
+            width: 400px;
+    }
+
+    rules applied to all axes
+    .jqplot-axis {
+        font-size: 0.75em;
+    }
+
+    .jqplot-xaxis {
+        margin-top: 10px;
+    }
+
+    .jqplot-x2axis {
+        margin-bottom: 10px;
+    }
+
+    .jqplot-yaxis {
+        margin-right: 10px;
+    }
+
+    .jqplot-y2axis, .jqplot-y3axis, .jqplot-y4axis, .jqplot-y5axis, .jqplot-y6axis, .jqplot-y7axis, .jqplot-y8axis, .jqplot-y9axis, .jqplot-yMidAxis {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    rules applied to all axis tick divs
+    .jqplot-axis-tick, .jqplot-xaxis-tick, .jqplot-yaxis-tick, .jqplot-x2axis-tick, .jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick, .jqplot-yMidAxis-tick {
+        position: absolute;
+        white-space: pre;
+    }
+
+
+    .jqplot-xaxis-tick {
+        top: 0px;
+         initial position untill tick is drawn in proper place 
+        left: 15px;
+            padding-top: 10px;
+        vertical-align: top;
+    }
+
+    .jqplot-x2axis-tick {
+        bottom: 0px;
+         initial position untill tick is drawn in proper place 
+        left: 15px;
+            padding-bottom: 10px;
+        vertical-align: bottom;
+    }
+
+    .jqplot-yaxis-tick {
+        right: 0px;
+         initial position untill tick is drawn in proper place 
+        top: 15px;
+            padding-right: 10px;
+        text-align: right;
+    }
+
+    .jqplot-yaxis-tick.jqplot-breakTick {
+        right: -20px;
+        margin-right: 0px;
+        padding:1px 5px 1px 5px;
+        background-color: white;
+        z-index: 2;
+        font-size: 1.5em;
+    }
+
+    .jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick {
+        left: 0px;
+         initial position untill tick is drawn in proper place 
+        top: 15px;
+            padding-left: 10px;
+            padding-right: 15px;
+        text-align: left;
+    }
+
+    .jqplot-yMidAxis-tick {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .jqplot-xaxis-label {
+        margin-top: 10px;
+        font-size: 11pt;
+        position: absolute;
+    }
+
+    .jqplot-x2axis-label {
+        margin-bottom: 10px;
+        font-size: 11pt;
+        position: absolute;
+    }
+
+    .jqplot-yaxis-label {
+        margin-right: 10px;
+            text-align: center;
+        font-size: 11pt;
+        position: absolute;
+    }
+
+    .jqplot-yMidAxis-label {
+        font-size: 11pt;
+        position: absolute;
+    }
+
+    .jqplot-y2axis-label, .jqplot-y3axis-label, .jqplot-y4axis-label, .jqplot-y5axis-label, .jqplot-y6axis-label, .jqplot-y7axis-label, .jqplot-y8axis-label, .jqplot-y9axis-label {
+            text-align: center;
+        font-size: 11pt;
+        margin-left: 10px;
+        position: absolute;
+    }
+
+    .jqplot-meterGauge-tick {
+        font-size: 0.75em;
+        color: #999999;
+    }
+
+    .jqplot-meterGauge-label {
+        font-size: 1em;
+        color: #999999;
+    }
+
+    table.jqplot-table-legend {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    table.jqplot-table-legend, table.jqplot-cursor-legend {
+        background-color: rgba(255,255,255,0.6);
+        border: 1px solid #cccccc;
+        position: absolute;
+        font-size: 0.75em;
+    }
+
+    td.jqplot-table-legend {
+        vertical-align:middle;
+    }
+
+    
+    These rules could be used instead of assigning
+    element styles and relying on js object properties.
+    
+
+    
+    td.jqplot-table-legend-swatch {
+        padding-top: 0.5em;
+        text-align: center;
+    }
+    
+    tr.jqplot-table-legend:first td.jqplot-table-legend-swatch {
+        padding-top: 0px;
+    }
+    
+
+    td.jqplot-seriesToggle:hover, td.jqplot-seriesToggle:active {
+        cursor: pointer;
+    }
+
+    .jqplot-table-legend .jqplot-series-hidden {
+        text-decoration: line-through;
+    }
+
+    div.jqplot-table-legend-swatch-outline {
+        border: 1px solid #cccccc;
+        padding:1px;
+    }
+
+    div.jqplot-table-legend-swatch {
+        width:0px;
+        height:0px;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+        border-left-width: 6px;
+        border-right-width: 6px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-right-style: solid;
+    }
+
+    .jqplot-title {
+        top: 0px;
+        left: 0px;
+        padding-bottom: 0.5em;
+        font-size: 1.2em;
+    }
+
+    table.jqplot-cursor-tooltip {
+        border: 1px solid #cccccc;
+        font-size: 0.75em;
+    }
+
+
+    .jqplot-cursor-tooltip {
+        border: 1px solid #cccccc;
+        font-size: 0.75em;
+        white-space: nowrap;
+        background: rgba(208,208,208,0.5);
+        padding: 1px;
+    }
+
+    .jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
+        border: 1px solid #cccccc;
+        font-size: 0.75em;
+        white-space: nowrap;
+        background: rgba(208,208,208,0.5);
+        padding: 1px;
+        z-index: 1;
+    }
+
+    .jqplot-point-label {
+        font-size: 0.75em;
+        z-index: 2;
+    }
+
+    td.jqplot-cursor-legend-swatch {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    div.jqplot-cursor-legend-swatch {
+        width: 1.2em;
+        height: 0.7em;
+    }
+
+    .jqplot-error {
+           Styles added to the plot target container when there is an error go here.
+        text-align: center;
+    }
+
+    .jqplot-error-message {
+            Styling of the custom error message div goes here.
+        position: relative;
+        top: 46%;
+        display: inline-block;
+    }
+
+    div.jqplot-bubble-label {
+        font-size: 0.8em;
+            background: rgba(90%, 90%, 90%, 0.15);
+        padding-left: 2px;
+        padding-right: 2px;
+        color: rgb(20%, 20%, 20%);
+    }
+
+    div.jqplot-bubble-label.jqplot-bubble-label-highlight {
+        background: rgba(90%, 90%, 90%, 0.7);
+    }
+
+    div.jqplot-noData-container {
+        text-align: center;
+        background-color: rgba(96%, 96%, 96%, 0.3);
+    }*/
+
+    ui.buttons input {
+        margin: 5px;
+        padding: 5px 5px 5px 20px; /* 20px makes room for your background image */
+        border: 1px solid #aaa;
+    }
+
+    .buttons .apply {
+        background: #eee url(path/to/apply.png) no-repeat 0 50%;
+    } 
+
+    .buttons .cross {
+        background: #eee url(path/to/cross.png) no-repeat 0 50%;
+    }
+    .ui-button{
+        border: none;
+        background-color:#FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-variant: normal;        
+        line-height: 26.3999996185303px;
+         padding: 2px 0px 5px;         
+         font-weight: 500;
+        }
+
+}
