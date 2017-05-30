@@ -57,25 +57,25 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <span>Consumo (1)</span> <span> $110.852.00</span> <span class="circle"></span>
+                                        <span>Consumo (1)</span> <span class="numeroTenencia"> $110.852.00</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Hipotec (2)</span> <span> $0.00</span> <span class="circle"></span>
+                                        <span>Hipotec (2)</span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>T.C VIS</span> <span> $23.587.00</span> <span class="circle"></span>
+                                        <span>T.C VIS</span> <span class="numeroTenencia"> $23.587.00</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>T.C MAS</span> <span> $0.00</span> <span class="circle"></span>
+                                        <span>T.C MAS</span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Vehiculo (1)</span> <span> $0.00</span> <span class="circle"></span>
+                                        <span>Vehiculo (1)</span > <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Libranza (1)</span> <span> $0.00</span> <span class="circle"></span>
+                                        <span>Libranza (1)</span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Otros </span> <span> $0.00</span> <span class="circle"></span>
+                                        <span>Otros </span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
                                     </li>
                                 </ul>
 
@@ -176,38 +176,54 @@
         </div>
         <div class="col-md-10 col-lg-10 modulosFichaGrande" >
             <div class="panel panel-primary panel2">
-                <div class="panel-heading heading2">
-                    <span class="title2">Citas para hoy</span>
-                    <span class="dropdown2">
-                            <a href="javascript:void(0)" class="dropbtn2 icon-config2"></a>
-                            <div class="dropdown-content2">
-                                <a href="#">Oficina</a>
-                                <a href="#">Nombre Apellido</a>
-                                <a href="#">Nombre Apellido</a>
-                                <a class="bordesubmenu" href="#">Nombre Apellido</a>
-                            </div>
-                        </span>
+                <div class="panel-heading heading2 headingficha">
+                    <ul class="nav nav-tabs fichatabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Campañas del cliente</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Campañas vigentes</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Historico de campañas</a></li>
+                        <li><a data-toggle="tab" href="#menu3">Mejor siguiente venta</a></li>
+                    </ul>
                 </div>
                 <div  class="panel-body body2">
-                    <div class="citas">
-                        <h:form id="table5">
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <div class="citas">
+                            <h:form id="table1">
 
-                            <p:dataTable var="programacion" value="#{dataTableView.programacionList}" sortBy="#{programacion.hora}"
-                                         rows="8"
-                                         paginator="true"
-                                         paginatorTemplate=" {PreviousPageLink} {PageLinks} {NextPageLink}"
-                                         rowsPerPageTemplate="5,10,15"
-                                         paginatorPosition="bottom"
-                                         sortorder = "ASCENDING"
-                            >
-                                <p:column groupRow="true">
-                                    <h:outputText value="#{programacion.hora}"  />
-                                </p:column>
-                                <p:column >
-                                    <h:outputText value="#{programacion.titulo}" />
-                                </p:column>
-                            </p:dataTable>
-                        </h:form>
+                                <p:dataTable var="campañas" value="#{dataTableView.campañasList}"
+                                             rows="5"
+                                             paginator="true"
+                                             paginatorTemplate=" {PreviousPageLink} {PageLinks} {NextPageLink}"
+                                             rowsPerPageTemplate="5,10,15"
+                                             paginatorPosition="bottom"
+                                >
+                                    <p:column headerText="Id">
+                                        <h:outputText value="#{campañas.campaña}"/>
+                                    </p:column>
+                                    <p:column >
+                                        <h:outputText value="#{campañas.estado}"/>
+                                    </p:column>
+                                    <p:column>
+                                        <h:outputText value="#{campañas.gestor}"/>
+                                    </p:column>
+                                    <p:column>
+                                        <h:outputText value="#{campañas.acciones}"/>
+                                        <h:commandButton value="Delete Actor"
+                                                         styleClass="btn btn-primary"
+                                                         />
+                                    </p:column>
+                                </p:dataTable>
+                            </h:form>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <h3>Menu 1</h3>
+                            <p>Some content in menu 1.</p>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
                     </div>
                 </div>
                 <div class = " citasvermas vermas ">

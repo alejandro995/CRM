@@ -1711,7 +1711,7 @@ position: absolute;
 }
 
 .modulosfooter1{
-    background-color: #D1D1D1;
+    background-color: #bebebe;
     padding: 10px;
 
 }
@@ -1727,7 +1727,7 @@ position: absolute;
 
 
 .modulosfooter2{
-    background-color: #D1D1D1;
+    background-color: #bebebe;
     padding: 10px;
 
 }
@@ -1780,4 +1780,40 @@ position: absolute;
     border-radius: 50%;
     background: #5cb85c;
     right: 0px;
+    margin-top: 2px;
+}
+
+.numeroTenencia{
+
+    float: right;
+    margin-right: 19px;
+
+}
+
+.fichatabs > li > a{
+    width: 203px;
+    text-align: center;
+    color: #666666 !important;
+}
+
+.fichatabs > li.active > a{
+    color: #002E64 !important;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.fichatabs > li > a:hover{
+    color: #ffffff !important;
+    cursor: default;
+    background-color: #0064A9 !important;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+
+}
+
+.headingficha{
+    background-color: #BFBFBF !important;
+
 }

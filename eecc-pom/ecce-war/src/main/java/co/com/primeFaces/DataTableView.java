@@ -21,12 +21,34 @@ public class DataTableView implements Serializable {
 
     private List<Preaprobados> preaprobadosList = new ArrayList<Preaprobados>();
 
+    private List<Campañas> campañasList = new ArrayList<Campañas>();
+
 
 
     @PostConstruct
     public void init() {
 
         createPieModels();
+        campañasList.add(new Campañas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
+        campañasList.add(new Campañas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
+        campañasList.add(new Campañas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
+        campañasList.add(new Campañas("Cumpleaños" , "Sin asignar", "", "icono"));
+        campañasList.add(new Campañas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
+        campañasList.add(new Campañas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
+        campañasList.add(new Campañas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
+        campañasList.add(new Campañas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
+        campañasList.add(new Campañas("Cumpleaños" , "Sin asignar", "", "icono"));
+        campañasList.add(new Campañas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
+        campañasList.add(new Campañas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
+        campañasList.add(new Campañas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
+        campañasList.add(new Campañas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
+        campañasList.add(new Campañas("Cumpleaños" , "Sin asignar", "", "icono"));
+        campañasList.add(new Campañas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
+
+
+
+
+
         //add students
         programacionList.add(new Programacion("8:00",  "8:30 a 9:00         "+"\n"+"Titulo del Evento"));
         programacionList.add(new Programacion("8:00", " "));
@@ -80,6 +102,9 @@ public class DataTableView implements Serializable {
 
     }
 
+    public List<Campañas> getCampañasList() {
+        return campañasList;
+    }
 
     public List<Programacion> getprogramacionList() {
         return programacionList;
