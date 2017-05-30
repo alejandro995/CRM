@@ -1333,123 +1333,160 @@ p:active{
 
 }
 
- @media (min-width: 1200px){
+.modulosFichaPequeños{
+    padding-left: 7px;
+    padding-right: 7px;
+   /* height: 132px;*/
+    margin-top: 15px;
 
-     .titulolargo {
-         width: 67.666667%!important;
-     }
+}
 
-     .titulocorto {
-         width: 14.666667%!important;
-     }
-     .contenedorderecha {
-         width: 98.666667% !important;
-         padding-left: 8px !important;
+.modulosFichaMedianos{
+    padding-left: 7px;
+    padding-right: 7px;
+/* height: 132px;*/
+ margin-top: 15px;
 
-     }
+}
 
-     .modulos { width: 277px;}
+.modulosFichaGrande{
+ padding-left: 7px;
+ padding-right: 7px;
+/* height: 132px;*/
+margin-top: 15px;
 
-     .modulosmediados { width: 277px; }
-
-     .modulospequeños { width: 277px;   }
+}
 
 
+@media (min-width: 1200px){
+
+ .titulolargo {
+     width: 67.666667%!important;
+ }
+
+ .titulocorto {
+     width: 14.666667%!important;
+ }
+ .contenedorderecha {
+     width: 98.666667% !important;
+     padding-left: 8px !important;
 
  }
 
+ .modulos { width: 277px;}
+
+ .modulosmediados { width: 277px; }
+
+ .modulospequeños { width: 277px;   }
+
+
+
+}
+
 
 @media (min-width: 992px) {
-    .contenedorderecha {
-        padding-left:8px;
-        width: 93.666667%;
-    }
+.contenedorderecha {
+    padding-left:8px;
+    width: 93.666667%;
+}
 
-    .titulolargo {
-        width: 62.666667%;
-    }
+.titulolargo {
+    width: 62.666667%;
+}
 
-    .titulocorto {
-        width: 18.666667%;
-    }
+.titulocorto {
+    width: 18.666667%;
+}
 
-    .forminput {
-        margin-left: 15px;
-        width: 60%;
-    }
+.forminput {
+    margin-left: 15px;
+    width: 60%;
+}
 
-    .bbvatitulo {
-        padding-right: 0px;
-    }
+.bbvatitulo {
+    padding-right: 0px;
+}
 
-    .modulos { width: 277px;}
+.modulos { width: 277px;}
 
-    .modulosmediados { width: 277px; }
+.modulosmediados { width: 277px; }
 
-    .modulospequeños { width: 277px;   }
+.modulospequeños { width: 277px;   }
+
+.modulosFichaPequeños {
+    width: 277px;
+}
+
+.modulosFichaMedianos {
+    width: 418px;
+}
+
+.modulosFichaGrande {
+    width: 835px;
+}
 }
 
 .oportunidades .divbtn{
-    padding-bottom: 17px;
+padding-bottom: 17px;
 
 }
 
 .pagina {
-    padding-top: 0px;
- margin-left: 0px;
-    padding-left: 0px;
+padding-top: 0px;
+margin-left: 0px;
+padding-left: 0px;
 }
 
 .menu2{
-    margin-left: 0px;
-    padding-left: 0px;
-    position: absolute;
-    top: 0px;
+margin-left: 0px;
+padding-left: 0px;
+position: absolute;
+top: 0px;
 }
 
 .fondoheader{
-    background-color: #072146;
-    width: 100%;
-    position: absolute;
-    height: 140px;
+background-color: #072146;
+width: 100%;
+position: absolute;
+height: 140px;
 }
 
 .fondosection{
-    position: absolute;
-    width: 100%;
-    height: 70px;
-    background-color: #004481;
-    top: 140px;
+position: absolute;
+width: 100%;
+height: 70px;
+background-color: #004481;
+top: 140px;
 }
 
 .contenedorderecha{
-    margin-left: 70px;
+margin-left: 70px;
 }
 
 
 .citas table > tbody > tr > td:nth-child(2){
-    background-color: #BBBBBB;
-    font-family: BentonSansBBVA-Light;
-    text-align: left;
-    padding-right: 90px;
-    font-size: 12px;
+background-color: #BBBBBB;
+font-family: BentonSansBBVA-Light;
+text-align: left;
+padding-right: 90px;
+font-size: 12px;
 }
 
 
 .citas table > tbody > tr .ui-datatable-even > td:nth-child(2){
-    font-weight: 900;
+font-weight: 900;
 }
 
 .comovoyimg{
-    width: 70%;
+width: 70%;
 }
 
 canvas .jqplot-series-shadowCanvas{
-    display: none;
+display: none;
 }
 
 .jqplot-target .jqplot-series-shadowCanvas {
-    display: none;
+display: none;
 }
 
 .w3-overlay {position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
@@ -1458,5 +1495,289 @@ canvas .jqplot-series-shadowCanvas{
 
 
 .imgcartera{
-    width: 62%;
+width: 62%;
+}
+
+
+.modulo1triangulo{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 83px 84px 0;
+border-color: transparent #C2A059 transparent transparent;
+float: right;
+position: absolute;
+    right: 7px;
+
+}
+
+.PNN{
+    float: right;
+    /* z-index: 999; */
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.fichalogo {
+
+    text-align: center;
+    margin-top: 35px;
+    color: #C2A059;
+    margin-bottom: 15px;
+}
+
+.fichades {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: BentonSansBBVA-Bold;
+
+}
+
+.fichades p {
+    margin-bottom: 0px;
+}
+
+
+.fichaplanumero1{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 15px;
+    color: #fff;
+    text-align: center;
+}
+.fichaplanumero2{
+    padding-right: 0px;
+    padding-top: 15px;
+    color: #fff;
+    padding-left: 0px;
+}
+.fichanum1{
+    font-family: BentonSansBBVA-Book;
+    font-size: 12px;
+    text-align: center;
+    border-right: 1px solid #fff;
+    margin-bottom: 0px;
+    line-height: 25px;
+}
+
+.fichades1{
+    font-family: BentonSansBBVA-Medium;
+    font-size: 12px;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+
+.fichanum2{
+    font-family: BentonSansBBVA-Book;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0px;
+    line-height: 25px;
+}
+.fichades2{
+    font-family: BentonSansBBVA-Medium;
+    font-size: 12px;
+    text-align: center;
+}
+
+.fichadivbtn{
+    text-align: center;
+    padding-top: 31px;
+    padding-bottom: 31px;
+}
+
+.fichabtn2{
+    font-family: BentonSansBBVA-Medium;
+    background-color: #237ABA;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2.2px;
+    color: #fff;
+    padding-right: 37px;
+    padding-left: 37px;
+    font-size: 14px;
+
+}
+
+.relevantes ul li{
+    color: black;
+    height: 42px;
+    border-bottom: 1px solid #D8D8D8;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.relevantes ul {
+    padding-left: 0px;
+    background: white;
+    list-style-type: none;
+}
+
+.fichabarra{
+
+    padding-left: 4px;
+    padding-right: 4px;
+    /* height: 20px; */
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+ .b1{
+    background-color: #00AF5F;
+
+}
+ .b2{
+    background-color: #9A7010;
+
+}
+.b3{
+    background-color: #9A7010;
+
+}
+.b4{
+    background-color: #00AF5F;
+}
+ .b5{
+    background-color: #FF8A31;
+
+}
+.b6{
+    background-color: #00AF5F;
+
+}
+
+.b7 {
+    background-color: #BFBFBF;
+}
+
+.d1{
+    padding-left: 5px;
+}
+
+.m1{
+    float: right;
+    padding-right: 5px;
+    font-size: 25px;
+    font-weight: 100;
+    /* height: 10px; */
+    line-height: 18px;
+    color: #0064A9;
+}
+
+.informacion ul li{
+    color: #ffffff;
+    height: 42px;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.informacion ul {
+    padding-left: 0px;
+    background: #00A7E9;
+    list-style-type: none;
+}
+
+.informacion .d1{
+    padding-left: 15px;
+}
+
+.informacion .m1 {
+    color: #ffffff;
+
+}
+
+.modulofichalargo{
+    height: 336px;
+}
+
+.modulofichacortoizq{
+    height: 168px;
+}
+
+.fichapie{
+    padding: 0px !important;
+}
+
+.fichapiecanvas{
+}
+
+.rowficha{
+    margin: 0px;
+}
+
+.modulosfooter1{
+    background-color: #D1D1D1;
+    padding: 10px;
+
+}
+
+.modulosfooter1 p{
+    color: #0064A9;
+    margin: 0px;
+}
+
+.modulosfooter1 p span{
+    float: right;
+}
+
+
+.modulosfooter2{
+    background-color: #D1D1D1;
+    padding: 10px;
+
+}
+.modulosfooter2 p{
+    color: #0064A9;
+    margin: 0px;
+
+}
+
+.modulosfooter2 p span{
+    float: right;
+
+}
+
+
+.fichapiegraf .jqplot-grid-canvas{
+    display: none;
+}
+
+.fichapiegraf .jqplot-grid-canvas{
+    display: none;
+}
+
+
+.fichapiecanvas .jqplot-target {
+    height: 190px;
+}
+
+.fichapie ul{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 0px;
+    font-size: 12px;
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+}
+
+.fichapie ul li{
+    padding-bottom: 5px;
+}
+
+.circle {
+    position: absolute;
+    float: right;
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+    right: 0px;
 }

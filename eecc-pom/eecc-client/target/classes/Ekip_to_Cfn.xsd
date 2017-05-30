@@ -1,0 +1,316 @@
+<xsd:schema targetNamespace="http://www.bbvanet.com.co/ContratacionDigitalTX/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.bbvanet.com.co/ContratacionDigitalTX/">
+	<!--CONSULTADIRECTA CIFIN -->
+	<xsd:element name="CONSULTACOMERCIAL" type="tns:validarConsultaType" />
+	<xsd:element name="CONSULTACOMERCIALRESPONSE" type="tns:validarConsultaResponseType"/>
+	<!--CONSULTADIRECTA CIFIN -->
+
+	<!--TIPOS -->
+	<!--REQUEST -->
+	<xsd:complexType name="validarConsultaType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="codigoInformacion"
+				type="xsd:int" />
+			<xsd:element maxOccurs="1" minOccurs="0" name="motivoConsulta"
+				type="xsd:int" />
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="numeroIdentificacion" type="xsd:int" />
+			<xsd:element maxOccurs="1" minOccurs="0" name="tipoIdentificacion"
+				type="tns:tipoIdType" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="tipoIdType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CC" />
+			<xsd:enumeration value="CE" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- RESPONSE -->
+	<xsd:complexType name="ObligacionType">
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element type="xsd:byte" name="PaqueteInformacion" />
+			<xsd:element type="xsd:int" name="IdentificadorLinea" />
+			<xsd:element type="xsd:string" name="TipoContrato" />
+			<xsd:element type="xsd:string" name="EstadoContrato" />
+			<xsd:element type="xsd:string" name="TipoEntidad" />
+			<xsd:element type="xsd:string" name="NombreEntidad" />
+			<xsd:element type="xsd:string" name="Ciudad" />
+			<xsd:element type="xsd:string" name="Sucursal" />
+			<xsd:element type="xsd:int" name="NumeroObligacion" />
+			<xsd:element type="xsd:string" name="Calidad" />
+			<xsd:element type="xsd:string" name="EstadoObligacion" />
+			<xsd:element type="xsd:string" name="ModalidadCredito" />
+			<xsd:element type="xsd:string" name="LineaCredito" />
+			<xsd:element type="xsd:string" name="Periodicidad" />
+			<xsd:element type="xsd:string" name="FechaApertura" />
+			<xsd:element type="xsd:string" name="FechaTerminacion" />
+			<xsd:element type="xsd:string" name="Calificacion" />
+			<xsd:element type="xsd:string" name="ValorInicial" />
+			<xsd:element type="xsd:short" name="SaldoObligacion" />
+			<xsd:element type="xsd:byte" name="ValorMora" />
+			<xsd:element type="xsd:short" name="ValorCuota" />
+			<xsd:element type="xsd:string" name="TipoMoneda" />
+			<xsd:element type="xsd:string" name="CuotasCanceladas" />
+			<xsd:element type="xsd:string" name="TipoGarantia" />
+			<xsd:element type="xsd:string" name="CubrimientoGarantia" />
+			<xsd:element type="xsd:string" name="MoraMaxima" />
+			<xsd:element type="xsd:string" name="Comportamientos" />
+			<xsd:element type="xsd:string" name="ParticipacionDeuda" />
+			<xsd:element type="xsd:string" name="ProbabilidadNoPago" />
+			<xsd:element type="xsd:string" name="FechaCorte" />
+			<xsd:element type="xsd:string" name="ModoExtincion" />
+			<xsd:element type="xsd:string" name="FechaPago" />
+			<xsd:element type="xsd:string" name="FechaPermanencia" />
+			<xsd:element type="xsd:string" name="NumeroReestructuraciones" />
+			<xsd:element type="xsd:string" name="NaturalezaReestructuracion" />
+			<xsd:element type="xsd:string" name="MarcaTarjeta" />
+			<xsd:element type="xsd:string" name="ClaseTarjeta" />
+			<xsd:element type="xsd:string" name="TipoEntidadOriginadoraCartera" />
+			<xsd:element type="xsd:string" name="EntidadOriginadoraCartera" />
+			<xsd:element type="xsd:string" name="TipoPago" />
+			<xsd:element type="xsd:string" name="EstadoTitular" />
+			<xsd:element type="xsd:string" name="NumeroCuotasPactadas" />
+			<xsd:element type="xsd:string" name="NumeroCuotasMora" />
+			<xsd:element type="xsd:string" name="Reestructurado" />
+			<xsd:element type="xsd:string" name="ChequesDevueltos" />
+			<xsd:element type="xsd:string" name="DiasCartera" />
+			<xsd:element type="xsd:byte" name="ValorCargoFijo" />
+			<xsd:element type="xsd:string" name="ClausulaPermanencia" />
+			<xsd:element type="xsd:string" name="Vigencia" />
+			<xsd:element type="xsd:string" name="NumeroMesesContrato" />
+			<xsd:element type="xsd:string" name="NumeroMesesClausula" />
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="cuposTarjCreditoType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="gastosCuotaPrestamoType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RegistroType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="PaqueteInformacion" />
+			<xsd:element type="xsd:byte" name="NumeroObligaciones" />
+			<xsd:element type="xsd:int" name="TotalSaldo" />
+			<xsd:element type="xsd:byte" name="ParticipacionDeuda" />
+			<xsd:element type="xsd:byte" name="NumeroObligacionesDia" />
+			<xsd:element type="xsd:int" name="SaldoObligacionesDia" />
+			<xsd:element type="xsd:short" name="CuotaObligacionesDia" />
+			<xsd:element type="xsd:byte" name="CantidadObligacionesMora" />
+			<xsd:element type="xsd:byte" name="SaldoObligacionesMora" />
+			<xsd:element type="xsd:byte" name="CuotaObligacionesMora" />
+			<xsd:element type="xsd:byte" name="ValorMora" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ResumenPrincipalType">
+		<xsd:sequence>
+			<xsd:element type="tns:RegistroType" name="Registro" maxOccurs="unbounded"
+				minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ConsolidadoType">
+		<xsd:sequence>
+			<xsd:element type="tns:ResumenPrincipalType" name="ResumenPrincipal" />
+			<xsd:element type="tns:RegistroType" name="Registro" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CuentasVigentesType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CuentasExtinguidasType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SectorFinancieroAlDiaType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SectorFinancieroExtinguidasType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SectorRealAlDiaType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SectorRealExtinguidasType">
+		<xsd:sequence>
+			<xsd:element type="tns:ObligacionType" name="Obligacion" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EncabezadoEndeudamientoType">
+		<xsd:sequence>
+			<xsd:element type="xsd:byte" name="NumeroEntidadesTrimestreI" />
+			<xsd:element type="xsd:string" name="FechaTrimestreI" />
+			<xsd:element type="xsd:byte" name="NumeroEntidadesTrimestreII" />
+			<xsd:element type="xsd:string" name="FechaTrimestreII" />
+			<xsd:element type="xsd:byte" name="NumeroEntidadesTrimestreIII" />
+			<xsd:element type="xsd:string" name="FechaTrimestreIII" />
+			<xsd:element type="xsd:byte" name="NumeroComprasTrimestreI" />
+			<xsd:element type="xsd:byte" name="NumeroComprasTrimestreII" />
+			<xsd:element type="xsd:byte" name="NumeroComprasTrimestreIII" />
+			<xsd:element type="xsd:byte" name="NumeroReestructuracionesTrimestreI" />
+			<xsd:element type="xsd:byte" name="NumeroReestructuracionesTrimestreII" />
+			<xsd:element type="xsd:byte" name="NumeroReestructuracionesTrimestreIII" />
+			<xsd:element type="xsd:byte" name="NumeroCastigosTrimestreI" />
+			<xsd:element type="xsd:byte" name="NumeroCastigosTrimestreII" />
+			<xsd:element type="xsd:byte" name="NumeroCastigosTrimestreIII" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Endeudamiento71Type">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="Calificacion" />
+			<xsd:element type="xsd:string" name="TipoModena" />
+			<xsd:element type="xsd:byte" name="NumeroOperacionesComercial" />
+			<xsd:element type="xsd:byte" name="NumeroOperacionesConsumo" />
+			<xsd:element type="xsd:byte" name="NumeroOperacionesVivienda" />
+			<xsd:element type="xsd:byte" name="NumeroOperacionesMicrocredito" />
+			<xsd:element type="xsd:byte" name="ValorDeudaComercial" />
+			<xsd:element type="xsd:float" name="ValorDeudaConsumo" />
+			<xsd:element type="xsd:byte" name="ValorDeudaVivienda" />
+			<xsd:element type="xsd:byte" name="ValorDeudaMicrocredito" />
+			<xsd:element type="xsd:float" name="Total" />
+			<xsd:element type="xsd:float" name="ParticipacionTotalDeudas" />
+			<xsd:element type="xsd:string" name="CubrimientoGarantiaComercial" />
+			<xsd:element type="xsd:float" name="CubrimientoGarantiaConsumo" />
+			<xsd:element type="xsd:string" name="CubrimientoGarantiaVivienda" />
+			<xsd:element type="xsd:string" name="CubrimientoGarantiaMicrocredito" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Endeudamiento72Type">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="TipoMoneda" />
+			<xsd:element type="xsd:string" name="NumeroContingencias" />
+			<xsd:element type="xsd:byte" name="ValorContingencias" />
+			<xsd:element type="xsd:short" name="CuotaEsperada" />
+			<xsd:element type="xsd:string" name="CumplimientoCuota" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Endeudamiento73Type">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="TipoEntidad" />
+			<xsd:element type="xsd:string" name="NombreEntidad" />
+			<xsd:element type="xsd:string" name="TipoEntidadOriginadoraCartera" />
+			<xsd:element type="xsd:string" name="EntidadOriginadoraCartera" />
+			<xsd:element type="xsd:string" name="TipoFideicomiso" />
+			<xsd:element type="xsd:string" name="NumeroFideicomiso" />
+			<xsd:element type="xsd:string" name="ModalidadCredito" />
+			<xsd:element type="xsd:string" name="Calificacion" />
+			<xsd:element type="xsd:string" name="TipoMoneda" />
+			<xsd:element type="xsd:byte" name="NumeroOperadores" />
+			<xsd:element type="xsd:float" name="ValorDeuda" />
+			<xsd:element type="xsd:float" name="ParticipacionTotalDeudas" />
+			<xsd:element type="xsd:float" name="CubrimientoGarantia" />
+			<xsd:element type="xsd:string" name="TipoGarantia" />
+			<xsd:element type="xsd:string" name="FechaUltimoAvaluo" />
+			<xsd:element type="xsd:short" name="CuotaEsperada" />
+			<xsd:element type="xsd:float" name="CumplimientoCuota" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EndeudamientoTrimIType">
+		<xsd:sequence>
+			<xsd:element type="tns:Endeudamiento71Type" name="Endeudamiento71"
+				maxOccurs="unbounded" minOccurs="0" />
+			<xsd:element type="tns:Endeudamiento72Type" name="Endeudamiento72"
+				maxOccurs="unbounded" minOccurs="0" />
+			<xsd:element type="tns:Endeudamiento73Type" name="Endeudamiento73"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EndeudamientoType">
+		<xsd:sequence>
+			<xsd:element type="tns:EncabezadoEndeudamientoType" name="EncabezadoEndeudamiento" />
+			<xsd:element type="tns:EndeudamientoTrimIType" name="EndeudamientoTrimI" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ConsultaType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="FechaConsulta" />
+			<xsd:element type="xsd:string" name="NombreTipoEntidad" />
+			<xsd:element type="xsd:string" name="NombreEntidad" />
+			<xsd:element type="xsd:string" name="Sucursal" />
+			<xsd:element type="xsd:string" name="Ciudad" />
+			<xsd:element type="xsd:string" name="MotivoConsulta" />
+			<xsd:element type="xsd:byte" name="CodigoTipoEntidad" />
+			<xsd:element type="xsd:byte" name="CodigoEntidad" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HuellaConsultaType">
+		<xsd:sequence>
+			<xsd:element type="tns:ConsultaType" name="Consulta" maxOccurs="unbounded"
+				minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TerceroType">
+		<xsd:sequence>
+			<xsd:element type="xsd:int" name="IdentificadorLinea" />
+			<xsd:element type="xsd:string" name="TipoIdentificacion" />
+			<xsd:element type="xsd:byte" name="CodigoTipoIndentificacion" />
+			<xsd:element type="xsd:int" name="NumeroIdentificacion" />
+			<xsd:element type="xsd:string" name="NombreTitular" />
+			<xsd:element type="xsd:string" name="NombreCiiu" />
+			<xsd:element type="xsd:string" name="LugarExpedicion" />
+			<xsd:element type="xsd:string" name="FechaExpedicion" />
+			<xsd:element type="xsd:string" name="Estado" />
+			<xsd:element type="xsd:long" name="NumeroInforme" />
+			<xsd:element type="xsd:string" name="EstadoTitular" />
+			<xsd:element type="xsd:string" name="RangoEdad" />
+			<xsd:element type="xsd:string" name="CodigoCiiu" />
+			<xsd:element type="xsd:byte" name="CodigoDepartamento" />
+			<xsd:element type="xsd:byte" name="CodigoMunicipio" />
+			<xsd:element type="xsd:string" name="Fecha" />
+			<xsd:element type="xsd:time" name="Hora" />
+			<xsd:element type="xsd:string" name="Entidad" />
+			<xsd:element type="xsd:byte" name="RespuestaConsulta" />
+			<xsd:element type="tns:ConsolidadoType" name="Consolidado" />
+			<xsd:element type="tns:CuentasVigentesType" name="CuentasVigentes" />
+			<xsd:element type="tns:CuentasExtinguidasType" name="CuentasExtinguidas" />
+			<xsd:element type="tns:SectorFinancieroAlDiaType" name="SectorFinancieroAlDia" />
+			<xsd:element type="tns:SectorFinancieroExtinguidasType" name="SectorFinancieroExtinguidas" />
+			<xsd:element type="tns:SectorRealAlDiaType" name="SectorRealAlDia" />
+			<xsd:element type="tns:SectorRealExtinguidasType" name="SectorRealExtinguidas" />
+			<xsd:element type="tns:EndeudamientoType" name="Endeudamiento" />
+			<xsd:element type="tns:HuellaConsultaType" name="HuellaConsulta" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="validarConsultaResponseType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="NombreTitular" />
+			<xsd:element type="xsd:string" name="TipoIdentificacion" />
+			<xsd:element type="xsd:int" name="NumeroIdentificacion" />
+			<xsd:element type="xsd:string" name="LugarExpedicion" />
+			<xsd:element type="xsd:string" name="FechaExpedicion" />
+			<xsd:element type="xsd:string" name="Estado" />
+			<xsd:element type="xsd:string" name="RangoEdad" />
+			<xsd:element type="xsd:string" name="CodigoCiiu" />
+			<xsd:element type="xsd:byte" name="CodigoDepartamento" />
+			<xsd:element type="xsd:byte" name="CodigoMunicipio" />
+			<xsd:element type="xsd:string" name="Fecha" />
+			<xsd:element type="xsd:time" name="Hora" />
+			<xsd:element type="xsd:string" name="gastosHipotecarios" />
+			<xsd:element type="tns:cuposTarjCreditoType" name="cuposTarjCredito" />
+			<xsd:element type="xsd:string" name="sobregiros" />
+			<xsd:element type="xsd:string" name="gastosComerciales" />
+			<xsd:element type="xsd:string" name="cuposComerciales" />
+			<xsd:element type="tns:gastosCuotaPrestamoType" name="gastosCuotaPrestamo" />
+			<xsd:element type="xsd:string" name="puntajeBuro" />
+			<xsd:element type="tns:TerceroType" name="Tercero" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+<!--TIPOS -->

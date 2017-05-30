@@ -10,8 +10,7 @@
 
     </head>
 
-    <ui:define name="content"> 
-
+    <ui:define name="content">
         <!-- /. ROW  -->
         <div class="row" >
             <!--            <h:panelGroup id="datosdatosBasicos">-->
@@ -27,20 +26,20 @@
                             <br></br>
                             <h5> Oficina Principal</h5>
                             <h5 >${fichaCliente.datosBasicos.oficinaPrincipal}</h5>
-                        </div>	
+                        </div>
                         <div style="float:right;text-align: left; width: 200px;" class="panel-body">
                             <br></br>
                             <h6 >${fichaCliente.datosBasicos.tipoDocumento}</h6>
                             <h5>${fichaCliente.datosBasicos.numeroDocumento}</h5>
                             <br></br>
                             <h5 >Carterizado </h5>
-                            <h5 > SI</h5>								
+                            <h5 > SI</h5>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4" style="height: 300px; ">
-                <div class="panel panel-primary" style="height: 300px;"> 
+                <div class="panel panel-primary" style="height: 300px;">
                     <div class="panel-heading">
                         <i class="fa fa-comments fa-fw"></i>
                         Grafica tenencia
@@ -58,18 +57,18 @@
                                     <a href="#">
                                         <i class="fa fa-refresh fa-fw"></i>Rentabilidad
                                     </a>
-                                </li>									
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div  style="width: 96%; height: 177px;">
 
-                    </div>                                                                 
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-4" style="height: 300px; ">
-                <div class="panel panel-primary" style="height: 300px;"> 
+                <div class="panel panel-primary" style="height: 300px;">
                     <div class="panel-heading">
                         <i class="fa fa-comments fa-fw"></i>
                         Grafica evolucion
@@ -87,28 +86,28 @@
                                     <a href="#">
                                         <i class="fa fa-refresh fa-fw"></i>Rentabilidad
                                     </a>
-                                </li>									
-                            </ul>  
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <h5> Graficas bajo menu</h5>
                     <div  style="width: 96%; height: 177px;">
                         <p:chart id="chart" type="line" model="${searchCriteria.lineModel1}" style="width: 96%; height: 177px;"/>
-                    </div> 
+                    </div>
                 </div>
             </div>
             <!--</h:panelGroup>-->
         </div>
 
 
-        <div class="row">            
+        <div class="row">
             <div class="col-md-4 col-sm-1"  style="padding-right: 0px;">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         Campos relevantes
                     </div>
                     <div class="panel-body">
-                        <h5 style="font-weight: bold;">Onboarding</h5>						
+                        <h5 style="font-weight: bold;">Onboarding</h5>
                         <a style="color:blue;" data-toggle="modal" data-target="#myModalOnboarding" href="#">
                             Ver + (detalle de etapas)  <i style="color:blue;" class="glyphicon glyphicon-new-window"></i></a>
                         <hr style="background-color: #A9A9A9;height: 0.5px;"></hr>
@@ -122,7 +121,7 @@
                              border-left: 12px solid transparent;
                              border-bottom: 12px solid red;"></div>
                         <h5 style="margin-right:10px; font-weight: bold; float:left; margin-top:0px; margin-bottom: 0px;" >-Mora Valor/Dias :</h5>
-                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" > 10.000.000 / 21</h5>																	
+                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" > 10.000.000 / 21</h5>
                         <hr width="0%"></hr>
                         <hr style="background-color: #A9A9A9;height: 1px;"></hr>
 
@@ -137,10 +136,10 @@
                              border-bottom: 12px solid #7FFF00;"></div>
 
                         <h5 style="margin-right:10px; font-weight: bold; float:left; margin-top:0px; margin-bottom: 0px;" >-Pagare unico:</h5>
-                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" > SI</h5>																	
+                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" > SI</h5>
                         <hr width="0%"></hr>
                         <hr style="background-color: #A9A9A9;height: 1px;"></hr>
-                        <div style="  
+                        <div style="
                              padding:10;
                              float:left;
                              width: 0;
@@ -150,26 +149,26 @@
                              border-left: 12px solid transparent;
                              border-bottom: 12px solid orange;"></div>
                         <h5 style="margin-right:10px; font-weight: bold; float:left; margin-top:0px; margin-bottom: 0px;" >- Quejas y Reclamos :</h5>
-                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" >SI - Radicados 5;Abiertas 1</h5>																	
+                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" >SI - Radicados 5;Abiertas 1</h5>
                         <hr width="0%"></hr>
                         <hr style="background-color: #A9A9A9;height: 1px;"></hr>
                         <h5 style="margin-right:10px; font-weight: bold; float:left; margin-top:0px; margin-bottom: 0px;" >-Puntaje Buro CIFIN / Fecha:</h5>
-                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" >813 /2016-02-01</h5>																	
+                        <h5  style="margin-left:10px; font-weight: bold; margin-top:0px; float:left; margin-bottom: 0px;" >813 /2016-02-01</h5>
                         <hr width="0%"></hr>
                         <h5 style="font-weight: bold;"> </h5>
                         <hr style="background-color: #A9A9A9;height: 1px;"></hr>
-                        <h5 style="font-weight: bold;">-Mis tramites</h5>									
+                        <h5 style="font-weight: bold;">-Mis tramites</h5>
                         <hr style="background-color: #A9A9A9;height: 1px;"></hr>
                         <!--DIV accorion-->
                         <div class="panel-group" id="accordion">
                             <div style="padding-left:0px;" class="panel-heading">
                                 <h4 class="panel-title">
-                                    <button style=" width: 367px;  text-align:left; background-color:#002147; color:#fff;" type="submit" 
-                                            class="btn btn-default collapsed"  data-target="#myModal" data-toggle="modal" 
-                                            data-parent="#accordion"  href="#collapseThree"  > Informacion del cliente                                                                    
+                                    <button style=" width: 367px;  text-align:left; background-color:#002147; color:#fff;" type="submit"
+                                            class="btn btn-default collapsed"  data-target="#myModal" data-toggle="modal"
+                                            data-parent="#accordion"  href="#collapseThree"  > Informacion del cliente
                                         <i style="color:#fff;" class="glyphicon glyphicon-new-window"></i>  </button>
                                 </h4>
-                            </div>	
+                            </div>
 
 
 
@@ -222,7 +221,7 @@
                                                                 <td style="font-size:90%;">Ocupacion / Profesion :<br></br>
                                                                     <span style="color:#333;">${fichaCliente.perfil.ocupacion} </span>
                                                                 </td>
-                                                            </tr>										
+                                                            </tr>
                                                         </tbody>
                                                         <tbody>
                                                             <tr>
@@ -240,7 +239,7 @@
                                                                 <td>Situacion Laboral : <br></br>
                                                                     <span style="color:#333;">TEMPORAL</span>
                                                                 </td>
-                                                            </tr>								
+                                                            </tr>
                                                         </tbody>
                                                         <tbody>
                                                             <tr>
@@ -250,7 +249,7 @@
                                                                 <td style="font-size:90%;">Emisor Nomina : <br></br>
                                                                     <span style="color:#333;">${fichaCliente.informacionContratosActivos.emisorNomina}</span>
                                                                 </td>
-                                                            </tr>								
+                                                            </tr>
                                                         </tbody>
                                                         <tbody>
                                                             <tr>
@@ -258,7 +257,7 @@
                                                                     <span style="color:#333;">${fichaCliente.informacionFinanciera.estrato}</span>
                                                                 </td>
                                                                 <td></td>
-                                                            </tr>								
+                                                            </tr>
                                                         </tbody>
                                                         <thead>
                                                             <tr>
@@ -297,7 +296,7 @@
                                                                     <span style="color:#333;">${fichaCliente.datosContacto.referencia}</span>
                                                                 </td>
                                                                 <td></td>
-                                                            </tr>										
+                                                            </tr>
                                                         </tbody>
                                                         <tbody>
                                                             <tr>
@@ -397,7 +396,7 @@
 
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>                                           
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
                                         </div>
                                     </div>
                                 </div>
@@ -428,7 +427,7 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td style="font-size:90%;" >Nombre : <br></br> 
+                                                                    <td style="font-size:90%;" >Nombre : <br></br>
                                                                         <span style="color:#333;">${fichaCliente.datosBasicos.primerNombre}</span>
 
                                                                     </td>
@@ -443,7 +442,7 @@
                                                                     <td>Segmento : <br></br>
                                                                         <span style="color:#333;">${fichaCliente.datosBasicos.segmento}</span>
                                                                     </td>
-                                                                </tr>										
+                                                                </tr>
                                                             </tbody>
                                                             <thead>
                                                                 <tr>
@@ -459,7 +458,7 @@
                                                                 <tr>
                                                                     <td>Oferta 2</td>
                                                                     <td>Oferta 4</td>
-                                                                </tr>								
+                                                                </tr>
                                                             </tbody>
                                                             <thead>
                                                                 <tr>
@@ -475,7 +474,7 @@
                                                                 <tr>
                                                                     <td>Oferta 2</td>
                                                                     <td>Oferta 4</td>
-                                                                </tr>								
+                                                                </tr>
                                                             </tbody>
                                                             <thead>
                                                                 <tr>
@@ -491,7 +490,7 @@
                                                                 <tr>
                                                                     <td>Oferta 2</td>
                                                                     <td>Oferta 4</td>
-                                                                </tr>								
+                                                                </tr>
                                                             </tbody>
                                                             <thead>
                                                                 <tr>
@@ -507,7 +506,7 @@
                                                                 <tr>
                                                                     <td>Oferta 2</td>
                                                                     <td>Oferta 4</td>
-                                                                </tr>								
+                                                                </tr>
                                                             </tbody>
                                                             <thead>
                                                                 <tr>
@@ -537,10 +536,10 @@
                                                                             <option>Three Vale</option>
                                                                             <option>Four Vale</option>
                                                                         </select></td>
-                                                                </tr>										
+                                                                </tr>
                                                             </tbody>
                                                         </table>
-                                                    </h:form>    
+                                                    </h:form>
                                                     <div class="form-group">
                                                         <label>Comentarios</label>
                                                         <textarea class="form-control" rows="3"></textarea>
@@ -554,7 +553,7 @@
 
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>                                           
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
                                         </div>
                                     </div>
                                 </div>
@@ -583,7 +582,7 @@
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.informacionPersonal.antiguedadEmpleado}</span>Antiguedad empleo :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.datosBasicos.primerNombre}</span>Situcion Laboral :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.ocupacion}</span>Ocupacion / Profesion :</div>
-                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.informacionContratosActivos.emisorNomina}</span>Emisor Nomina :</div>										
+                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.informacionContratosActivos.emisorNomina}</span>Emisor Nomina :</div>
                                     </div>
                                 </div>
                             </div>
@@ -602,7 +601,7 @@
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.datosContacto.numeroCelular}</span>Celular :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.datosContacto.referencia}</span>Referencia Cliente :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.informacionFinanciera.estrato}</span>Estrato :</div>
-                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.puntajeBuroCifin}</span>Otros Datos de contrato CIFIN :</div>										
+                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.puntajeBuroCifin}</span>Otros Datos de contrato CIFIN :</div>
                                     </div>
                                 </div>
                             </div>
@@ -622,7 +621,7 @@
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.colectivo}</span>Colectivo :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.datosBasicos.antiguedadCliente}</span>Antiguedad Cliente :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.subColectivo}</span>Subcolectivo :</div>
-                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.puntosGestion}</span>Puntos de gestion :</div>                                       
+                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.puntosGestion}</span>Puntos de gestion :</div>
                                     </div>
                                 </div>
                             </div>
@@ -642,7 +641,7 @@
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.informacionFinanciera.totalPasivos}</span>Pasivo :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.calificacionFinanciera}</span>Calificacion Financiera :</div>
                                         <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.informacionFinanciera.declaraRenta}</span>Declara Renta (SI/NO) :</div>
-                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.limitesVentaCruzada}</span>Limites Vta Cruzada :</div> 
+                                        <div style="font-size:90%;"><span style="float:right; ">${fichaCliente.perfil.limitesVentaCruzada}</span>Limites Vta Cruzada :</div>
                                     </div>
                                 </div>
                             </div>
@@ -683,14 +682,14 @@
                                 <h:commandButton rendered="#{customer.estado == 'Replanificar'}" value="Replanificar" style="text-align:center; color:#fff;"  class="modal-title" id="replanif"> </h:commandButton>
                                 <h:commandButton rendered="#{customer.estado == 'Planificar'}" value="Planificar" style="text-align:center; color:#fff;"  class="modal-title" id="planif"> </h:commandButton>
                                 <h:commandButton rendered="#{customer.estado == 'sinGestionar'}" value="Sin Gestionar" style="text-align:center; color:#fff;"  class="modal-title" id="sinGest"> </h:commandButton>
-                            </p:column>  
+                            </p:column>
                             <p:column>
                                 <h:commandButton rendered="#{customer.estado == 'Gestionada'}" value="Gestionar" style="text-align:center; color:#fff;"  class="modal-title" id="gestionar"> </h:commandButton>
                                 <h:commandButton rendered="#{customer.estado == 'Cambiar'}" value="Respuesta" style="text-align:center; color:#fff;"  class="modal-title" id="respuesta"> </h:commandButton>
                             </p:column>
                             <p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true" height="100">
                                 <h:outputText value="This is a Modal Dialog." />
-                            </p:dialog>  
+                            </p:dialog>
                         </p:dataTable>
 
                     </h:form>
