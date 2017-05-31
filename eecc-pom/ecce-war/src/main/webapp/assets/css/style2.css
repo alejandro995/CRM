@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?tnocom');
-  src:  url('../fonts/icomoon.eot?tnocom#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?tnocom') format('truetype'),
-  url('../fonts/icomoon.woff?tnocom') format('woff'),
-  url('../fonts/icomoon.svg?tnocom#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?1gf8m9');
+  src:  url('../fonts/icomoon.eot?1gf8m9#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?1gf8m9') format('truetype'),
+  url('../fonts/icomoon.woff?1gf8m9') format('woff'),
+  url('../fonts/icomoon.svg?1gf8m9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -24,51 +25,784 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-forward:before {
-  content: "\e909";
-  color: #fff;
-}
-.icon-home:before {
-  content: "\e90a";
-  color: #fff;
-}
-.icon-config:before {
-  content: "\e902";
-  color: #fff;
-}
-.icon-menu:before {
-  content: "\e903";
-  color: #fff;
-}
-.icon-preg .path1:before {
-  content: "\e904";
-  color: rgb(188, 188, 188);
-}
-.icon-preg .path2:before {
+.icon-account_icon:before {
   content: "\e900";
-  margin-left: -1em;
-  color: rgb(188, 188, 188);
+  color: #2a86ca;
 }
-.icon-preg .path3:before {
+.icon-atm_icon:before {
   content: "\e901";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: #2a86ca;
 }
-.icon-preg .path4:before {
+.icon-balance_icon:before {
+  content: "\e902";
+  color: #2a86ca;
+}
+.icon-bill_icon:before {
+  content: "\e903";
+  color: #2a86ca;
+}
+.icon-blockcard_icon:before {
+  content: "\e904";
+  color: #2a86ca;
+}
+.icon-cash_icon:before {
   content: "\e905";
-  margin-left: -1em;
-  color: rgb(51, 153, 204);
+  color: #2a86ca;
 }
-.icon-preg .path5:before {
+.icon-chargecard_icon:before {
   content: "\e906";
-  margin-left: -1em;
-  color: rgb(51, 153, 204);
+  color: #2a86ca;
 }
-.icon-config2:before {
+.icon-chargemovil_icon:before {
   content: "\e907";
-  color: #fff;
+  color: #2a86ca;
 }
-.icon-search:before {
+.icon-contract:before {
   content: "\e908";
-  color: #fff;
+  color: #2a86ca;
+}
+.icon-copycard_icon:before {
+  content: "\e909";
+  color: #2a86ca;
+}
+.icon-creditcard_icon:before {
+  content: "\e90a";
+  color: #2a86ca;
+}
+.icon-currencyexchange_icon:before {
+  content: "\e90b";
+  color: #2a86ca;
+}
+.icon-deposit_icon:before {
+  content: "\e90c";
+  color: #2a86ca;
+}
+.icon-digitalcard_icon:before {
+  content: "\e90d";
+  color: #2a86ca;
+}
+.icon-dischargecard_icon:before {
+  content: "\e90e";
+  color: #2a86ca;
+}
+.icon-dollar_icon:before {
+  content: "\e90f";
+  color: #2a86ca;
+}
+.icon-euro_icon:before {
+  content: "\e910";
+  color: #2a86ca;
+}
+.icon-expressaccount_icon:before {
+  content: "\e911";
+  color: #2a86ca;
+}
+.icon-insurance_icon:before {
+  content: "\e912";
+  color: #2a86ca;
+}
+.icon-international_icon:before {
+  content: "\e913";
+  color: #2a86ca;
+}
+.icon-investment_icon:before {
+  content: "\e914";
+  color: #2a86ca;
+}
+.icon-limits_icon:before {
+  content: "\e915";
+  color: #2a86ca;
+}
+.icon-loan_icon:before {
+  content: "\e916";
+  color: #2a86ca;
+}
+.icon-mobilepayment_icon:before {
+  content: "\e917";
+  color: #2a86ca;
+}
+.icon-mortaje_icon:before {
+  content: "\e918";
+  color: #2a86ca;
+}
+.icon-productportfolio_icon:before {
+  content: "\e919";
+  color: #2a86ca;
+}
+.icon-return_icon:before {
+  content: "\e91a";
+  color: #2a86ca;
+}
+.icon-seecvv_icon:before {
+  content: "\e91b";
+  color: #2a86ca;
+}
+.icon-settings_icon:before {
+  content: "\e91c";
+  color: #2a86ca;
+}
+.icon-stock_icon:before {
+  content: "\e91d";
+  color: #2a86ca;
+}
+.icon-ticket_icon:before {
+  content: "\e91e";
+  color: #2a86ca;
+}
+.icon-transfer_icon:before {
+  content: "\e91f";
+  color: #2a86ca;
+}
+.icon-transferaccount_icon:before {
+  content: "\e920";
+  color: #2a86ca;
+}
+.icon-transfercard_icon:before {
+  content: "\e921";
+  color: #2a86ca;
+}
+.icon-wallet_icon:before {
+  content: "\e922";
+  color: #2a86ca;
+}
+.icon-add_icon:before {
+  content: "\e923";
+  color: #2a86ca;
+}
+.icon-back_icon:before {
+  content: "\e924";
+  color: #2a86ca;
+}
+.icon-bbvaofice_icon:before {
+  content: "\e925";
+  color: #2a86ca;
+}
+.icon-block_icon:before {
+  content: "\e926";
+  color: #2a86ca;
+}
+.icon-checkmark_icon:before {
+  content: "\e927";
+  color: #2a86ca;
+}
+.icon-close_icon:before {
+  content: "\e928";
+  color: #2a86ca;
+}
+.icon-continue_icon:before {
+  content: "\e929";
+  color: #2a86ca;
+}
+.icon-contract_icon:before {
+  content: "\e92a";
+  color: #2a86ca;
+}
+.icon-correct_icon:before {
+  content: "\e92b";
+  color: #2a86ca;
+}
+.icon-correctlocation_icon:before {
+  content: "\e92c";
+  color: #2a86ca;
+}
+.icon-error_icon:before {
+  content: "\e92d";
+  color: #2a86ca;
+}
+.icon-expand_icon:before {
+  content: "\e92e";
+  color: #2a86ca;
+}
+.icon-exploration_icon:before {
+  content: "\e92f";
+  color: #2a86ca;
+}
+.icon-fingerprint_icon:before {
+  content: "\e930";
+  color: #2a86ca;
+}
+.icon-fold_icon:before {
+  content: "\e931";
+  color: #2a86ca;
+}
+.icon-forward_icon:before {
+  content: "\e932";
+  color: #2a86ca;
+}
+.icon-fraud_icon:before {
+  content: "\e933";
+  color: #2a86ca;
+}
+.icon-getout_icon:before {
+  content: "\e934";
+  color: #2a86ca;
+}
+.icon-hide_icon:before {
+  content: "\e935";
+  color: #2a86ca;
+}
+.icon-link_icon:before {
+  content: "\e936";
+  color: #2a86ca;
+}
+.icon-lock_icon:before {
+  content: "\e937";
+  color: #2a86ca;
+}
+.icon-mapa_icon:before {
+  content: "\e938";
+  color: #2a86ca;
+}
+.icon-menu_icon:before {
+  content: "\e939";
+  color: #2a86ca;
+}
+.icon-more_icon:before {
+  content: "\e93a";
+  color: #2a86ca;
+}
+.icon-mylocation_icon:before {
+  content: "\e93b";
+  color: #2a86ca;
+}
+.icon-navigation_icon:before {
+  content: "\e93c";
+  color: #2a86ca;
+}
+.icon-nearme_icon:before {
+  content: "\e93d";
+  color: #2d85c6;
+}
+.icon-on_icon:before {
+  content: "\e93e";
+  color: #2a86ca;
+}
+.icon-phishing_icon:before {
+  content: "\e93f";
+  color: #2a86ca;
+}
+.icon-place_icon:before {
+  content: "\e940";
+  color: #2a86ca;
+}
+.icon-return_icon-12:before {
+  content: "\e941";
+  color: #2a86ca;
+}
+.icon-return_icon-15:before {
+  content: "\e942";
+  color: #2a86ca;
+}
+.icon-seachinglocation_icon:before {
+  content: "\e943";
+  color: #2a86ca;
+}
+.icon-security_icon:before {
+  content: "\e944";
+  color: #2a86ca;
+}
+.icon-substract_icon:before {
+  content: "\e945";
+  color: #2a86ca;
+}
+.icon-unfold_icon:before {
+  content: "\e946";
+  color: #2a86ca;
+}
+.icon-unlock_icon:before {
+  content: "\e947";
+  color: #2a86ca;
+}
+.icon-visualize_icon:before {
+  content: "\e948";
+  color: #2a86ca;
+}
+.icon-walkingdirections_icon:before {
+  content: "\e949";
+  color: #2a86ca;
+}
+.icon-withoutlocation_icon:before {
+  content: "\e94a";
+  color: #2a86ca;
+}
+.icon-agenda_icon:before {
+  content: "\e94b";
+  color: #2a86ca;
+}
+.icon-calculator_icon:before {
+  content: "\e94c";
+  color: #2a86ca;
+}
+.icon-calendar_icon:before {
+  content: "\e94d";
+  color: #2a86ca;
+}
+.icon-configuration_icon:before {
+  content: "\e94e";
+  color: #2a86ca;
+}
+.icon-consult_icon:before {
+  content: "\e94f";
+  color: #2a86ca;
+}
+.icon-copy_icon:before {
+  content: "\e950";
+  color: #2a86ca;
+}
+.icon-desktop_icon:before {
+  content: "\e951";
+  color: #2a86ca;
+}
+.icon-document_icon:before {
+  content: "\e952";
+  color: #2a86ca;
+}
+.icon-download_icon:before {
+  content: "\e953";
+  color: #2a86ca;
+}
+.icon-edit_icon:before {
+  content: "\e954";
+  color: #2a86ca;
+}
+.icon-excel_icon:before {
+  content: "\e955";
+  color: #2a86ca;
+}
+.icon-filter_icon:before {
+  content: "\e956";
+  color: #2a86ca;
+}
+.icon-frequency_icon_frequency_icon .path1:before {
+  content: "\e957";
+  color: rgb(45, 133, 198);
+}
+.icon-frequency_icon_frequency_icon .path2:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(42, 134, 202);
+}
+.icon-graphics_icon:before {
+  content: "\e959";
+  color: #2a86ca;
+}
+.icon-historic_icon:before {
+  content: "\e95a";
+  color: #2d85c6;
+}
+.icon-home_icon:before {
+  content: "\e95b";
+  color: #2a86ca;
+}
+.icon-idcard_icon:before {
+  content: "\e95c";
+  color: #2a86ca;
+}
+.icon-interactivity_icon:before {
+  content: "\e95d";
+  color: #2d85c6;
+}
+.icon-keyboard_icon:before {
+  content: "\e95e";
+  color: #2a86ca;
+}
+.icon-listview_icon:before {
+  content: "\e95f";
+  color: #2a86ca;
+}
+.icon-mobile_icon-26:before {
+  content: "\e960";
+  color: #2a86ca;
+}
+.icon-mobile_icon-28:before {
+  content: "\e961";
+  color: #2d85c6;
+}
+.icon-myprofile_icon:before {
+  content: "\e962";
+  color: #2a86ca;
+}
+.icon-pdf_icon:before {
+  content: "\e963";
+  color: #2a86ca;
+}
+.icon-print_icon:before {
+  content: "\e964";
+  color: #2a86ca;
+}
+.icon-safeforlater_icon:before {
+  content: "\e965";
+  color: #2a86ca;
+}
+.icon-search_icon:before {
+  content: "\e966";
+  color: #2a86ca;
+}
+.icon-settings_icon2:before {
+  content: "\e967";
+  color: #2a86ca;
+}
+.icon-team_icon:before {
+  content: "\e968";
+  color: #2a86ca;
+}
+.icon-titleview_icon:before {
+  content: "\e969";
+  color: #2a86ca;
+}
+.icon-trash_icon:before {
+  content: "\e96a";
+  color: #2a86ca;
+}
+.icon-upload_icon:before {
+  content: "\e96b";
+  color: #2a86ca;
+}
+.icon-word_icon:before {
+  content: "\e96c";
+  color: #2a86ca;
+}
+.icon-alarm_icon:before {
+  content: "\e96d";
+  color: #2d85c6;
+}
+.icon-alert_icon:before {
+  content: "\e96e";
+  color: #2d85c6;
+}
+.icon-appstore_icon:before {
+  content: "\e96f";
+  color: #2d85c6;
+}
+.icon-audio_icon:before {
+  content: "\e970";
+  color: #2d85c6;
+}
+.icon-BBVAcontigo_icon:before {
+  content: "\e971";
+  color: #2a86ca;
+}
+.icon-blog_icon:before {
+  content: "\e972";
+  color: #2a86ca;
+}
+.icon-bluetooth_icon:before {
+  content: "\e973";
+  color: #2d85c6;
+}
+.icon-camera_icon:before {
+  content: "\e974";
+  color: #2d85c6;
+}
+.icon-clock_icon:before {
+  content: "\e975";
+  color: #2d85c6;
+}
+.icon-communication_icon:before {
+  content: "\e976";
+  color: #2d85c6;
+}
+.icon-email_icon:before {
+  content: "\e977";
+  color: #2a86ca;
+}
+.icon-facebook_icon:before {
+  content: "\e978";
+  color: #2d85c6;
+}
+.icon-facebook2_icon:before {
+  content: "\e979";
+  color: #2d85c6;
+}
+.icon-favorite_icon:before {
+  content: "\e97a";
+  color: #2a86ca;
+}
+.icon-googleplus_icon:before {
+  content: "\e97b";
+  color: #2a86ca;
+}
+.icon-googleplus2_icon:before {
+  content: "\e97c";
+  color: #2d85c6;
+}
+.icon-gooplay2_icon:before {
+  content: "\e97d";
+  color: #2d85c6;
+}
+.icon-hashtag_icon:before {
+  content: "\e97e";
+  color: #2d85c6;
+}
+.icon-help_icon:before {
+  content: "\e97f";
+  color: #2d85c6;
+}
+.icon-info_icon:before {
+  content: "\e980";
+  color: #2d85c6;
+}
+.icon-instagram_icon:before {
+  content: "\e981";
+  color: #2d85c6;
+}
+.icon-instagram2_icon:before {
+  content: "\e982";
+  color: #2d85c6;
+}
+.icon-language_icon:before {
+  content: "\e983";
+  color: #2a86ca;
+}
+.icon-linkedin_icon:before {
+  content: "\e984";
+  color: #2a86ca;
+}
+.icon-linkedin2_icon:before {
+  content: "\e985";
+  color: #2d85c6;
+}
+.icon-microphone_icon:before {
+  content: "\e986";
+  color: #2a86ca;
+}
+.icon-mobiledisconnected_icon:before {
+  content: "\e987";
+  color: #2a86ca;
+}
+.icon-nfcconnect_icon:before {
+  content: "\e988";
+  color: #2d85c6;
+}
+.icon-nfcdisconnect_icon:before {
+  content: "\e989";
+  color: #2d85c6;
+}
+.icon-pause_icon:before {
+  content: "\e98a";
+  color: #2a86ca;
+}
+.icon-pinterest_icon:before {
+  content: "\e98b";
+  color: #2d85c6;
+}
+.icon-play_icon:before {
+  content: "\e98d";
+  color: #2d85c6;
+}
+.icon-quotemark_icon:before {
+  content: "\e98e";
+  color: #2d85c6;
+}
+.icon-reademail_icon:before {
+  content: "\e98f";
+  color: #2a86ca;
+}
+.icon-reply_icon:before {
+  content: "\e990";
+  color: #2a86ca;
+}
+.icon-retweet_icon:before {
+  content: "\e991";
+  color: #2a86ca;
+}
+.icon-send_icon:before {
+  content: "\e992";
+  color: #2d85c6;
+}
+.icon-share_icon:before {
+  content: "\e993";
+  color: #2d85c6;
+}
+.icon-slideshare_icon:before {
+  content: "\e994";
+  color: #2d85c6;
+}
+.icon-slideshare2_icon:before {
+  content: "\e995";
+  color: #2a86ca;
+}
+.icon-support_icon:before {
+  content: "\e996";
+  color: #2d85c6;
+}
+.icon-telephone_icon:before {
+  content: "\e997";
+  color: #2d85c6;
+}
+.icon-twitter_icon:before {
+  content: "\e998";
+  color: #2d85c6;
+}
+.icon-twitter2_icon:before {
+  content: "\e999";
+  color: #2d85c6;
+}
+.icon-videochat_icon:before {
+  content: "\e99a";
+  color: #2d85c6;
+}
+.icon-videoplayline_icon:before {
+  content: "\e99b";
+  color: #2a86ca;
+}
+.icon-youtube_icon:before {
+  content: "\e99c";
+  color: #2d85c6;
+}
+.icon-youtube2_icon:before {
+  content: "\e99d";
+  color: #2d85c6;
+}
+.icon-auto_icon:before {
+  content: "\e99e";
+  color: #2a86ca;
+}
+.icon-autobank_icon:before {
+  content: "\e99f";
+  color: #2a86ca;
+}
+.icon-bank_icon:before {
+  content: "\e9a0";
+  color: #2a86ca;
+}
+.icon-bar_icon:before {
+  content: "\e9a1";
+  color: #2a86ca;
+}
+.icon-barcode_icon:before {
+  content: "\e9a2";
+  color: #2a86ca;
+}
+.icon-bookstore_icon:before {
+  content: "\e9a3";
+  color: #2a86ca;
+}
+.icon-build_icon:before {
+  content: "\e9a4";
+  color: #2a86ca;
+}
+.icon-cashregister_icon:before {
+  content: "\e9a5";
+  color: #2a86ca;
+}
+.icon-coffeshop_icon:before {
+  content: "\e9a6";
+  color: #2a86ca;
+}
+.icon-discount_icon:before {
+  content: "\e9a7";
+  color: #2a86ca;
+}
+.icon-donation_icon:before {
+  content: "\e9a8";
+  color: #2a86ca;
+}
+.icon-education_icon:before {
+  content: "\e9a9";
+  color: #2a86ca;
+}
+.icon-entretainment_icon:before {
+  content: "\e9aa";
+  color: #2a86ca;
+}
+.icon-executive_icon:before {
+  content: "\e9ab";
+  color: #2a86ca;
+}
+.icon-florist_icon:before {
+  content: "\e9ac";
+  color: #2a86ca;
+}
+.icon-furniture_icon:before {
+  content: "\e9ad";
+  color: #2a86ca;
+}
+.icon-health_icon:before {
+  content: "\e9ae";
+  color: #2a86ca;
+}
+.icon-hotel_icon:before {
+  content: "\e9af";
+  color: #2a86ca;
+}
+.icon-jewel_icon:before {
+  content: "\e9b0";
+  color: #2a86ca;
+}
+.icon-pets_icon:before {
+  content: "\e9b1";
+  color: #2a86ca;
+}
+.icon-pinpadconnect_icon:before {
+  content: "\e9b2";
+  color: #2a86ca;
+}
+.icon-pinpaddisconnected_icon:before {
+  content: "\e9b3";
+  color: #2a86ca;
+}
+.icon-point_icon:before {
+  content: "\e9b4";
+  color: #2a86ca;
+}
+.icon-promotion_icon:before {
+  content: "\e9b5";
+  color: #2a86ca;
+}
+.icon-restaurant_icon:before {
+  content: "\e9b6";
+  color: #2a86ca;
+}
+.icon-retail_icon:before {
+  content: "\e9b7";
+  color: #2a86ca;
+}
+.icon-retirement_icon:before {
+  content: "\e9b8";
+  color: #2a86ca;
+}
+.icon-rewards_icon:before {
+  content: "\e9b9";
+  color: #2a86ca;
+}
+.icon-sales_icon:before {
+  content: "\e9ba";
+  color: #2a86ca;
+}
+.icon-savings_icon:before {
+  content: "\e9bb";
+  color: #2a86ca;
+}
+.icon-services_icon:before {
+  content: "\e9bc";
+  color: #2a86ca;
+}
+.icon-shop_icon:before {
+  content: "\e9bd";
+  color: #2a86ca;
+}
+.icon-shopping_icon:before {
+  content: "\e9be";
+  color: #2a86ca;
+}
+.icon-supermarket_icon:before {
+  content: "\e9bf";
+  color: #2a86ca;
+}
+.icon-toys_icon:before {
+  content: "\e9c0";
+  color: #2a86ca;
+}
+.icon-travel_icon:before {
+  content: "\e9c1";
+  color: #2a86ca;
+}
+.icon-weather_icon:before {
+  content: "\e9c2";
+  color: #2a86ca;
+}
+.icon-wellness_icon:before {
+  content: "\e9c3";
+  color: #2a86ca;
 }
