@@ -110,14 +110,14 @@ h3 {
     display: block;
     padding-top: 14px;
     padding-right: 10px;
-    padding-left: 14px;
+    padding-left: 20px;
     padding-bottom: 10px;
     font-size: 15px;
     font-size: 1.5rem;
     text-decoration: none;
 }
 .information .information_menu li a i {
-    font-size: 40px;
+    font-size: 30px;
 }
 .information .btn-emergency {
   font-family: 'BentonSansBBVA-Medium';
@@ -1056,7 +1056,7 @@ span .dropdown2 {
 }
 
 .oportunidades .ui-datatable table{
-    width: 99%;
+    width: 99.9999%;
 }
 
 .oportunidades .ui-widget-header {
@@ -1144,7 +1144,7 @@ span .dropdown2 {
 }
 
 .citas .ui-datatable table{
-    width: 99%;
+    width: 99.9999%;
 }
 
 .citas  .ui-widget-content{
@@ -1525,9 +1525,12 @@ position: absolute;
 .fichalogo {
 
     text-align: center;
-    margin-top: 35px;
+    margin-top: 25px;
     color: #C2A059;
     margin-bottom: 15px;
+    padding-left: 40px;
+    font-size: 25px;
+
 }
 
 .fichades {
@@ -1587,8 +1590,8 @@ position: absolute;
 
 .fichadivbtn{
     text-align: center;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .fichabtn2{
@@ -1816,4 +1819,183 @@ position: absolute;
 .headingficha{
     background-color: #BFBFBF !important;
 
+}
+
+.campañastabla .ui-datatable thead th {
+
+    display: table-cell !important;
+    background-color: transparent;
+    border: 0px;
+    border-top: 2px solid #D1D1D1;
+    border-bottom: 3px;
+    color: #0087CE;
+    font-size: 14px;
+    font-family: BentonSansBBVA-Bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+
+}
+
+.campañastabla .ui-datatable tbody td {
+    border: none;
+    font-family: BentonSansBBVA-Medium;
+    padding-top: 5px;
+    text-align: left;
+    padding-bottom: 5px;
+    background-color: transparent;
+    height: 70px;
+
+}
+
+.campañastabla .ui-datatable thead th:nth-child(4) {
+    text-align: right;
+    width: 336px;
+    padding-right: 20px;
+}
+.iconc{
+    font-size: x-large;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.campañastabla table > tbody > tr > td:nth-child(1) {
+    font-family: BentonSansBBVA-Bold;
+    background-color: transparent;
+
+}
+
+.campañastabla table > tbody > tr > td:nth-child(4) {
+    width: 336px;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.campañastabla .ui-datatable-odd td {
+    background-color: transparent;
+    font-family: BentonSansBBVA-Medium;
+
+}
+
+
+.campañastabla .ui-datatable thead th{
+    display: none;
+}
+
+.campañastabla .ui-widget-content {
+    background: #FFF;
+    border: 0px;
+    float: initial;
+}
+
+.campañastabla .ui-datatable table{
+    width: 99.9999%;
+}
+
+.campañastabla  .ui-widget-content{
+    font-family: BentonSansBBVA-Medium;
+    font-size: 14px;
+    border-top: 2px solid #D1D1D1;
+    border-bottom: 2px solid #D1D1D1;
+}
+
+.campañastabla .ui-widget-header .ui-state-default{
+    background: none;
+
+}
+
+.campañastabla .ui-widget-header{
+    background: none;
+    border: none;
+}
+
+.campañastabla .ui-datatable .ui-paginator, .ui-datatable .ui-paginator{
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 13px
+}
+
+.campañastabla .ui-corner-all{
+    color: #4572B3;
+    padding: 0px;
+}
+
+.campañastabla .ui-widget-header .ui-state-default{
+    background: none;
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.campañastabla .ui-icon-seek-prev {
+    background-position: -96px 1px;
+    zoom: 1.3;
+}
+
+.campañastabla .ui-icon-seek-next {
+    background-position: -32px 1px;
+    zoom: 1.3;
+}
+
+.campañastabla .ui-paginator .ui-paginator-pages{
+    padding: 0px;
+}
+
+.campañastabla .ui-datatable tbody td {
+    border: none;
+    font-family: BentonSansBBVA-Medium;
+    padding-top: 5px;
+    text-align: left;
+    padding-bottom: 5px;
+
+}
+
+.campañastabla .ui-datatable table{
+    table-layout: auto;
+}
+
+
+.campañastabla .ui-datatable-even{
+}
+
+.campañastabla .ui-datatable-odd{
+
+
+}
+
+.iconcolor{
+    color: #ffffff !important;
+}
+
+.icon-home_icon:before{
+    color: #ffffff !important;
+}
+
+.icon-menu_icon:before{
+    color: #ffffff !important;
+}
+
+.icon-settings_icon:before{
+    color: #ffffff !important;
+}
+
+.icon-help_icon:before{
+    color: #ffffff !important;
+}
+
+.icon-forward_icon:before{
+    color: #ffffff !important;
+}
+.icon-configuration_icon:before {
+    color: #ffffff !important;
+}
+
+.icon-search_icon:before {
+    color: #ffffff !important;
+}
+
+.icon-myprofile_icon:before{
+    color: #C2A059 !important;
 }
