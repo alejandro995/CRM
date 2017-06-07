@@ -1,11 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      class="no-js">
 
     <f:view contentType="text/html">
 
@@ -25,7 +26,7 @@
                 <!---Apple Safari iPad and iPhone Meta Tags-->
                 <meta name="viewport" content="width = device-width"/>
                 <meta name="viewport" content="initial-scale = 1.0"/>
-                <meta name="viewport" content="width = 320, initial-scale = 2.3, user-scalable = no"/><!--width is pixels, range 200 to 10000-->
+                <meta name="viewport" content="width = 992, initial-scale = 1, user-scalable = no"/><!--width is pixels, range 200 to 10000-->
                 <meta name="format-detection" content="telephone=no"/> <!--disables automatic detection of possible phone numbers-->
                 <meta name="apple-mobile-web-app-capable" content="yes"/><!--specifies full-screen mode-->
                 <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!--specify full-screen mode first-->
@@ -58,7 +59,7 @@
                 <div class="container">
                 <h:form role="form">
                         <span class=" col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                            <h:inputText id="searchString" value="#{searchCriteria.searchString}"  pt:placeholder="Buscador de clientes / Número de identicación" class="forminput"/>
+                            <h:inputText id="searchString" value="#{searchCriteria.searchString}"  pt:placeholder="Buscador de clientes / Número de identificación" class="forminput"/>
                         </span>
                     <span class=" col-xs-2 col-sm-2 col-md-2 col-lg-2 lupa">
 
@@ -71,17 +72,17 @@
                 <div class="col-md-1 col-lg-1 menu2">
                         <div class="col-md-4 information nopaddingleft nopaddingright">
                             <ul class="information_menu">
-                                <li class="active" data-id="1"><a href="#"><i class="icon-home_icon"></i></a></li>
-                                <li data-id="2"><a href="javascript:w3_open()"><i class="icon-menu_icon"></i></a></li>
+                                <li class="active" data-id="1"><a href="onboarding"><i class="icon-home_icon"></i></a></li>
+                                <li data-id="2"><a id="showmenu1"><i class="icon-menu_icon"></i></a></li>
                                 <div class="spacing"></div>
                                 <li data-id="3"><a href="#"><i class="icon-settings_icon"></i></a></li>
                                 <li data-id="4"><a href="#"><i class="icon-help_icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i></a></li>
                             </ul>
                         </div>
                         <!-- Sidebar -->
-                        <div class="menunivel1 " style="display:none;z-index:5" id="menunivel1">
+                        <div class="menunivel1 menunivelleft1" id="menunivel1">
                             <ul class="information_menunivel1">
-                                <li class="active" data-id="1"><a href="javascript:w3_open2()">
+                                <li class="active" data-id="1"><a href="#">
                                     <img src="../assets/img/perfil.png"  style="   width: 35%;  position: absolute; left: 13px;top: 13px;" />
                                     <ul class="menuPerfil">
                                         <li>
@@ -98,33 +99,33 @@
                                         </li>
                                     </ul>
                                 </a></li>
-                                <li data-id="2"><a href="javascript:w3_open2()"><p>Gestion comercial <span class="icon-forward_icon flechas"></span></p></a></li>
-                                <li data-id="3"><a href="javascript:w3_open2()"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
-                                <li data-id="4"><a href="javascript:w3_open2()"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
-                                <li data-id="4"><a href="javascript:w3_open2()"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
-                                <li data-id="4"><a href="javascript:w3_open2()"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
+                                <li data-id="2"><a id="showmenu2" href="#"><p>Gestion comercial <span class="icon-forward_icon flechas"></span></p></a></li>
+                                <li data-id="3"><a id="showmenu2" href="#"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
+                                <li data-id="4"><a id="showmenu2" href="#"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                <li data-id="4"><a id="showmenu2" href="#"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                <li data-id="4"><a id="showmenu2" href="#"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
                                 <li data-id="4"><a href="#"><p>Alerta de fuga</p></a></li>
                             </ul>
 
                             <!-- Sidebar -->
-                            <div class="menunivel2 " style="display:none;z-index:5" id="menunivel2">
+                            <div class="menunivel2 menunivelleft2" id="menunivel2">
                                 <ul class="information_menunivel2">
                                     <li class="active" data-id="1">
-                                        <a href="javascript:w3_open2()">
+                                        <a href="#">
                                             <ul class="menuPerfil">
                                             </ul>
                                         </a>
                                     </li>
-                                    <li data-id="2"><a href="javascript:w3_open3()"><p>Citas para hoy <span class="icon-forward_icon flechas"></span></p></a></li>
-                                    <li data-id="3"><a href="javascript:w3_open3()"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
-                                    <li data-id="4"><a href="javascript:w3_open3()"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                    <li data-id="2"><a  id="showmenu3" href="#"><p>Citas para hoy <span class="icon-forward_icon flechas"></span></p></a></li>
+                                    <li data-id="3"><a  id="showmenu3" href="#"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                    <li data-id="4"><a  id="showmenu3" href="#"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
                                 </ul>
 
                                 <!-- Sidebar -->
-                                <div class="menunivel3 " style="display:none;z-index:5" id="menunivel3">
+                                <div class="menunivel3 menunivelleft3" id="menunivel3">
                                     <ul class="information_menunivel3">
                                         <li class="active" data-id="1">
-                                            <a href="javascript:w3_open2()">
+                                            <a href="#">
                                                 <ul class="menuPerfil">
                                                 </ul>
                                             </a>
@@ -158,66 +159,39 @@
             </div>
             <script src="${request.contextPath}/assets/js/classie.js"></script>
             <script>
-                var menuLeft = document.getElementById('cbp-spmenu-s1'),
-                    menuLeft2 = document.getElementById('cbp-spmenu-s2'),
-                    showLeft = document.getElementById('showLeft'),
-                    showLeft2 = document.getElementById('showLeft2'),
-                    body = document.body;
-                showLeft.onclick = function () {
-                    classie.toggle(this, 'active');
-                    classie.toggle(menuLeft, 'cbp-spmenu-open');
-                    disableOther('showLeft');
-                    classie.toggle(this, 'active');
-                };
+                var menunivel1 = document.getElementById('menunivel1'),
+                    menunivel2 = document.getElementById('menunivel2'),
+                    menunivel3 = document.getElementById('menunivel3');
 
-                showLeft2.onclick = function () {
-                    classie.toggle(this, 'active');
-                    classie.toggle(menuLeft2, 'cbp-spmenu-open');
-                    disableOther('showLeft2');
-                    classie.toggle(this, 'active');
-                };
+                    $("#showmenu1").click(function(){
+                      classie.toggle(this, 'active');
+                      classie.toggle(menunivel1, 'menu1open');
+                    });
 
-                function disableOther(button) {
-                    if (button !== 'showLeft') {
-                        classie.toggle(showLeft, 'active');
-                    }
-                }
+                    $("#showmenu2").click(function(){
+                      classie.toggle(this, 'active');
+                      classie.toggle(menunivel2, 'menu2open');
+                    });
+
+                    $("#showmenu3").click(function(){
+                      classie.toggle(this, 'active');
+                      classie.toggle(menunivel3, 'menu3open');
+                    });
+
+
+
+
                 function w3_open() {
-                    if(document.getElementById("menunivel1").style.display == "none"){
-                        document.getElementById("menunivel1").style.display = "block";
+                    if(document.getElementById("menunivel1").style.left == "70px"){
+
                         document.getElementById("myOverlay").style.display = "block";
                     }else{
-                        document.getElementById("menunivel1").style.display = "none";
-                        document.getElementById("menunivel2").style.display = "none";
-                        document.getElementById("menunivel3").style.display = "none";
                         document.getElementById("myOverlay").style.display = "none";
                     }
 
 
                 }
-                function w3_open2() {
-                    if(document.getElementById("menunivel2").style.display == "none"){
-                        document.getElementById("menunivel2").style.display = "block";
-                    }else{
-                        document.getElementById("menunivel2").style.display = "none";
-                        document.getElementById("menunivel3").style.display = "none";
-                    }
 
-                }
-                function w3_open3() {
-                    if(document.getElementById("menunivel3").style.display == "none"){
-                        document.getElementById("menunivel3").style.display = "block";
-                    }else{
-                        document.getElementById("menunivel3").style.display = "none";
-                    }
-                }
-
-                function w3_close() {
-                    document.getElementById("menunivel1").style.display = "none";
-                    document.getElementById("menunivel2").style.display = "none";
-                    document.getElementById("menunivel3").style.display = "none";
-                    document.getElementById("myOverlay").style.display = "none";
-                }
             </script>
 
         </h:body>

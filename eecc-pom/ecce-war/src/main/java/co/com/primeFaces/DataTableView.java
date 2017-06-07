@@ -21,7 +21,15 @@ public class DataTableView implements Serializable {
 
     private List<Preaprobados> preaprobadosList = new ArrayList<Preaprobados>();
 
-    private List<Campañas> campañasList = new ArrayList<Campañas>();
+    private List<Campanas> campanasList = new ArrayList<Campanas>();
+
+    private List<Saldos> cuentaspersonales = new ArrayList<Saldos>();
+    private List<Saldos> fondodeinversion = new ArrayList<Saldos>();
+    private List<Saldos> prestamos = new ArrayList<Saldos>();
+    private List<Saldos> tarjetadecredito = new ArrayList<Saldos>();
+
+    private List<SaldosInternos> detalledetransacciones = new ArrayList<SaldosInternos>();
+
 
 
 
@@ -29,25 +37,40 @@ public class DataTableView implements Serializable {
     public void init() {
 
         createPieModels();
-        campañasList.add(new Campañas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
-        campañasList.add(new Campañas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
-        campañasList.add(new Campañas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
-        campañasList.add(new Campañas("Cumpleaños" , "Sin asignar", "", "icono"));
-        campañasList.add(new Campañas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
-        campañasList.add(new Campañas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
-        campañasList.add(new Campañas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
-        campañasList.add(new Campañas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
-        campañasList.add(new Campañas("Cumpleaños" , "Sin asignar", "", "icono"));
-        campañasList.add(new Campañas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
-        campañasList.add(new Campañas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
-        campañasList.add(new Campañas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
-        campañasList.add(new Campañas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
-        campañasList.add(new Campañas("Cumpleaños" , "Sin asignar", "", "icono"));
-        campañasList.add(new Campañas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
 
 
 
+        cuentaspersonales.add(new Saldos("0313-0042-00-0201712345","AH","674.00","94.075.18"));
+        cuentaspersonales.add(new Saldos("0313-0042-00-0201712345","AH","94.075.18","94.075.18"));
+        cuentaspersonales.add(new Saldos("0313-0042-00-0201712345","AH","94.075.18","94.075.18"));
+        cuentaspersonales.add(new Saldos("0313-0042-00-0201712345","AH","94.075.18","94.075.18"));
 
+        fondodeinversion.add(new Saldos("0313-0042-00-0201712345","BF","2'178.000.00","2'178.000.00"));
+
+        prestamos.add(new Saldos("0313-0042-00-0201712345","CS","2'178.000.00","2'178.000.00"));
+        prestamos.add(new Saldos("0313-0042-00-0201712345","CS","2'178.000.00","2'178.000.00"));
+
+        tarjetadecredito.add(new Saldos("0313-0042-00-0201712345","CS","2'178.000.00","2'178.000.00"));
+
+        detalledetransacciones.add(new SaldosInternos("03-02-2017","03-02-2017" , "Retiro cajero1", "-$200.000"));
+        detalledetransacciones.add(new SaldosInternos("03-02-2017","03-02-2017" , "Retiro cajero2", "-$200.000"));
+        detalledetransacciones.add(new SaldosInternos("03-02-2017","03-02-2017" , "Retiro cajero3", "-$200.000"));
+
+        campanasList.add(new Campanas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
+        campanasList.add(new Campanas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
+        campanasList.add(new Campanas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
+        campanasList.add(new Campanas("Cumpleaños" , "Sin asignar", "", "icono"));
+        campanasList.add(new Campanas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
+        campanasList.add(new Campanas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
+        campanasList.add(new Campanas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
+        campanasList.add(new Campanas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
+        campanasList.add(new Campanas("Cumpleaños" , "Sin asignar", "", "icono"));
+        campanasList.add(new Campanas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
+        campanasList.add(new Campanas("Vencimiento CDT" , "Sin planificar", "Sandra Maria Suarez", "icono"));
+        campanasList.add(new Campanas("Preaprobado nómina" , "Gestionada", "Isabel Rodriguez", "icono"));
+        campanasList.add(new Campanas("Seguro Vehículo" , "Planificada", "Jose Granados", "icono"));
+        campanasList.add(new Campanas("Cumpleaños" , "Sin asignar", "", "icono"));
+        campanasList.add(new Campanas("Tarjeta de Crédito" , "Gestionada", "Andrea Maldonado", "icono"));
 
         //add students
         programacionList.add(new Programacion("8:00",  "8:30 a 9:00         "+"\n"+"Titulo del Evento"));
@@ -102,8 +125,29 @@ public class DataTableView implements Serializable {
 
     }
 
-    public List<Campañas> getCampañasList() {
-        return campañasList;
+    public List<Saldos> getCuentaspersonales() {
+        return cuentaspersonales;
+    }
+
+
+    public List<Saldos> getFondodeinversion() {
+        return fondodeinversion;
+    }
+
+    public List<Saldos> getPrestamos() {
+        return prestamos;
+    }
+
+    public List<Saldos> getTarjetadecredito() {
+        return tarjetadecredito;
+    }
+
+    public List<SaldosInternos> getDetalledetransacciones() {
+        return detalledetransacciones;
+    }
+
+    public List<Campanas> getCampanasList() {
+        return campanasList;
     }
 
     public List<Programacion> getprogramacionList() {
@@ -141,11 +185,20 @@ public class DataTableView implements Serializable {
     private void createLineModels() {
         lineModel1 = initLinearModel();
         Axis xAxis = lineModel1.getAxis(AxisType.X);
-        xAxis.setMin(1);
+
+
+        xAxis.setMin(6);
+
         xAxis.setMax(12);
+        xAxis.setTickFormat("%d");
+        xAxis.setLabel("meses");
+        lineModel1.getAxes().put(AxisType.X, xAxis);
+
         Axis yAxis = lineModel1.getAxis(AxisType.Y);
         yAxis.setMin(0);
         yAxis.setMax(1000000);
+
+
 
         lineModel1.setShadow(false);
 
@@ -183,19 +236,17 @@ public class DataTableView implements Serializable {
     private void createPieModel2() {
         pieModel2 = new PieChartModel();
 
-        pieModel2.set("Brand 1", 540);
-        pieModel2.set("Brand 2", 325);
-        pieModel2.set("Brand 3", 702);
-        pieModel2.set("Brand 4", 421);
-        pieModel2.set("Brand 5", 421);
-        pieModel2.set("Brand 6", 421);
-        pieModel2.set("Brand 7", 421);
+        pieModel2.set("Consumo", 20000000);
+        pieModel2.set("Hipoteca", 10000000);
+        pieModel2.set("TC. VIS", 8000000);
+        pieModel2.set("TC. MAS", 8000000);
+        pieModel2.set("Vehiculo", 30000000);
+        pieModel2.set("Libranza", 2000000);
+        pieModel2.set("Otros", 7000000);
         pieModel2.setShowDataLabels(true);
         pieModel2.setDiameter(150);
         pieModel2.setShadow(false);
     }
-
-
 
 
 }

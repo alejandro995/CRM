@@ -15,5 +15,10 @@
 	});
 
     $('.carousel').carousel();
+
+    $('#popoverData').popover();
+    $('.iconc').popover();
+
+    $('#popoverData').popover({ trigger: "hover" });
    });
 })(jQuery);

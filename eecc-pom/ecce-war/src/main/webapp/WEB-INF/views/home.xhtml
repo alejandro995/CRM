@@ -1,75 +1,86 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"  
-      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BBVA</title>
-        <!-- BOOTSTRAP STYLES-->
-        <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <!-- FONTAWESOME STYLES-->
-        <link href="assets/css/font-awesome.css" rel="stylesheet" />
-        <!-- MORRIS CHART STYLES-->
-        <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
-        <link href="assets/css/custom.css" rel="stylesheet" />
-        <!-- GOOGLE FONTS-->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-        <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
-        <link rel="stylesheet" type="text/css" href="../assets/css/login.css" />
-        <script type='text/javascript' src="assets/js/jquery-3.2.0.js"></script>
-        <script type='text/javascript' src="assets/js/bootstrap.min.js"></script>
-        <script type='text/javascript' src="assets/js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <style type="text/css">
-            .menu ul{
-                list-style:none;
-                margin: 0;
-            }
+      <h:head>
 
-            .menu ul ul{
-                transition:all 5;
-                opacity:0;
-                position:absolute;
-                visibility:hidden;
-                left:80%;
-                top:-2%;
-                background-color:blue;
-            }
+          <f:facet name="first">
+              <meta charset="utf-8" />
+              <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11; IE=10; IE=9; IE=8; IE=7"/>
+              <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+              <title>BBVA</title>
+              <!-- BOOTSTRAP STYLES-->
+              <link href="${request.contextPath}/assets/css/bootstrap.css" rel="stylesheet" media="all" />
 
-            .menu ul li{
-                padding:1px;
-                position: relative;
-                width:200px;
-            }
-            .menu ul li a{
-                color:#fff;
-                text-decoration:none;
-            }
+              <!-- BBVA fonts -->
+              <link href="${request.contextPath}/assets/css/style2.css" rel="stylesheet" media="all" />
+              <!--SCRIPTS-->
+              <!---Apple Safari iPad and iPhone Meta Tags-->
+              <meta name="viewport" content="width = device-width"/>
+              <meta name="viewport" content="initial-scale = 1.0"/>
+              <meta name="viewport" content="width = 992, initial-scale = 1, user-scalable = no"/><!--width is pixels, range 200 to 10000-->
+              <meta name="format-detection" content="telephone=no"/> <!--disables automatic detection of possible phone numbers-->
+              <meta name="apple-mobile-web-app-capable" content="yes"/><!--specifies full-screen mode-->
+              <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!--specify full-screen mode first-->
+          </f:facet>
+          <!-- Custom BBVA Theme create by: Alejandro Daza -->
+          <link href="${request.contextPath}/assets/css/style.css" rel="stylesheet" media="all" />
+          <script src="${request.contextPath}/assets/js/bootstrap.min.js"></script>
+          <script src="${request.contextPath}/assets/js/modernizr.custom.js"></script>
+          <script src="${request.contextPath}/assets/js/style1.js"></script>
 
-            .menu ul li:hover > ul{	
-                opacity:1;
-                visibility:visible;
-            }
+</h:head>
+<body  class="homebody">
 
-        </style>
-    </head>
-    <div class="login-page">
-        <div class="form">
-            <form class="register-form">
-                <input type="text" placeholder="name"/>
-                <input type="password" placeholder="password"/>
-                <input type="text" placeholder="email address"/>
-                <button>create</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
-            <form class="login-form">
-                <p:inputText value="#{managedBeanLogIn.name}" type="text" placeholder="username"/>
-                <p:inputText value="#{managedBeanLogIn.password}" type="password" placeholder="password"/>            
-                <h:outputLink  value="onboarding"> Login</h:outputLink>
-                <p class="message">Not registered? <a href="#">Create an account</a></p>
-            </form>
-        </div>
+<div class="container">
+  <div class="col-md-offset-2 col-md-8 col-md-offset-2 homeheader">
+    <header class="headerbbvahome">
+        <span class="col-xs-2 col-sm-2 col-md-2 col-lg-2 titulocorto">AUG</span>
+        <span class="col-xs-8 col-sm-8 col-md-8 col-lg-8 titulolargo">Agenda Única de Gestión</span>
+        <span class="col-xs-2 col-sm-2 col-md-2 col-lg-2 bbvatitulo"> <img src="../assets/img/bbva-icon.png"/></span>
+    </header>
+    <section class="sectionheaderhome">
+    
+        <span>
+          Ingreso
+        </span>
+
+
+    </section>
+  </div>
+
+    <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+      <div class="login-page">
+      <div class="form">
+        <!-- register Form>
+          <form class="register-form">
+              <input type="text" placeholder="name"/>
+              <input type="password" placeholder="password"/>
+              <input type="text" placeholder="email address"/>
+              <button>create</button>
+              <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+        -->
+          <h:form class="login-form">
+              <p class="icon-executive_icon iconhome"> </p>
+              <div class="form-group">
+              <p:inputText value="#{managedBeanLogIn.name}" type="text" placeholder="Usuario*" class="form-control homeusuario"/>
+              </div>
+              <div class="form-group">
+              <p:inputText value="#{managedBeanLogIn.password}" type="password" placeholder="Constraseña*" class="form-control homepassword"/>
+              </div>
+              <h:outputLink  class="btn btn-default homebtn" value="onboarding"> Ingresar</h:outputLink>
+            <!--  <p class="message">Not registered? <a href="#">Create an account</a></p> -->
+          </h:form>
+      </div>
+      </div>
     </div>
+
+
+</div>
+
+</body>
+
+
+
 </html>

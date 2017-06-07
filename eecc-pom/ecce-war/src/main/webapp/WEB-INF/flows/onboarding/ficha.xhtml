@@ -14,9 +14,9 @@
     <ui:define name="content">
         <div class="col-md-2 col-lg-2 modulosFichaPequeños" >
             <div class="panel panel-primary panel2">
-                <div  class="panel-body body2" style="background-color:#043263">
+                <div  class="panel-body body2 fichaprofile" style="background-color:#043263">
                     <span class ="modulo1triangulo"></span>
-                    <p class = "PNN">PNN</p>
+                    <p class = "PNN" id = "popoverData" data-toggle="popover" data-placement="left" data-content="Emprendedor PNN bajo valor" data-trigger="hover">PNN</p>
                     <p class = "fichalogo icon-myprofile_icon"></p>
                     <div class ="fichades">
                     <p>Alvaro Jose </p>
@@ -40,14 +40,14 @@
         <div class="col-md-5 col-lg-5 modulosFichaMedianos" >
             <div class="panel panel-primary panel2">
                 <div class="panel-heading heading2">
-                    <span class="title2">Tenencia:</span>
+                    <span class="title2">Tenencia: Activos</span>
                     <span class="dropdown2">
                             <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
-                            <div class="dropdown-content2">
-                                <a href="#">Oficina</a>
-                                <a href="#">Nombre Apellido</a>
-                                <a href="#">Nombre Apellido</a>
-                                <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                            <div class="dropdown-content2 ddficha">
+                                <a href="#">Activo</a>
+                                <a href="#">Pasivo</a>
+                                <a  class="bordesubmenu" href="#">Servicios</a>
+
                             </div>
                         </span>
                 </div>
@@ -57,32 +57,33 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <span>Consumo (1)</span> <span class="numeroTenencia"> $110.852.00</span> <span class="circle"></span>
+                                        <span>CNS (1)</span> <span class="numeroTenencia"> $200'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Hipotec (2)</span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
+                                        <span>HI (2)</span> <span class="numeroTenencia"> $10'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>T.C VIS</span> <span class="numeroTenencia"> $23.587.00</span> <span class="circle"></span>
+                                        <span>T.C V</span> <span class="numeroTenencia"> $8'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>T.C MAS</span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
+                                        <span>T.C M</span> <span class="numeroTenencia"> $8'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Vehiculo (1)</span > <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
+                                        <span>VEH (1)</span > <span class="numeroTenencia"> $300'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Libranza (1)</span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
+                                        <span>LBZ (1)</span> <span class="numeroTenencia"> $2'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>Otros </span> <span class="numeroTenencia"> $0.00</span> <span class="circle"></span>
+                                        <span>Otros </span> <span class="numeroTenencia"> $7'000.000</span> <span class="circle"></span>
                                     </li>
                                 </ul>
+
 
                             </div>
                             <div class="modulosfooter1">
                                 <p> Total activos: <span>$10.000.000</span> </p>
-                                <p> Participacion <span>0.3%</span></p>
+                                <p> Participación: <span>0.3%</span></p>
                             </div>
 
                         </div>
@@ -94,23 +95,23 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5 col-lg-5 modulosFichaMedianos" >
+        <div class="col-md-5 col-lg-5 modulosFichaMedianos evolucion" >
             <div class="panel panel-primary panel2">
                 <div class="panel-heading heading2">
-                    <span class="title2">Citas para hoy</span>
+                    <span class="title2">Evolución: </span>
                     <span class="dropdown2">
                             <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
-                            <div class="dropdown-content2">
-                                <a href="#">Oficina</a>
-                                <a href="#">Nombre Apellido</a>
-                                <a href="#">Nombre Apellido</a>
-                                <a class="bordesubmenu" href="#">Nombre Apellido</a>
+                            <div class="dropdown-content2 ddficha">
+                                <a href="#">Saldos medios activo</a>
+                                <a href="#">Saldos medios pasivo</a>
+                                <a class="bordesubmenu" href="#">Rentabilidad</a>
+
                             </div>
                         </span>
                 </div>
                 <div  class="panel-body body2">
-                    <div class="fichapiegraf">
-                    <p:chart type="line" model="#{dataTableView.lineModel1}" responsive="true" style="height:180px;"/>
+                    <div class="fichapiegraf linegraf">
+                    <p:chart type="line" model="#{dataTableView.lineModel1}" responsive="true" style="height:177px;" />
                     </div>
                     <div class="modulosfooter2">
                         <p> Rentabilidad acumulada: <span> $20´000.000</span></p>
@@ -119,56 +120,706 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2 modulosFichaPequeños" >
+        <div class="col-md-2 col-lg-2 modulosFichaPequeños camposrelevantes" >
             <div class="modulofichalargo">
                 <div class="panel panel-primary panel2">
                     <div class="panel-heading heading2">
                         <span class="title2">Campos relevantes</span>
-                        <span class="dropdown2">
-                            <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
-                                <div class="dropdown-content2">
-                                    <a href="#">Oficina</a>
-                                    <a href="#">Nombre Apellido</a>
-                                    <a href="#">Nombre Apellido</a>
-                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
-                                </div>
-                            </span>
                     </div>
                     <div class="row row2 panel-body body2 relevantes" style="background-color:#192647 ">
                         <ul>
-                            <li><span class="fichabarra b1"></span> <span class="d1">Onboarding</span><a href="#" class="m1">+</a> </li>
-                            <li> <span class="fichabarra b2"></span> <span class="d1">Alerta de fuga</span> <a href="#" class="m1">+</a></li>
-                            <li> <span class="fichabarra b3"></span> <span class="d1">Deuda vencida</span><a href="#" class="m1">+</a></li>
-                            <li> <span class="fichabarra b4"></span> <span class="d1">Pagare unicó </span><a href="#" class="m1">+</a></li>
-                            <li><span class="fichabarra b5"></span>  <span class="d1">Puntaje buro CIFIN </span ><a href="#" class="m1">+</a></li>
-                            <li> <span class="fichabarra b6"></span> <span class="d1">Quejas y reclamos </span><a  href="#" class="m1">+</a></li>
-                            <li> <span class="fichabarra b7"></span> <span class="d1">Saldos y movimientos </span><a href="#" class="m1">+</a></li>
-
+                            <li><span class="fichabarra b1"></span> <span class="d1">Onboarding</span><a data-toggle="modal" data-target="#ModalOnboarding" class="m1 clickable" href="#">+</a> </li>
+                            <li> <span class="fichabarra b2"></span> <span class="d1">Alerta de fuga</span> <a data-toggle="modal" data-target="#ModalAlerta" class="m1 clickable" href="#">+</a></li>
+                            <li> <span class="fichabarra b3"></span> <span class="d1">Deuda vencida</span><a data-toggle="modal" data-target="#deudavencida" class="m1 clickable" href="#">+</a></li>
+                            <li> <span class="fichabarra b4"></span> <span class="d1">Pagaré único </span><a data-toggle="modal" data-target="#pagareunico" class="m1 clickable" href="#">+</a></li>
+                            <li><span class="fichabarra b5"></span>  <span class="d1">Puntaje buro CIFIN </span ><a data-toggle="modal" data-target="#puntajeburo" class="m1 clickable" href="#">+</a></li>
+                            <li> <span class="fichabarra b6"></span> <span class="d1">Quejas y reclamos </span><a  data-toggle="modal" data-target="#quejas" class="m1 clickable" href="#">+</a></li>
+                            <li> <span class="fichabarra b7"></span> <span class="d1">Saldos y movimientos </span><a data-toggle="modal" data-target="#saldosmovimientos" class="m1 clickable" href="#">+</a></li>
                         </ul>
+                            <div>
+                            <!-- Modales  Onbarding-->
+                              <div id="ModalOnboarding" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Onboarding</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>
+                                        Datos basicos
+                                      </span>
+                                    </div>
+                                    <div class="datosbasicos">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            Nombre:
+                                            <span>
+                                              Alvaro José
+                                              Rodríguez Aristizabal
+                                            </span>
+                                          </p>
+                                          <p>
+                                            Tipo de documento:
+                                            <span>
+                                              Cédula de ciudadanía
+                                            </span>
+                                          </p>
+                                          <p>
+                                            Oportunidad:
+                                            <span>
+                                              Lorem ipsum
+                                            </span>
+                                          </p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            Documento:
+                                            <span>
+                                              00000000000000
+                                            </span>
+                                          </p>
+                                          <p>
+                                            Segmento:
+                                            <span>
+                                              Emprendedor PNN bajo valor
+                                            </span>
+                                          </p>
+                                          <p>
+                                            Prioridad:
+                                            <span>
+                                              1
+                                            </span>
+                                          </p>
+                                          <p>
+                                            Vigencia:
 
+                                            <span> 00-00-0000 a 00-00-0000</span>
+                                          </p>
+
+                                        </div>
+                                      </row>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Ofertas de la etapa 1</span> <span class="fvencimiento">Vencimiento 00-00-0000</span>
+                                    </div>
+                                    <div class="ofertas1">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            Welcome kit
+                                            <span class="icon-checkmark_icon"></span>
+                                          </p>
+                                          <p>
+                                            Banca Movil
+                                            <span class="icon-close_icon"></span>
+                                          </p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+
+                                        </div>
+                                      </row>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Ofertas de la etapa 2</span> <span class="fvencimiento">Vencimiento 00-00-0000</span>
+                                    </div>
+                                    <div class="ofertas2">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            Compra de cartera
+                                            <span class="icon-checkmark_icon"></span>
+                                          </p>
+                                          <p>
+                                            Consumo
+                                            <span class="icon-close_icon"></span>
+                                          </p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            TDC
+                                            <span class="icon-checkmark_icon">
+
+                                            </span>
+                                          </p>
+                                          <p>
+                                            Cta. Ahorros
+                                            <span class="icon-close_icon"></span>
+                                          </p>
+                                        </div>
+                                      </row>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Ofertas de la etapa 3</span> <span class="fvencimiento">Vencimiento 00-00-0000</span>
+                                    </div>
+                                    <div class="ofertas3">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            Aplicar Irene
+                                            <span class="icon-checkmark_icon"></span>
+                                          </p>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+
+                                        </div>
+                                      </row>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Ofertas de la etapa 4</span> <span class="fvencimiento">En curso</span>
+                                    </div>
+                                    <div class="ofertas4">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>
+                                            Preaprobado
+                                            <span class="icon-checkmark_icon"></span>
+                                          </p>
+                                          <p>
+                                            CDT
+                                            <span class="icon-close_icon"></span>
+                                          </p>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+
+                                        </div>
+                                      </row>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Respuesta de la gestión</span>
+                                    </div>
+                                    <div class="respuestaGestion">
+                                      <p class="fgestion">Fecha y hora de la gestion: <span class="fsgestion" >01 de enero de 2017 a las 18:24 pm</span> <span class="icon-edit_icon figestion"></span></p>
+
+                                      <p>
+                                        <span>Respuesta</span>
+
+                                        <span> <select class="form-control" id="sel1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                              </select>
+                                        </span>
+                                      </p>
+                                      <p>
+                                        <span>Motivo</span>
+
+                                        <span> <select class="form-control" id="sel1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                              </select>
+                                        </span>
+                                      </p>
+                                      <p>
+                                        Comentarios
+                                      </p>
+                                      <p>
+                                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                                      </p>
+                                      <div class="btnrespuesta">
+                                        <a class= "respuestaGestionbtn" href="#">
+                                          Guardar
+                                        </a>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Modal Alerta de Fuga -->
+                              <div id="ModalAlerta" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Alerta de  fuga</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Productos</span>
+                                    </div>
+                                    <div class="datosbasicos alertadefuga">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Nombre:<span>Hipotecario</span></p>
+                                          <p>TDC<span>No</span></p>
+                                          <p>Pasivo<span>CDT</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                        </div>
+                                      </row>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Fin modal Alerta de Fuga -->
+                              <!-- Modal Alerta de Fuga -->
+                              <div id="ModalAlerta" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Alerta de  fuga</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Productos</span>
+                                    </div>
+                                    <div class="datosbasicos alertadefuga">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Nombre:<span>Hipotecario</span></p>
+                                          <p>TDC<span>No</span></p>
+                                          <p>Pasivo<span>CDT</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                        </div>
+                                      </row>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Fin modal Alerta de Fuga -->
+                              <!-- Modal Pagare unico -->
+                              <div id="pagareunico" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Campos relevantes</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Pagaré único</span>
+                                    </div>
+                                    <div class="datosbasicos pagareunico">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Tiene:<span>Si</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                        </div>
+                                      </row>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Fin Campos relevantes -->
+                              <!-- Modal Deuda vencida -->
+                              <div id="deudavencida" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Campos relevantes</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Deuda vencida</span>
+                                    </div>
+                                    <div class="datosbasicos pagareunico">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Monto:<span>$10.000.000.00</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Dias:<span>21</span></p>
+                                        </div>
+                                      </row>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Fin Campos relevantes Deuda vencida-->
+                              <!-- Modal Deuda vencida -->
+                              <div id="puntajeburo" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Campos relevantes</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Puntaje Buro CIFIN</span>
+                                    </div>
+                                    <div class="datosbasicos puntajeburo">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Fecha:<span>01 de Febrero de 2017</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Puntaje CIFIN:<span>813</span></p>
+                                        </div>
+                                      </row>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Fin Campos relevantes Deuda vencida-->
+                              <!-- Modal Deuda vencida -->
+                              <div id="quejas" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Campos relevantes</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Quejas y reclamos</span>
+                                    </div>
+                                    <div class="datosbasicos puntajeburo">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>N° de quejas:<span>1</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Radicado<span>Kronos - #123456</span></p>
+                                        </div>
+                                      </row>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Fin Campos relevantes Deuda vencida-->
+                              <div id="saldosmovimientos2" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Saldos y movimientos</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Detalle de la cuenta</span>
+                                    </div>
+                                    <div class="datosbasicos pagareunico">
+                                      <row>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Numero de la cuenta:<span>13123123123</span></p>
+                                          <p>Tipo de cuenta:<span>Ahorros</span></p>
+                                          <p>Oficina:<span>Chico reservado</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                          <p>Saldo Total:<span>$1'000.000.00</span></p>
+                                          <p>Saldo disponible:<span>$1'000.000.00</span></p>
+                                          <p>Saldo en canje:<span>$1'000.000.00</span></p>
+                                        </div>
+                                      </row>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Detalle de la transacciones</span>
+                                    </div>
+                                    <div class="t1">
+                                      <h:form id="table11">
+                                      <p:dataTable var="detalledetransacciones" value="#{dataTableView.detalledetransacciones}">
+                                          <p:column headerText="Fecha operación">
+                                              <h:outputText value="#{detalledetransacciones.fechaoperacion}"/>
+                                          </p:column>
+                                          <p:column headerText="Fecha valor">
+                                              <h:outputText value="#{detalledetransacciones.fechavalor}"/>
+                                          </p:column>
+                                          <p:column headerText="Concepto">
+                                              <h:outputText value="#{detalledetransacciones.concepto}"/>
+                                          </p:column>
+                                          <p:column headerText="Valor">
+                                              <h:outputText value="#{detalledetransacciones.valor}"/>
+                                          </p:column>
+                                      </p:dataTable>
+                                      </h:form>
+                                    </div>
+                                    <div class="btnrespuesta2">
+                                      <a class= "respuestaGestionbtn" href="#">
+                                        Volver
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div id="saldosmovimientos" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                  <!-- Modal content-->
+                                  <div class="modal-content modelficha1">
+                                    <div class="modal-header modelficha1header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <span>Saldos y movimientos</span>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Cuentas personales</span>
+                                    </div>
+                                    <div class="t2">
+                                      <h:form id="table12">
+                                          <p:dataTable var="cuentaspersonales" value="#{dataTableView.cuentaspersonales}">
+                                              <p:column headerText="Número de cuenta">
+                                                  <h:outputText value="#{cuentaspersonales.numerodeproducto}"/>
+                                              </p:column>
+                                              <p:column headerText="Tipo">
+                                                  <h:outputText value="#{cuentaspersonales.tipo}"/>
+                                              </p:column>
+                                              <p:column headerText="Saldo total">
+                                                  <h:outputText value="#{cuentaspersonales.saldototal}"/>
+                                              </p:column>
+                                              <p:column headerText="Saldo Disponible">
+                                                  <h:outputText value="#{cuentaspersonales.saldodisponible}"/>
+                                              </p:column>
+                                              <p:column>
+                                                  <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                              </p:column>
+                                          </p:dataTable>
+                                      </h:form>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Fondo de inversión</span>
+                                    </div>
+                                    <div class="t3">
+                                      <h:form id="table13">
+                                      <p:dataTable var="fondodeinversion" value="#{dataTableView.fondodeinversion}">
+                                          <p:column headerText="Número fondo">
+                                              <h:outputText value="#{fondodeinversion.numerodeproducto}"/>
+                                          </p:column>
+                                          <p:column headerText="Tipo">
+                                              <h:outputText value="#{fondodeinversion.tipo}"/>
+                                          </p:column>
+                                          <p:column headerText="Saldo total">
+                                              <h:outputText value="#{fondodeinversion.saldototal}"/>
+                                          </p:column>
+                                          <p:column headerText="Saldo disp a reembolsar">
+                                              <h:outputText value="#{fondodeinversion.saldodisponible}"/>
+                                          </p:column>
+                                          <p:column>
+                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                          </p:column>
+                                      </p:dataTable>
+                                      </h:form>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Préstamos</span>
+                                    </div>
+                                    <div class="t4">
+                                      <h:form id="table14">
+                                      <p:dataTable var="prestamos" value="#{dataTableView.prestamos}">
+                                          <p:column headerText="Número prestamo">
+                                              <h:outputText value="#{prestamos.numerodeproducto}"/>
+                                          </p:column>
+                                          <p:column headerText="Tipo">
+                                              <h:outputText value="#{prestamos.tipo}"/>
+                                          </p:column>
+                                          <p:column headerText="Total adeudado">
+                                              <h:outputText value="#{prestamos.saldototal}"/>
+                                          </p:column>
+                                          <p:column headerText="Total vencido">
+                                              <h:outputText value="#{prestamos.saldodisponible}"/>
+                                          </p:column>
+                                          <p:column>
+                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                          </p:column>
+                                      </p:dataTable>
+                                      </h:form>
+                                    </div>
+                                    <div class="modelficha1subheader">
+                                      <span>Tarjeta de crédito</span>
+                                    </div>
+                                    <div class="t5">
+                                      <h:form id="table15">
+                                      <p:dataTable var="tarjetadecredito" value="#{dataTableView.tarjetadecredito}">
+                                          <p:column headerText="Número tarjeta">
+                                              <h:outputText value="#{tarjetadecredito.numerodeproducto}"/>
+                                          </p:column>
+                                          <p:column headerText="Tipo">
+                                              <h:outputText value="#{tarjetadecredito.tipo}"/>
+                                          </p:column>
+                                          <p:column headerText="Cupo total">
+                                              <h:outputText value="#{tarjetadecredito.saldototal}"/>
+                                          </p:column>
+                                          <p:column headerText="Cupo Disponible">
+                                              <h:outputText value="#{tarjetadecredito.saldodisponible}"/>
+                                          </p:column>
+                                          <p:column>
+                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                          </p:column>
+                                      </p:dataTable>
+                                      </h:form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+
+
+
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="panel panel-primary panel2">
                 <div class="row panel-heading heading2">
-                    <span class="title2">Informacion del cliente</span>
-                    <span class="dropdown2">
-                            <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
-                                <div class="dropdown-content2">
-                                    <a href="#">Oficina</a>
-                                    <a href="#">Nombre Apellido</a>
-                                    <a href="#">Nombre Apellido</a>
-                                    <a class="bordesubmenu" href="#">Nombre Apellido</a>
-                                </div>
-                        </span>
-                </div>
+                    <span class="title2 clickable" data-toggle="modal" data-target="#datosbasicos" href="#">Información del cliente</span>
+                  </div>
                 <div class="row row2 panel-body body2 informacion modulofichacortoizq" style="background-color:#192647 ">
                     <ul>
-                        <li> <span class="d1">Datos básicos</span><a href="#" class="m1">+</a> </li>
-                        <li> <span class="d1">Datos de contacto</span> <a href="#" class="m1">+</a></li>
-                        <li> <span class="d1">Perfl BBVA</span><a  href="#" class="m1">+</a></li>
-                        <li> <span class="d1">Informacion fnanciera </span><a href="#" class="m1">+</a></li>
+                        <li> <span class="d1">Datos básicos</span><a data-toggle="modal" data-target="#datosbasicos" href="#" class="m1 clickable">+</a> </li>
+                        <li> <span class="d1">Datos de contacto</span> <a data-toggle="modal" data-target="#datoscontacto" href="#" class="m1 clickable">+</a></li>
+                        <li> <span class="d1">Perfil BBVA</span><a data-toggle="modal" data-target="#perfilbbva" href="#" class="m1 clickable">+</a></li>
+                        <li> <span class="d1">Información financiera </span><a data-toggle="modal" data-target="#informacionfinanciera" href="#" class="m1 clickable">+</a></li>
                     </ul>
+
+
+                    <!-- Modal InformacionCliente -->
+                    <div id="datosbasicos" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content modelficha1">
+                          <div class="modal-header modelficha1header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <span>Información del cliente</span>
+                          </div>
+                          <div class="modelficha1subheader">
+                            <span>
+                              Datos básicos
+                            </span>
+                          </div>
+                          <div class="datosbasicos datosbasicos1">
+                            <row>
+                              <div class="col-md-6 col-lg-6">
+                                <p>Nombre:<span>Ricardo Daniel Rodriguez Melo</span></p>
+                                <p>Tipo de Documento:<span>Cedula</span></p>
+                                <p>Edad:<span>50 años</span></p>
+                                <p>Sexo:<span>Masculino</span></p>
+                                <p>Fecha de Nacimiento<span>30-05-1977</span></p>
+                                <p>Nacionalidad<span>Colombiano</span></p>
+                                <p>Estrato<span>3</span></p>
+                              </div>
+                              <div class="col-md-6 col-lg-6">
+                                <p>Ciudad Nacimiento:<span>Bogota</span></p>
+                                <p>Estado Civil:<span>Casado</span></p>
+                                <p>Empresa donde:<span>BBVA</span></p>
+                                <p>Labora:<span>3 años</span></p>
+                                <p>Antiguedad Empleo:<span>Independiente</span></p>
+                                <p>Situacion Laboral:<span>Activo</span></p>
+                                <p>Ocupacion/Profesion:<span>Arquitecto</span></p>
+                                <p>Emisor Nomina:<span>Xxxxxxx</span></p>
+                              </div>
+                            </row>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fin modal InformacionCliente -->
+                    <!-- Modal InformacionCliente datos contacto-->
+                    <div id="datoscontacto" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content modelficha1">
+                          <div class="modal-header modelficha1header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <span>Información del cliente</span>
+                          </div>
+                          <div class="modelficha1subheader">
+                            <span>
+                              Datos de contacto
+                            </span>
+                          </div>
+                          <div class="datosbasicos datoscontacto">
+                            <row>
+                              <div class="col-md-6 col-lg-6">
+                                <p>Tel Principal:<span>267687</span></p>
+                                <p>Tel2:<span>n/a</span></p>
+                                <p>Celular:<span>300 2098762</span></p>
+                                <p>Datos de Contacto:<span>3024567890</span></p>
+                                <p>CIFIN:<span>031 428 4455 3103098877</span></p>
+                              </div>
+                              <div class="col-md-6 col-lg-6">
+                                <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
+                                <p>Correo Electronico:<span>ricardorome@gmail.com</span></p>
+                                <p>Referencia Cliente:<span>A54909873</span></p>
+                              </div>
+                            </row>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fin modal InformacionCliente datos contacto -->
+                    <!-- Modal InformacionCliente informacion financiera-->
+                    <div id="informacionfinanciera" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content modelficha1">
+                          <div class="modal-header modelficha1header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <span>Información del cliente</span>
+                          </div>
+                          <div class="modelficha1subheader">
+                            <span>
+                              Información financiera
+                            </span>
+                          </div>
+                          <div class="datosbasicos">
+                            <row>
+                              <div class="col-md-6 col-lg-6">
+                                <p>Patrimonio:<span>$200.000.000</span></p>
+                                <p>Activo:<span>$500.000.000</span></p>
+                                <p>Pasivo:<span>$300.000.000</span></p>
+                                <p>Total Ingresos:<span>$3.000.000</span></p>
+                                <p>Declara Renta:<span>Si</span></p>
+                              </div>
+                              <div class="col-md-6 col-lg-6">
+                                <p># Personad a Cargo:<span>3</span></p>
+                                <p>Puntaje Burro Cifin:<span>345</span></p>
+                                <p>Calificacion Financiera:<span>100</span></p>
+                                <p>Limites Vta Cruzada:<span>876</span></p>
+                              </div>
+                            </row>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fin modal InformacionCliente informacion financiera-->
+                    <!-- Modal InformacionCliente perfil BBVA-->
+                    <div id="perfilbbva" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content modelficha1">
+                          <div class="modal-header modelficha1header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <span>Información del cliente</span>
+                          </div>
+                          <div class="modelficha1subheader">
+                            <span>
+                              Perfil BBVA
+                            </span>
+                          </div>
+                          <div class="datosbasicos">
+                            <row>
+                              <div class="col-md-6 col-lg-6">
+                                <p># Cliente Altamira:<span>12345678</span></p>
+                                <p>Gestor Ppal:<span>12345678</span></p>
+                                <p>Oficina Ppal:<span>Av Chile</span></p>
+                                <p>Antiguedad Cliente:<span>2010-10-10</span></p>
+                                <p>Puntos de Gestion:<span>003</span></p>
+                              </div>
+                              <div class="col-md-6 col-lg-6">
+                                <p>Segmento:<span>Banca personal</span></p>
+                                <p>Cuadrante:<span>Cuadrante</span></p>
+                                <p>Colectivo:<span>Otros</span></p>
+                                <p>Subcolectivo:<span>Otros</span></p>
+                              </div>
+                            </row>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fin modal InformacionCliente  perfil BBVA-->
 
                 </div>
             </div>
@@ -178,19 +829,19 @@
             <div class="panel panel-primary panel2">
                 <div class="panel-heading heading2 headingficha">
                     <ul class="nav nav-tabs fichatabs">
-                        <li class="active"><a data-toggle="tab" href="#home">Campañas del cliente</a></li>
-                        <li><a data-toggle="tab" href="#menu1">Campañas vigentes</a></li>
-                        <li><a data-toggle="tab" href="#menu2">Historico de campañas</a></li>
+                        <li><a class="campañatitulo">Campañas del cliente<span class="icon-download_icon iconcampañas"></span></a></li>
+                        <li class="active"><a data-toggle="tab" href="#menu1">Campañas vigentes</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Histórico de campañas</a></li>
                         <li><a data-toggle="tab" href="#menu3">Mejor siguiente venta</a></li>
                     </ul>
                 </div>
                 <div  class="panel-body body2">
                     <div class="tab-content">
-                        <div id="home" class="tab-pane fade in active">
+                        <div id="menu1" class="tab-pane fade in active">
                             <div class="campañastabla">
                             <h:form id="table1">
 
-                                <p:dataTable var="campañas" value="#{dataTableView.campañasList}"
+                                <p:dataTable var="campañas" value="#{dataTableView.campanasList}"
                                              rows="5"
                                              paginator="true"
                                              paginatorTemplate=" {PreviousPageLink} {PageLinks} {NextPageLink}"
@@ -198,7 +849,7 @@
                                              paginatorPosition="bottom"
                                 >
                                     <p:column headerText="Campaña">
-                                        <h:outputText value="#{campañas.campaña}"/>
+                                        <h:outputText value="#{campañas.campana}"/>
                                     </p:column>
                                     <p:column headerText="Estado">
                                         <h:outputText value="#{campañas.estado}"/>
@@ -207,37 +858,37 @@
                                         <h:outputText value="#{campañas.gestor}"/>
                                     </p:column>
                                     <p:column headerText="Acciones">
-                                        <a class="iconc icon-calendar_icon"></a>
-                                        <a class="iconc icon-edit_icon"></a>
-                                        <a class="iconc icon-historic_icon"></a>
-                                        <a class="iconc icon-alert_icon"></a>
-                                        <a class="iconc icon-return_icon"></a>
+
+                                        <a  data-toggle="popover" data-placement="left" data-content="Gestionar" class="iconc icon-calendar_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="Cambiar respuesta" class="iconc icon-edit_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="algo" class="iconc icon-historic_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="algo" class="iconc icon-alert_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="algo" class="iconc icon-return_icon" data-trigger="hover"></a>
                                     </p:column>
                                 </p:dataTable>
                             </h:form>
                             </div>
                         </div>
-                        <div id="menu1" class="tab-pane fade">
-                            <row>
-                               <div class="col-md-4 col-lg-4">Activo</div>
-                                <div class="col-md-4 col-lg-4">Pasivo</div>
-                                <div class="col-md-4 col-lg-4">Servicios</div>
-                            </row>
-                            <row>
-                                <div class="col-md-4 col-lg-4">TDC</div>
-                                <div class="col-md-4 col-lg-4">Cta corriente</div>
-                                <div class="col-md-4 col-lg-4">BBVA Net</div>
-
-                            </row>
-                            <row>
-                                <div class="col-md-4 col-lg-4">Consumo</div>
-                                <div class="col-md-4 col-lg-4"></div>
-                                <div class="col-md-4 col-lg-4">BBVA movil</div>
-                            </row>
-                        </div>
                         <div id="menu2" class="tab-pane fade">
-                            <h3>Menu 2</h3>
-                            <p>Some content in menu 2.</p>
+
+                        </div>
+                        <div id="menu3" class="tab-pane fade">
+                          <row>
+                             <div class="col-md-4 col-lg-4  vigentesTitulo">Activo</div>
+                              <div class="col-md-4 col-lg-4 vigentesTitulo">Pasivo</div>
+                              <div class="col-md-4 col-lg-4 vigentesTitulo">Servicios</div>
+                          </row>
+                          <row>
+                              <div class="col-md-4 col-lg-4 vigentesRow rojo">TDC <span></span></div>
+                              <div class="col-md-4 col-lg-4 vigentesRow verde">Cta corriente <span></span> </div>
+                              <div class="col-md-4 col-lg-4 vigentesRow rojo">BBVA Net <span></span> </div>
+
+                          </row>
+                          <row>
+                              <div class="col-md-4 col-lg-4 vigentesRow verde">Consumo <span></span> </div>
+                              <div class="col-md-4 col-lg-4 vigentesRow"></div>
+                              <div class="col-md-4 col-lg-4 vigentesRow verde">BBVA movil <span></span> </div>
+                          </row>
                         </div>
                     </div>
                 </div>

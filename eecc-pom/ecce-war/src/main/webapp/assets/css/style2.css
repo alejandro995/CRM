@@ -806,3 +806,25 @@
   content: "\e9c3";
   color: #2a86ca;
 }
+
+.fichapie > div > ul > li:nth-child(1) > .circle {
+  background-color: #4bb2c5;
+}
+.fichapie > div > ul > li:nth-child(2) > .circle {
+  background-color: #eaa228;
+}
+.fichapie > div > ul > li:nth-child(3) > .circle {
+  background-color: #c5b47f;
+}
+.fichapie > div > ul > li:nth-child(4) > .circle {
+  background-color: #579575;
+}
+.fichapie > div > ul > li:nth-child(5) > .circle {
+  background-color: #839557;
+}
+.fichapie > div > ul > li:nth-child(6) > .circle {
+  background-color: #958c12;
+}
+.fichapie > div > ul > li:nth-child(7) > .circle {
+  background-color: #953579;
+}
