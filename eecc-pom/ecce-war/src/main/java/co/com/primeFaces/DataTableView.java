@@ -197,6 +197,8 @@ public class DataTableView implements Serializable {
         Axis yAxis = lineModel1.getAxis(AxisType.Y);
         yAxis.setMin(0);
         yAxis.setMax(1000000);
+        yAxis.setTickFormat("%d");
+        lineModel1.getAxes().put(AxisType.Y, yAxis);
 
 
 

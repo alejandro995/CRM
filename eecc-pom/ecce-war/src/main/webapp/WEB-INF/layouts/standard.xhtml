@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:h="http://java.sun.com/jsf/html"
@@ -14,7 +14,7 @@
 
             <f:facet name="first">
                 <meta charset="utf-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11; IE=10; IE=9; IE=8; IE=7"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11; IE=10; IE=9; IE=8; IE=7, chrome=1"/>
                 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
                 <title>BBVA</title>
                 <!-- BOOTSTRAP STYLES-->
@@ -24,18 +24,24 @@
                 <link href="${request.contextPath}/assets/css/style2.css" rel="stylesheet" media="all" />
                 <!--SCRIPTS-->
                 <!---Apple Safari iPad and iPhone Meta Tags-->
-                <meta name="viewport" content="width = device-width"/>
-                <meta name="viewport" content="initial-scale = 1.0"/>
-                <meta name="viewport" content="width = 992, initial-scale = 1, user-scalable = no"/><!--width is pixels, range 200 to 10000-->
+                <meta name="viewport" content="width=device-width"/>
+                <meta name="viewport" content="initial-scale=1.0"/>
+                <meta name="viewport" content="width=992, initial-scale=1, user-scalable=no"/><!--width is pixels, range 200 to 10000-->
                 <meta name="format-detection" content="telephone=no"/> <!--disables automatic detection of possible phone numbers-->
                 <meta name="apple-mobile-web-app-capable" content="yes"/><!--specifies full-screen mode-->
                 <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!--specify full-screen mode first-->
             </f:facet>
             <!-- Custom BBVA Theme create by: Alejandro Daza -->
             <link href="${request.contextPath}/assets/css/style.css" rel="stylesheet" media="all" />
+            <link rel="stylesheet" type="text/css" href="${request.contextPath}/assets/css/default.css" />
+            <link rel="stylesheet" type="text/css" href="${request.contextPath}/assets/css/component.css" />
             <script src="${request.contextPath}/assets/js/bootstrap.min.js"></script>
             <script src="${request.contextPath}/assets/js/modernizr.custom.js"></script>
             <script src="${request.contextPath}/assets/js/style1.js"></script>
+            <script src="http://192.168.0.3:1337/vorlon.js"></script>
+            <script src="${request.contextPath}/assets/js/classie.js"></script>
+
+
 
 
 
@@ -43,6 +49,20 @@
         </h:head>
 
         <h:body>
+            <script>
+                $(document).ready(function(){
+                    //Check if the current URL contains '#'
+                    if(document.URL.indexOf("#")==-1){
+                        // Set the URL to whatever it was plus "#".
+                        url = document.URL+"#";
+                        location = "#";
+
+                        //Reload the page
+                        location.reload(true);
+                    }
+                });
+            </script>
+
             <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
 
             <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
@@ -68,18 +88,82 @@
                 </h:form>
                 </div>
             </section>
-            <div class="container pagina clearfix">
+            <div class="col-md-4 information nopaddingleft nopaddingright">
+                <ul class="information_menu">
+                    <li class="active" data-id="1"><a href="onboarding"><i class="icon-home_icon"></i></a></li>
+                    <li data-id="2"><a id="showLeft"><i class="icon-menu_icon"></i></a></li>
+                    <div class="spacing"></div>
+                    <li data-id="3"><a href="#"><i class="icon-settings_icon"></i></a></li>
+                    <li data-id="4"><a href="#"><i class="icon-help_icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i></a></li>
+                </ul>
+            </div>
+            <nav class="zmenu1 cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+                <ul class="information_menunivel1">
+                    <li class="active" data-id="1"><a href="#" class="mperfil">
+                        <img src="../assets/img/perfil.png"  style="  width: 30%;  position: absolute; left: 13px;top: 13px;" />
+                        <ul class="menuPerfil">
+                            <li>
+                                Luci Santodomingo
+                            </li>
+                            <li>
+                                Gerente
+                            </li>
+                            <li>
+                                Oficina Calle 123
+                            </li>
+                            <li>
+                                Bogotá
+                            </li>
+                        </ul>
+                    </a></li>
+                    <li><a id="showRight" href="#"><p>Gestion comercial <span class="icon-forward_icon flechas"></span></p></a></li>
+                    <li><a  href="#"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
+                    <li><a  href="#"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li><a  href="#"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li><a  href="#"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
+                    <li><a href="#"><p>Alerta de fuga</p></a></li>
+                </ul>
+            </nav>
+            <nav class=" zmenu2 cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s2">
+                <ul class="information_menunivel2">
+                    <li class="active">
+                        <a href="#">
+                            <ul class="menuPerfil3">
+                            </ul>
+                        </a>
+                    </li>
+                    <li ><a id="showTop" href="#"><p>Citas para hoy <span class="icon-forward_icon flechas"></span></p></a></li>
+                    <li><a  href="#"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li data-id="4"><a   href="#"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
+                </ul>
+            </nav>
+            <nav class=" zmenu3 cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s3">
+                <ul class="information_menunivel3">
+                    <li class="active" data-id="1">
+                        <a href="#">
+                            <ul class="menuPerfil3">
+                            </ul>
+                        </a>
+                    </li>
+                    <li><a href="#"><p>Propia</p></a></li>
+                    <li><a href="#"><p>Mis Ejecutivos </p></a></li>
+
+                </ul>
+            </nav>
+            <div class="container pagina">
+
                 <div class="col-md-1 col-lg-1 menu2">
+                    <!--
                         <div class="col-md-4 information nopaddingleft nopaddingright">
                             <ul class="information_menu">
                                 <li class="active" data-id="1"><a href="onboarding"><i class="icon-home_icon"></i></a></li>
-                                <li data-id="2"><a id="showmenu1"><i class="icon-menu_icon"></i></a></li>
+                                <li data-id="2"><a id="showmenu1"  onclick="" ><i class="icon-menu_icon"></i></a></li>
                                 <div class="spacing"></div>
                                 <li data-id="3"><a href="#"><i class="icon-settings_icon"></i></a></li>
                                 <li data-id="4"><a href="#"><i class="icon-help_icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i></a></li>
                             </ul>
                         </div>
-                        <!-- Sidebar -->
+
                         <div class="menunivel1 menunivelleft1" id="menunivel1">
                             <ul class="information_menunivel1">
                                 <li class="active" data-id="1"><a href="#">
@@ -99,29 +183,29 @@
                                         </li>
                                     </ul>
                                 </a></li>
-                                <li data-id="2"><a id="showmenu2" href="#"><p>Gestion comercial <span class="icon-forward_icon flechas"></span></p></a></li>
-                                <li data-id="3"><a id="showmenu2" href="#"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
-                                <li data-id="4"><a id="showmenu2" href="#"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
-                                <li data-id="4"><a id="showmenu2" href="#"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
-                                <li data-id="4"><a id="showmenu2" href="#"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
-                                <li data-id="4"><a href="#"><p>Alerta de fuga</p></a></li>
+                                <li><a id="showmenu2" href="#"  onclick="" ><p>Gestion comercial <span class="icon-forward_icon flechas"></span></p></a></li>
+                                <li><a  href="#"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
+                                <li><a  href="#"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                <li><a  href="#"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                <li><a  href="#"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
+                                <li><a href="#"><p>Alerta de fuga</p></a></li>
                             </ul>
 
-                            <!-- Sidebar -->
+
                             <div class="menunivel2 menunivelleft2" id="menunivel2">
                                 <ul class="information_menunivel2">
-                                    <li class="active" data-id="1">
+                                    <li class="active">
                                         <a href="#">
                                             <ul class="menuPerfil">
                                             </ul>
                                         </a>
                                     </li>
-                                    <li data-id="2"><a  id="showmenu3" href="#"><p>Citas para hoy <span class="icon-forward_icon flechas"></span></p></a></li>
-                                    <li data-id="3"><a  id="showmenu3" href="#"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
-                                    <li data-id="4"><a  id="showmenu3" href="#"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                    <li ><a  id="showmenu3" href="#" onclick=""><p>Citas para hoy <span class="icon-forward_icon flechas"></span></p></a></li>
+                                    <li><a   href="#"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
+                                    <li data-id="4"><a   href="#"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
                                 </ul>
 
-                                <!-- Sidebar -->
+
                                 <div class="menunivel3 menunivelleft3" id="menunivel3">
                                     <ul class="information_menunivel3">
                                         <li class="active" data-id="1">
@@ -130,8 +214,8 @@
                                                 </ul>
                                             </a>
                                         </li>
-                                        <li data-id="2"><a href="#"><p>Propia</p></a></li>
-                                        <li data-id="3"><a href="#"><p>Mis Ejecutivos </p></a></li>
+                                        <li><a href="#"><p>Propia</p></a></li>
+                                        <li><a href="#"><p>Mis Ejecutivos </p></a></li>
 
                                     </ul>
                                 </div>
@@ -140,12 +224,12 @@
                             </div>
 
                         </div>
-
+-->
                 </div>
                 <!-- Page Content -->
                 <div class="col-md-11 col-lg-11 contenedorderecha clearfix">
                     <div class="row contenedorModulos clearfix">
-                        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
 
 
                         <h:form id="principalForm">
@@ -157,40 +241,37 @@
                 <!-- /#page-content-wrapper -->
             <!-- /#wrapper -->
             </div>
-            <script src="${request.contextPath}/assets/js/classie.js"></script>
             <script>
-                var menunivel1 = document.getElementById('menunivel1'),
-                    menunivel2 = document.getElementById('menunivel2'),
-                    menunivel3 = document.getElementById('menunivel3');
-
-                    $("#showmenu1").click(function(){
-                      classie.toggle(this, 'active');
-                      classie.toggle(menunivel1, 'menu1open');
-                    });
-
-                    $("#showmenu2").click(function(){
-                      classie.toggle(this, 'active');
-                      classie.toggle(menunivel2, 'menu2open');
-                    });
-
-                    $("#showmenu3").click(function(){
-                      classie.toggle(this, 'active');
-                      classie.toggle(menunivel3, 'menu3open');
-                    });
+                var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+                    menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+                    menuTop = document.getElementById( 'cbp-spmenu-s3' ),
+                    menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
+                    showLeft = document.getElementById( 'showLeft' ),
+                    showRight = document.getElementById( 'showRight' ),
+                    showTop = document.getElementById( 'showTop' ),
+                    showBottom = document.getElementById( 'showBottom' ),
+                    showLeftPush = document.getElementById( 'showLeftPush' ),
+                    showRightPush = document.getElementById( 'showRightPush' ),
+                    body = document.body;
 
 
 
+                showLeft.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuLeft, 'cbp-spmenu-open' );
+                };
+                showRight.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuRight, 'cbp-spmenu-open2' );
 
-                function w3_open() {
-                    if(document.getElementById("menunivel1").style.left == "70px"){
+                };
+                showTop.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuTop, 'cbp-spmenu-open3' );
 
-                        document.getElementById("myOverlay").style.display = "block";
-                    }else{
-                        document.getElementById("myOverlay").style.display = "none";
-                    }
+                };
 
 
-                }
 
             </script>
 

@@ -64,6 +64,7 @@ h3 {
     z-index: 5;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    top: 0px;
 }
 .information h3 {
   font-family: 'BentonSansBBVA-Medium';
@@ -109,9 +110,11 @@ h3 {
   font-family: 'BentonSansBBVA-Medium';
     color: #fff;
     display: block;
-    padding-top: 14px;
+
     padding-right: 10px;
-    padding-left: 20px;
+
+    padding-top: 22px;
+    padding-left: 23px;
     padding-bottom: 10px;
     font-size: 15px;
     font-size: 1.5rem;
@@ -364,11 +367,11 @@ body,
 }
 
  .menunivel1{
-   display: block;
+     display: block;
    height: 100%;
     width: 0px;
     background-color: #004481;
-    position: relative;
+    position: fixed;
     z-index: 4;
     overflow: auto;
 
@@ -440,11 +443,11 @@ body,
  }
 
  .menunivel2{
-   display: block;
+     display: block;
    height: 100%;
     width: 280px;
     background-color: #2A86CA;
-    position: relative;
+    position: fixed;
     z-index: 2;
     overflow: auto;
 
@@ -463,11 +466,12 @@ body,
 
 
  .information_menunivel2{
+
    height: 100%;
     width: 283px;
     background-color: #2A86CA;
     position: fixed!important;
-    z-index: 3;
+    z-index: 1003;
     overflow: auto;
     padding-left: 0px;
      transform: translateZ(0);
@@ -517,12 +521,12 @@ body,
 
 
  .menunivel3{
-   display: block;
+     display: block;
    height: 100%;
     width: 280px;
     background-color: #5BBEFF;
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    z-index: 1000;
     overflow: auto;
 
     -webkit-transition: all 0.3s ease;
@@ -540,6 +544,7 @@ body,
 
 
  .information_menunivel3{
+
    height: 100%;
     width: 283px;
     background-color: #5BBEFF;
@@ -653,6 +658,10 @@ body,
 
 @media (min-width: 992px) {
 
+
+    .m1t{
+        display: block !important;
+    }
   .camposrelevantes{
         float: left;
   }
@@ -679,6 +688,9 @@ body,
     .sectionheader .container{
         padding-left: 0px;
         width: 1105px;
+    }
+    .m1t{
+        display: none !important;
     }
 }
 
@@ -2836,10 +2848,76 @@ top: 128px
     bottom: 0px;
     bottom: 25px !important;
 }
-
-
-
-
-.cbp-spmenu-left.cbp-spmenu-open {
-	left: 200px;
+.detalletransaccion{
+    height: 135px !important;
 }
+
+.m1t{
+    display: none;
+}
+
+#datosbasicosf p{
+    padding: 0px !important;
+    text-align: left !important;
+}
+
+.zmenu1{
+    z-index: 3 !important;
+    font-size: 16px;
+    font-family: BentonSansBBVA-Light;
+}
+
+.zmenu1 p {
+    padding-left: 5px;
+}
+
+.mperfil{
+    padding-left: 73px !important;
+}
+.zmenu1 a {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 22px;
+    padding-bottom: 13px;
+}
+.zmenu2{
+    z-index: 2 !important;
+    font-size: 16px;
+    font-family: BentonSansBBVA-Light;
+}
+
+.zmenu2 p {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 22px;
+    padding-bottom: 13px;
+}
+.zmenu3{
+    z-index: 1 !important;
+    font-size: 16px;
+    font-family: BentonSansBBVA-Light;
+}
+
+.zmenu3 p {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 22px;
+    padding-bottom: 13px;
+}
+
+.menuPerfil{
+    list-style-type: none;
+}
+.menuPerfil li:first-child{
+    font-size: 16px;
+}
+
+.menuPerfil li{
+    font-size: 12px;
+}
+
+
+.menuPerfil3{
+    height: 113px;
+}
+

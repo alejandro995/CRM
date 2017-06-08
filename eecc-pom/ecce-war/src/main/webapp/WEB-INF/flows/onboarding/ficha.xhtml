@@ -501,7 +501,7 @@
                                     <div class="modelficha1subheader">
                                       <span>Detalle de la cuenta</span>
                                     </div>
-                                    <div class="datosbasicos pagareunico">
+                                    <div class="datosbasicos detalletransaccion">
                                       <row>
                                         <div class="col-md-6 col-lg-6">
                                           <p>Numero de la cuenta:<span>13123123123</span></p>
@@ -537,7 +537,7 @@
                                       </h:form>
                                     </div>
                                     <div class="btnrespuesta2">
-                                      <a class= "respuestaGestionbtn" href="#">
+                                      <a data-toggle="modal" data-target="#saldosmovimientos"  data-dismiss="modal" class= "respuestaGestionbtn" href="#">
                                         Volver
                                       </a>
                                     </div>
@@ -572,7 +572,8 @@
                                                   <h:outputText value="#{cuentaspersonales.saldodisponible}"/>
                                               </p:column>
                                               <p:column>
-                                                  <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+
+                                                  <a  data-toggle="modal" data-target="#saldosmovimientos2" data-dismiss="modal" href="#" class="iconc icon-expand_icon"></a>
                                               </p:column>
                                           </p:dataTable>
                                       </h:form>
@@ -596,7 +597,7 @@
                                               <h:outputText value="#{fondodeinversion.saldodisponible}"/>
                                           </p:column>
                                           <p:column>
-                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" data-dismiss="modal" href="#" class="iconc icon-expand_icon"></a>
                                           </p:column>
                                       </p:dataTable>
                                       </h:form>
@@ -620,7 +621,7 @@
                                               <h:outputText value="#{prestamos.saldodisponible}"/>
                                           </p:column>
                                           <p:column>
-                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                              <a  data-toggle="modal" data-target="#saldosmovimientos2"  data-dismiss="modal" href="#" class="iconc icon-expand_icon"></a>
                                           </p:column>
                                       </p:dataTable>
                                       </h:form>
@@ -644,7 +645,7 @@
                                               <h:outputText value="#{tarjetadecredito.saldodisponible}"/>
                                           </p:column>
                                           <p:column>
-                                              <a  data-toggle="modal" data-target="#saldosmovimientos2" href="#" class="iconc icon-expand_icon"></a>
+                                              <a  data-toggle="modal" data-target="#saldosmovimientos2"  data-dismiss="modal" href="#" class="iconc icon-expand_icon"></a>
                                           </p:column>
                                       </p:dataTable>
                                       </h:form>
@@ -664,8 +665,117 @@
             </div>
             <div class="panel panel-primary panel2">
                 <div class="row panel-heading heading2">
-                    <span class="title2 clickable" data-toggle="modal" data-target="#datosbasicos" href="#">Información del cliente</span>
-                  </div>
+                    <span class="title2">Información del cliente</span> <a data-toggle="modal" data-target="#datosbasicosf" href="#" class="m1 m1t clickable">+</a>
+
+                    <!-- Modal InformacionCliente -->
+                    <div id="datosbasicosf" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content modelficha1">
+                                <div class="modal-header modelficha1header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <span>Información del cliente</span>
+                                </div>
+                                <div class="modelficha1subheader">
+                            <span>
+                              Datos básicos
+                            </span>
+                                </div>
+                                <div class="datosbasicos datosbasicos1">
+                                    <row>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p>Nombre:<span>Ricardo Daniel Rodriguez Melo</span></p>
+                                            <p>Tipo de Documento:<span>Cedula</span></p>
+                                            <p>Edad:<span>50 años</span></p>
+                                            <p>Sexo:<span>Masculino</span></p>
+                                            <p>Fecha de Nacimiento<span>30-05-1977</span></p>
+                                            <p>Nacionalidad<span>Colombiano</span></p>
+                                            <p>Estrato<span>3</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p>Ciudad Nacimiento:<span>Bogota</span></p>
+                                            <p>Estado Civil:<span>Casado</span></p>
+                                            <p>Empresa donde:<span>BBVA</span></p>
+                                            <p>Labora:<span>3 años</span></p>
+                                            <p>Antiguedad Empleo:<span>Independiente</span></p>
+                                            <p>Situacion Laboral:<span>Activo</span></p>
+                                            <p>Ocupacion/Profesion:<span>Arquitecto</span></p>
+                                            <p>Emisor Nomina:<span>Xxxxxxx</span></p>
+                                        </div>
+                                    </row>
+                                </div>
+                                <div class="modelficha1subheader">
+                            <span>
+                              Datos de contacto
+                            </span>
+                                </div>
+                                <div class="datosbasicos datoscontacto">
+                                    <row>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p>Tel Principal:<span>267687</span></p>
+                                            <p>Tel2:<span>n/a</span></p>
+                                            <p>Celular:<span>300 2098762</span></p>
+                                            <p>Datos de Contacto:<span>3024567890</span></p>
+                                            <p>CIFIN:<span>031 428 4455 3103098877</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
+                                            <p>Correo Electronico:<span>ricardorome@gmail.com</span></p>
+                                            <p>Referencia Cliente:<span>A54909873</span></p>
+                                        </div>
+                                    </row>
+                                </div>
+                                <div class="modelficha1subheader">
+                            <span>
+                              Información financiera
+                            </span>
+                                </div>
+                                <div class="datosbasicos">
+                                    <row>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p>Patrimonio:<span>$200.000.000</span></p>
+                                            <p>Activo:<span>$500.000.000</span></p>
+                                            <p>Pasivo:<span>$300.000.000</span></p>
+                                            <p>Total Ingresos:<span>$3.000.000</span></p>
+                                            <p>Declara Renta:<span>Si</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p># Personad a Cargo:<span>3</span></p>
+                                            <p>Puntaje Burro Cifin:<span>345</span></p>
+                                            <p>Calificacion Financiera:<span>100</span></p>
+                                            <p>Limites Vta Cruzada:<span>876</span></p>
+                                        </div>
+                                    </row>
+                                </div>
+                                <div class="modelficha1subheader">
+                            <span>
+                              Perfil BBVA
+                            </span>
+                                </div>
+                                <div class="datosbasicos">
+                                    <row>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p># Cliente Altamira:<span>12345678</span></p>
+                                            <p>Gestor Ppal:<span>12345678</span></p>
+                                            <p>Oficina Ppal:<span>Av Chile</span></p>
+                                            <p>Antiguedad Cliente:<span>2010-10-10</span></p>
+                                            <p>Puntos de Gestion:<span>003</span></p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p>Segmento:<span>Banca personal</span></p>
+                                            <p>Cuadrante:<span>Cuadrante</span></p>
+                                            <p>Colectivo:<span>Otros</span></p>
+                                            <p>Subcolectivo:<span>Otros</span></p>
+                                        </div>
+                                    </row>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
                 <div class="row row2 panel-body body2 informacion modulofichacortoizq" style="background-color:#192647 ">
                     <ul>
                         <li> <span class="d1">Datos básicos</span><a data-toggle="modal" data-target="#datosbasicos" href="#" class="m1 clickable">+</a> </li>
@@ -673,6 +783,8 @@
                         <li> <span class="d1">Perfil BBVA</span><a data-toggle="modal" data-target="#perfilbbva" href="#" class="m1 clickable">+</a></li>
                         <li> <span class="d1">Información financiera </span><a data-toggle="modal" data-target="#informacionfinanciera" href="#" class="m1 clickable">+</a></li>
                     </ul>
+
+
 
 
                     <!-- Modal InformacionCliente -->
