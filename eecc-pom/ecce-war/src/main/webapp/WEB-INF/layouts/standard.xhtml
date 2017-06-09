@@ -38,8 +38,8 @@
             <script src="${request.contextPath}/assets/js/bootstrap.min.js"></script>
             <script src="${request.contextPath}/assets/js/modernizr.custom.js"></script>
             <script src="${request.contextPath}/assets/js/style1.js"></script>
-            <script src="http://192.168.0.3:1337/vorlon.js"></script>
             <script src="${request.contextPath}/assets/js/classie.js"></script>
+
 
 
 
@@ -68,6 +68,7 @@
             <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
                 <h:outputText value="Cargando información"/>
             </p:dialog>
+            <div class="w3-overlay w3-animate-opacity" style="cursor:pointer" id="myOverlay"></div>
             <header class="headerbbva">
                 <div class="container">
                 <span class="col-xs-2 col-sm-2 col-md-2 col-lg-2 titulocorto">AUG</span>
@@ -117,10 +118,10 @@
                         </ul>
                     </a></li>
                     <li><a id="showRight" href="#"><p>Gestion comercial <span class="icon-forward_icon flechas"></span></p></a></li>
-                    <li><a  href="#"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
-                    <li><a  href="#"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
-                    <li><a  href="#"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
-                    <li><a  href="#"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
+                    <li><a  id="showRight1" href="#"><p>Cartera de clientes <span class="icon-forward_icon flechas"></span></p></a></li>
+                    <li><a id="showRight2"  href="#"><p>Oportunidades comerciales <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li><a id="showRight3"  href="#"><p>Portal de desarrollo comercial <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li><a id="showRight4"  href="#"><p>Portal MIS <span class="icon-forward_icon flechas"></span></p></a></li>
                     <li><a href="#"><p>Alerta de fuga</p></a></li>
                 </ul>
             </nav>
@@ -133,8 +134,8 @@
                         </a>
                     </li>
                     <li ><a id="showTop" href="#"><p>Citas para hoy <span class="icon-forward_icon flechas"></span></p></a></li>
-                    <li><a  href="#"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
-                    <li data-id="4"><a   href="#"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li><a id="showTop1" href="#"><p>Agenda <span class="icon-forward_icon flechas"></span> </p></a></li>
+                    <li data-id="4"><a  id="showTop2" href="#"><p>Reclamos <span class="icon-forward_icon flechas"></span> </p></a></li>
                 </ul>
             </nav>
             <nav class=" zmenu3 cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s3">
@@ -248,10 +249,17 @@
                     menuBottom = document.getElementById( 'cbp-spmenu-s4' ),
                     showLeft = document.getElementById( 'showLeft' ),
                     showRight = document.getElementById( 'showRight' ),
+                    showRight1 = document.getElementById( 'showRight1' ),
+                    showRight2 = document.getElementById( 'showRight2' ),
+                    showRight3 = document.getElementById( 'showRight3' ),
+                    showRight4 = document.getElementById( 'showRight4' ),
                     showTop = document.getElementById( 'showTop' ),
+                    showTop1 = document.getElementById( 'showTop1' ),
+                    showTop2 = document.getElementById( 'showTop2' ),
                     showBottom = document.getElementById( 'showBottom' ),
                     showLeftPush = document.getElementById( 'showLeftPush' ),
                     showRightPush = document.getElementById( 'showRightPush' ),
+                    myOverlay = document.getElementById( 'myOverlay' ),
                     body = document.body;
 
 
@@ -259,15 +267,66 @@
                 showLeft.onclick = function() {
                     classie.toggle( this, 'active' );
                     classie.toggle( menuLeft, 'cbp-spmenu-open' );
+                    classie.removeClass(menuRight, 'cbp-spmenu-open2');
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
+                    if( document.getElementById("myOverlay").style.display == "block") {
+                        document.getElementById("myOverlay").style.display = "none";
+                    }else{
+                        document.getElementById("myOverlay").style.display = "block";
+                    }
+
                 };
                 showRight.onclick = function() {
                     classie.toggle( this, 'active' );
                     classie.toggle( menuRight, 'cbp-spmenu-open2' );
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
+
+                };
+                showRight1.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuRight, 'cbp-spmenu-open2' );
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
+
+                };
+                showRight2.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuRight, 'cbp-spmenu-open2' );
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
+
+                };
+                showRight3.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuRight, 'cbp-spmenu-open2' );
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
+
+                };
+                showRight4.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuRight, 'cbp-spmenu-open2' );
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
 
                 };
                 showTop.onclick = function() {
                     classie.toggle( this, 'active' );
                     classie.toggle( menuTop, 'cbp-spmenu-open3' );
+
+                };
+                showTop1.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuTop, 'cbp-spmenu-open3' );
+
+                };
+                showTop2.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuTop, 'cbp-spmenu-open3' );
+
+                };
+
+                myOverlay.onclick = function() {
+                    document.getElementById("myOverlay").style.display = "none";
+                    classie.toggle( menuLeft, 'cbp-spmenu-open' );
+                    classie.removeClass(menuRight, 'cbp-spmenu-open2');
+                    classie.removeClass(menuTop, 'cbp-spmenu-open3');
 
                 };
 

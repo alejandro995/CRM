@@ -7,9 +7,7 @@
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
                 xmlns:f="http://java.sun.com/jsf/core">
 
-    <head>
 
-    </head>
 
     <ui:define name="content">
         <div class="col-md-2 col-lg-2 modulosFichaPequeños" >
@@ -40,7 +38,7 @@
         <div class="col-md-5 col-lg-5 modulosFichaMedianos" >
             <div class="panel panel-primary panel2">
                 <div class="panel-heading heading2">
-                    <span class="title2">Tenencia: Activos</span>
+                    <span class="title2 titleTenencia">Tenencia: Activos</span>
                     <span class="dropdown2">
                             <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
                             <div class="dropdown-content2 ddficha">
@@ -160,7 +158,7 @@
         <div class="col-md-5 col-lg-5 modulosFichaMedianos evolucion" >
             <div class="panel panel-primary panel2">
                 <div class="panel-heading heading2">
-                    <span class="title2">Evolución: </span>
+                    <span class="title2 titleEvolucion">Evolución: Saldos Activos </span>
                     <span class="dropdown2">
                             <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
                             <div class="dropdown-content2 ddficha">
@@ -1097,5 +1095,37 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var mactivob = document.getElementById( 'mactivob' ),
+                mpasivob = document.getElementById( 'mpasivob' ),
+                mserviciosb = document.getElementById( 'mserviciosb' ),
+                saldosmactivosb = document.getElementById( 'saldosmactivosb' ),
+                saldosmpasivosb = document.getElementById( 'saldosmpasivosb' ),
+                saldosrentabilidadb = document.getElementById( 'saldosrentabilidadb' );
+
+
+
+            mactivob.onclick = function() {
+                $('.titleTenencia').text('Tenencia: Activos');
+            };
+            mpasivob.onclick = function() {
+                $('.titleTenencia').text('Tenencia: Pasivos');
+            };
+            mserviciosb.onclick = function() {
+                $('.titleTenencia').text('Tenencia: Servicios');
+            };
+            saldosmactivosb.onclick = function() {
+                $('.titleEvolucion').text('Evolución: Saldos Activos');
+            };
+            saldosmpasivosb.onclick = function() {
+                $('.titleEvolucion').text('Evolución: Saldos Pasivos ');
+            };
+            saldosrentabilidadb.onclick = function() {
+                $('.titleEvolucion').text('Evolución: Saldos Rentabilidad ');
+            };
+
+
+        </script>
     </ui:define>
 </ui:composition>

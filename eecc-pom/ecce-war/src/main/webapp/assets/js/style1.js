@@ -20,6 +20,10 @@
     $('.iconc').popover();
 
     $('#popoverData').popover({ trigger: "hover" });
+
+
+
+
    });
 })(jQuery);
 
