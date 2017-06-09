@@ -2,6 +2,7 @@ package co.com.primeFaces;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -93,31 +94,31 @@ public class DataTableView implements Serializable {
         programacionList.add(new Programacion("16:00", "16:30 a 17:00         "+"\n"+" Titulo del Evento"));
 
         preaprobadosList.add(new Preaprobados("Preaprobados","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Preaprobados","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Preaprobados","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Informativas","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Informativas","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Informativas","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Onboarding","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Onboarding","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Onboarding","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Preaprobados2","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Preaprobados2","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Preaprobados2","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Informativas2","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Informativas2","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Informativas2","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Onboarding2","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Onboarding2","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Onboarding2","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Preaprobados3","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Preaprobados3","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Preaprobados3","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Informativas4","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Informativas4","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Informativas4","Sin planificar 40","Gestionada 0"));
 
         preaprobadosList.add(new Preaprobados("Onboarding5","Sin asignar 20","Planificado 10"));
-        preaprobadosList.add(new Preaprobados("Onboarding5","Asignados 40","Gestionada 0"));
+        preaprobadosList.add(new Preaprobados("Onboarding5","Sin planificar 40","Gestionada 0"));
 
         createLineModels();
 
@@ -186,12 +187,30 @@ public class DataTableView implements Serializable {
         lineModel1 = initLinearModel();
         Axis xAxis = lineModel1.getAxis(AxisType.X);
 
+        Calendar cal = Calendar.getInstance();
 
-        xAxis.setMin(6);
 
-        xAxis.setMax(12);
+
+        int month =  cal.get(Calendar.MONTH);
+        System.out.println("mes de hoy" + month);
+
+
+
+        xAxis.setMin(month+1);
+
+
+        cal.add(Calendar.MONTH, 11);
+
+
+
+        int monthmax =  cal.get(Calendar.MONTH);
+
+        System.out.println("mes de final" + monthmax);
+
+
+        xAxis.setMax(monthmax+12);
         xAxis.setTickFormat("%d");
-        xAxis.setLabel("meses");
+        xAxis.setLabel("Ultimos 12 meses");
         lineModel1.getAxes().put(AxisType.X, xAxis);
 
         Axis yAxis = lineModel1.getAxis(AxisType.Y);

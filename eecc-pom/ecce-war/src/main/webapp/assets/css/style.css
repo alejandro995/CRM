@@ -896,7 +896,7 @@ white-space: nowrap;
     padding-left: 15px;
     padding-top: 0px;
     padding-right: 15px;
-    margin-bottom: 7px;
+    margin-bottom: 9px;
 }
 
 .limenu ul li{
@@ -981,7 +981,7 @@ span .dropdown2 {
 
 .panel2{
     border: none !important;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .dropdown-content2 {
@@ -1210,6 +1210,10 @@ span .dropdown2 {
 .oportunidades .ui-widget-header .ui-state-default{
     background: none;
     border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: BentonSansBBVA-Medium !important;
 }
 
 .oportunidades .ui-icon-seek-prev {
@@ -1235,7 +1239,7 @@ span .dropdown2 {
 }
 
 .oportunidades .divbtn{
-    padding-top: 15px !important;
+    padding-top: 20px !important;
     padding-bottom: 12px;
 }
 
@@ -1277,7 +1281,7 @@ span .dropdown2 {
 .citas .ui-datatable .ui-paginator, .ui-datatable .ui-paginator{
 
     padding-top: 20px;
-    font-size: 12px
+    font-size: 13px;
 }
 
 .citas .ui-corner-all{
@@ -1288,6 +1292,10 @@ span .dropdown2 {
 .citas .ui-widget-header .ui-state-default{
     background: none;
     border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: BentonSansBBVA-Medium !important;
 }
 
 .citas .ui-icon-seek-prev {
@@ -1447,7 +1455,7 @@ p:active{
 .modulosFichaPequeños{
     padding-left: 7px;
     padding-right: 7px;
-   /* height: 132px;*/
+    height: 290px;
     margin-top: 15px;
 
 }
@@ -1455,7 +1463,7 @@ p:active{
 .modulosFichaMedianos{
     padding-left: 7px;
     padding-right: 7px;
-/* height: 132px;*/
+ height: 290px;
  margin-top: 15px;
 
 }
@@ -1643,7 +1651,7 @@ font-weight: 900;
 }
 
 .comovoyimg{
-width: 68.55555555555555%;
+width: 68.555556%;
 }
 
 canvas .jqplot-series-shadowCanvas{
@@ -1879,6 +1887,7 @@ position: absolute;
 }
 
 .modulosfooter1{
+    height: 60px;
     background-color: #eaeaea;
     padding: 10px;
 
@@ -1895,6 +1904,7 @@ position: absolute;
 
 
 .modulosfooter2{
+    height: 60px;
     background-color: #eaeaea;
     padding: 10px;
 
@@ -1936,6 +1946,7 @@ position: absolute;
     list-style-type: none;
     margin-bottom: 0px;
     padding-bottom: 3px;
+    height: 177px;
 }
 
 .fichapie ul li{
@@ -2326,6 +2337,7 @@ padding-right: 25px;
 }
 
 .ofertas1 row div p {
+    color: black;
   margin: 0px;
   line-height: 25px;
 }
@@ -2348,6 +2360,7 @@ padding-right: 25px;
 }
 
 .ofertas2 row div p {
+    color: black;
   margin: 0px;
   line-height: 25px;
 }
@@ -2371,6 +2384,7 @@ font-weight: 900;
 }
 
 .ofertas3 row div p {
+    color: black;
   margin: 0px;
   line-height: 25px;
 }
@@ -2393,6 +2407,7 @@ font-weight: 900;
 }
 
 .ofertas4 row div p {
+    color: black;
   margin: 0px;
   line-height: 25px;
 }
@@ -2405,6 +2420,7 @@ font-weight: 900;
 }
 
 .respuestaGestion{
+    color: black;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: white;
@@ -2782,7 +2798,7 @@ margin-bottom: 20px;
 }
 
 .datoscontacto {
-  height: 210px !important;
+  height: 245px !important;
 }
 
 .alertadefuga{
@@ -2841,12 +2857,11 @@ top: 128px
 }
 
 .linegraf .jqplot-xaxis-label{
-  width: 41px;
+    width: 100px;
     height: 16.5px;
     position: absolute;
-    left: 6px !important;
-    bottom: 0px;
-    bottom: 25px !important;
+    left: 160px !important;
+    bottom: 5px !important;
 }
 .detalletransaccion{
     height: 135px !important;
@@ -2921,3 +2936,45 @@ top: 128px
     height: 113px;
 }
 
+.ppequeño{
+    height: 20px !important;
+}
+
+.nombreg {
+    height: 40px !important;
+}
+
+.titulodb{
+    color: #009ad7;
+
+}
+
+.tabid {
+    visibility:hidden;
+
+}
+
+.tabid.active {
+    visibility:visible;
+}
+
+.tabid2.active{
+    position: relative;
+    bottom: 237px;
+}
+
+.tabid3.active{
+    position: relative;
+    bottom: 476px;
+}
+
+.tab-content{
+    height: 237px !important;
+}
+
+
+Gestionar
+CAmbiar respuesta
+Re planificar
+Sin asignar
+Planificar

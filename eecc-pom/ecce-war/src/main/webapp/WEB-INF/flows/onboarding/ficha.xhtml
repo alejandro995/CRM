@@ -44,23 +44,24 @@
                     <span class="dropdown2">
                             <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
                             <div class="dropdown-content2 ddficha">
-                                <a href="#">Activo</a>
-                                <a href="#">Pasivo</a>
-                                <a  class="bordesubmenu" href="#">Servicios</a>
+                                <a data-toggle="tab" href="#mactivo" id="mactivob">Activo</a>
+                                <a data-toggle="tab" href="#mpasivo" id="mpasivob">Pasivo</a>
+                                <a data-toggle="tab" href="#mservicios" id="mserviciosb" class="bordesubmenub">Servicios</a>
 
                             </div>
                         </span>
                 </div>
-                <div  class="panel-body body2">
+            <div class="tab-content">
+                <div id="mactivo" class="panel-body body2 tabid active">
                     <div class="row rowficha">
                         <div class="col-md-6 col-lg-6 fichapie">
                             <div>
                                 <ul>
                                     <li>
-                                        <span>CNS (1)</span> <span class="numeroTenencia"> $200'000.000</span> <span class="circle"></span>
+                                        <span>CON (1)</span> <span class="numeroTenencia"> $200'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
-                                        <span>HI (2)</span> <span class="numeroTenencia"> $10'000.000</span> <span class="circle"></span>
+                                        <span>HIP (2)</span> <span class="numeroTenencia"> $10'000.000</span> <span class="circle"></span>
                                     </li>
                                     <li>
                                         <span>T.C V</span> <span class="numeroTenencia"> $8'000.000</span> <span class="circle"></span>
@@ -78,21 +79,82 @@
                                         <span>Otros </span> <span class="numeroTenencia"> $7'000.000</span> <span class="circle"></span>
                                     </li>
                                 </ul>
-
-
                             </div>
                             <div class="modulosfooter1">
                                 <p> Total activos: <span>$10.000.000</span> </p>
                                 <p> Participación: <span>0.3%</span></p>
                             </div>
-
                         </div>
                         <div class="col-md-6 col-lg-6 fichapie fichapiegraf fichapiecanvas">
                         <p:chart type="pie" model="#{dataTableView.pieModel2}"/>
-
                         </div>
                     </div>
                 </div>
+                <div id="mpasivo" class="panel-body body2 tabid tabid2">
+                    <div class="row rowficha">
+                        <div class="col-md-6 col-lg-6 fichapie">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span>CON (1)</span> <span class="numeroTenencia"> $200'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>HIP (2)</span> <span class="numeroTenencia"> $10'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>T.C V</span> <span class="numeroTenencia"> $8'000.000</span> <span class="circle"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modulosfooter1">
+                                <p> Total pasivos: <span>$10.000.000</span> </p>
+                                <p> Participación: <span>0.5%</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 fichapie fichapiegraf fichapiecanvas">
+                            <p:chart type="pie" model="#{dataTableView.pieModel2}"/>
+                        </div>
+                    </div>
+                </div>
+                <div  id="mservicios" class="panel-body body2 tabid tabid3">
+                    <div class="row rowficha">
+                        <div class="col-md-6 col-lg-6 fichapie">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span>CON (1)</span> <span class="numeroTenencia"> $200'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>HIP (2)</span> <span class="numeroTenencia"> $10'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>T.C V</span> <span class="numeroTenencia"> $8'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>T.C M</span> <span class="numeroTenencia"> $8'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>VEH (1)</span > <span class="numeroTenencia"> $300'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>LBZ (1)</span> <span class="numeroTenencia"> $2'000.000</span> <span class="circle"></span>
+                                    </li>
+                                    <li>
+                                        <span>Otros </span> <span class="numeroTenencia"> $7'000.000</span> <span class="circle"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modulosfooter1">
+                                <p> Total activos: <span>$10.000.000</span> </p>
+                                <p> Participación: <span>0.3%</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 fichapie fichapiegraf fichapiecanvas">
+                            <p:chart type="pie" model="#{dataTableView.pieModel2}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
         <div class="col-md-5 col-lg-5 modulosFichaMedianos evolucion" >
@@ -102,14 +164,15 @@
                     <span class="dropdown2">
                             <a href="javascript:void(0)" class="dropbtn2 icon-configuration_icon"></a>
                             <div class="dropdown-content2 ddficha">
-                                <a href="#">Saldos medios activo</a>
-                                <a href="#">Saldos medios pasivo</a>
-                                <a class="bordesubmenu" href="#">Rentabilidad</a>
+                                <a data-toggle="tab" href="#saldosmactivos" id="saldosmactivosb" >Saldos medios activo</a>
+                                <a data-toggle="tab" href="#saldosmpasivos" id="saldosmpasivosb" >Saldos medios pasivo</a>
+                                <a data-toggle="tab" href="#saldosrentabilidad" id="saldosrentabilidadb" >Rentabilidad</a>
 
                             </div>
                         </span>
                 </div>
-                <div  class="panel-body body2">
+                <div class="tab-content">
+                <div id="saldosmactivos" class="panel-body body2 tabid active">
                     <div class="fichapiegraf linegraf">
                     <p:chart type="line" model="#{dataTableView.lineModel1}" responsive="true" style="height:177px;" />
                     </div>
@@ -117,6 +180,24 @@
                         <p> Rentabilidad acumulada: <span> $20´000.000</span></p>
                         <p> Rentabilidad año anterior: <span> $20´000.000</span></p>
                     </div>
+                </div>
+                <div id="saldosmpasivos" class="panel-body body2 tabid tabid2">
+                    <div class="fichapiegraf linegraf">
+                        <p:chart type="line" model="#{dataTableView.lineModel1}" responsive="true" style="height:177px;"/>
+                    </div>
+                    <div class="modulosfooter2">
+                        <p> Total saldos medios: <span> $20´000.000</span></p>
+                    </div>
+                </div>
+                <div id="saldosrentabilidad" class="panel-body body2 tabid tabid3">
+                    <div class="fichapiegraf linegraf">
+                        <p:chart type="line" model="#{dataTableView.lineModel1}" responsive="true" style="height:177px;"/>
+                    </div>
+                    <div class="modulosfooter2">
+                        <p> Rentabilidad acumulada: <span> $20´000.000</span></p>
+                        <p> Rentabilidad año anterior: <span> $20´000.000</span></p>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -348,7 +429,7 @@
                                     <div class="datosbasicos alertadefuga">
                                       <row>
                                         <div class="col-md-6 col-lg-6">
-                                          <p>Nombre:<span>Hipotecario</span></p>
+                                          <p class="ppequeño">Activo<span>Hipotecario</span></p>
                                           <p>TDC<span>No</span></p>
                                           <p>Pasivo<span>CDT</span></p>
                                         </div>
@@ -694,9 +775,9 @@
                                         </div>
                                         <div class="col-md-6 col-lg-6">
                                             <p>Ciudad Nacimiento:<span>Bogota</span></p>
-                                            <p>Estado Civil:<span>Casado</span></p>
+                                            <p class="ppequeño">Estado Civil:<span>Casado</span></p>
                                             <p>Empresa donde:<span>BBVA</span></p>
-                                            <p>Labora:<span>3 años</span></p>
+                                            <p class="ppequeño">Labora:<span>3 años</span></p>
                                             <p>Antiguedad Empleo:<span>Independiente</span></p>
                                             <p>Situacion Laboral:<span>Activo</span></p>
                                             <p>Ocupacion/Profesion:<span>Arquitecto</span></p>
@@ -712,16 +793,22 @@
                                 <div class="datosbasicos datoscontacto">
                                     <row>
                                         <div class="col-md-6 col-lg-6">
+                                            <p class="titulodb ppequeño"> Datos del banco</p>
                                             <p>Tel Principal:<span>267687</span></p>
                                             <p>Tel2:<span>n/a</span></p>
                                             <p>Celular:<span>300 2098762</span></p>
-                                            <p>Datos de Contacto:<span>3024567890</span></p>
-                                            <p>CIFIN:<span>031 428 4455 3103098877</span></p>
+                                            <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
+                                            <p class="ppequeño">Correo Electronico:<span>ricardorome@gmail.com</span></p>
+                                            <p>Referencia Cliente:<span>A54909873</span></p>
+
                                         </div>
                                         <div class="col-md-6 col-lg-6">
+                                            <p class="titulodb">Datos CIFIN </p>
+                                            <p class="ppequeño">Tel Principal:<span>267687</span></p>
+                                            <p>Tel2:<span>n/a</span></p>
+                                            <p class="ppequeño">Celular:<span>300 2098762</span></p>
                                             <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
-                                            <p>Correo Electronico:<span>ricardorome@gmail.com</span></p>
-                                            <p>Referencia Cliente:<span>A54909873</span></p>
+                                            <p>Ciudad Principal:<span>Bogotá</span></p>
                                         </div>
                                     </row>
                                 </div>
@@ -733,17 +820,16 @@
                                 <div class="datosbasicos">
                                     <row>
                                         <div class="col-md-6 col-lg-6">
-                                            <p>Patrimonio:<span>$200.000.000</span></p>
+                                            <p class="ppequeño">Patrimonio:<span>$200.000.000</span></p>
                                             <p>Activo:<span>$500.000.000</span></p>
                                             <p>Pasivo:<span>$300.000.000</span></p>
                                             <p>Total Ingresos:<span>$3.000.000</span></p>
                                             <p>Declara Renta:<span>Si</span></p>
                                         </div>
                                         <div class="col-md-6 col-lg-6">
-                                            <p># Personad a Cargo:<span>3</span></p>
-                                            <p>Puntaje Burro Cifin:<span>345</span></p>
+                                            <p># Personal a Cargo:<span>3</span></p>
+                                            <p class="ppequeño">Puntaje Buro Cifin:<span>345</span></p>
                                             <p>Calificacion Financiera:<span>100</span></p>
-                                            <p>Limites Vta Cruzada:<span>876</span></p>
                                         </div>
                                     </row>
                                 </div>
@@ -755,7 +841,7 @@
                                 <div class="datosbasicos">
                                     <row>
                                         <div class="col-md-6 col-lg-6">
-                                            <p># Cliente Altamira:<span>12345678</span></p>
+                                            <p class="ppequeño"># Cliente Altamira:<span>12345678</span></p>
                                             <p>Gestor Ppal:<span>12345678</span></p>
                                             <p>Oficina Ppal:<span>Av Chile</span></p>
                                             <p>Antiguedad Cliente:<span>2010-10-10</span></p>
@@ -763,7 +849,7 @@
                                         </div>
                                         <div class="col-md-6 col-lg-6">
                                             <p>Segmento:<span>Banca personal</span></p>
-                                            <p>Cuadrante:<span>Cuadrante</span></p>
+                                            <p class="ppequeño">Cuadrante:<span>Cuadrante</span></p>
                                             <p>Colectivo:<span>Otros</span></p>
                                             <p>Subcolectivo:<span>Otros</span></p>
                                         </div>
@@ -804,7 +890,7 @@
                           <div class="datosbasicos datosbasicos1">
                             <row>
                               <div class="col-md-6 col-lg-6">
-                                <p>Nombre:<span>Ricardo Daniel Rodriguez Melo</span></p>
+                                <p class="nombreg">Nombre:<span>Ricardo Daniel Rodriguez Melo</span></p>
                                 <p>Tipo de Documento:<span>Cedula</span></p>
                                 <p>Edad:<span>50 años</span></p>
                                 <p>Sexo:<span>Masculino</span></p>
@@ -814,9 +900,9 @@
                               </div>
                               <div class="col-md-6 col-lg-6">
                                 <p>Ciudad Nacimiento:<span>Bogota</span></p>
-                                <p>Estado Civil:<span>Casado</span></p>
+                                <p class="ppequeño">Estado Civil:<span>Casado</span></p>
                                 <p>Empresa donde:<span>BBVA</span></p>
-                                <p>Labora:<span>3 años</span></p>
+                                <p class="ppequeño" >Labora:<span>3 años</span></p>
                                 <p>Antiguedad Empleo:<span>Independiente</span></p>
                                 <p>Situacion Laboral:<span>Activo</span></p>
                                 <p>Ocupacion/Profesion:<span>Arquitecto</span></p>
@@ -843,20 +929,26 @@
                             </span>
                           </div>
                           <div class="datosbasicos datoscontacto">
-                            <row>
-                              <div class="col-md-6 col-lg-6">
-                                <p>Tel Principal:<span>267687</span></p>
-                                <p>Tel2:<span>n/a</span></p>
-                                <p>Celular:<span>300 2098762</span></p>
-                                <p>Datos de Contacto:<span>3024567890</span></p>
-                                <p>CIFIN:<span>031 428 4455 3103098877</span></p>
-                              </div>
-                              <div class="col-md-6 col-lg-6">
-                                <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
-                                <p>Correo Electronico:<span>ricardorome@gmail.com</span></p>
-                                <p>Referencia Cliente:<span>A54909873</span></p>
-                              </div>
-                            </row>
+                              <row>
+                                  <div class="col-md-6 col-lg-6">
+                                      <p class="titulodb ppequeño"> Datos del banco</p>
+                                      <p>Tel Principal:<span>267687</span></p>
+                                      <p>Tel2:<span>n/a</span></p>
+                                      <p>Celular:<span>300 2098762</span></p>
+                                      <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
+                                      <p class="ppequeño">Correo Electronico:<span>ricardorome@gmail.com</span></p>
+                                      <p>Referencia Cliente:<span>A54909873</span></p>
+
+                                  </div>
+                                  <div class="col-md-6 col-lg-6">
+                                      <p class="titulodb">Datos CIFIN </p>
+                                      <p class="ppequeño">Tel Principal:<span>267687</span></p>
+                                      <p>Tel2:<span>n/a</span></p>
+                                      <p class="ppequeño">Celular:<span>300 2098762</span></p>
+                                      <p>Direccion Principal:<span>Calle 0 #00 -00</span></p>
+                                      <p>Ciudad Principal:<span>Bogotá</span></p>
+                                  </div>
+                              </row>
                           </div>
                         </div>
                       </div>
@@ -879,17 +971,16 @@
                           <div class="datosbasicos">
                             <row>
                               <div class="col-md-6 col-lg-6">
-                                <p>Patrimonio:<span>$200.000.000</span></p>
+                                <p class = "ppequeño">Patrimonio:<span>$200.000.000</span></p>
                                 <p>Activo:<span>$500.000.000</span></p>
                                 <p>Pasivo:<span>$300.000.000</span></p>
                                 <p>Total Ingresos:<span>$3.000.000</span></p>
                                 <p>Declara Renta:<span>Si</span></p>
                               </div>
                               <div class="col-md-6 col-lg-6">
-                                <p># Personad a Cargo:<span>3</span></p>
-                                <p>Puntaje Burro Cifin:<span>345</span></p>
+                                <p># Personal a Cargo:<span>3</span></p>
+                                <p class="ppequeño">Puntaje Buro Cifin:<span>345</span></p>
                                 <p>Calificacion Financiera:<span>100</span></p>
-                                <p>Limites Vta Cruzada:<span>876</span></p>
                               </div>
                             </row>
                           </div>
@@ -914,7 +1005,7 @@
                           <div class="datosbasicos">
                             <row>
                               <div class="col-md-6 col-lg-6">
-                                <p># Cliente Altamira:<span>12345678</span></p>
+                                <p class="ppequeño"># Cliente Altamira:<span>12345678</span></p>
                                 <p>Gestor Ppal:<span>12345678</span></p>
                                 <p>Oficina Ppal:<span>Av Chile</span></p>
                                 <p>Antiguedad Cliente:<span>2010-10-10</span></p>
@@ -922,7 +1013,7 @@
                               </div>
                               <div class="col-md-6 col-lg-6">
                                 <p>Segmento:<span>Banca personal</span></p>
-                                <p>Cuadrante:<span>Cuadrante</span></p>
+                                <p  class="ppequeño">Cuadrante:<span>Cuadrante</span></p>
                                 <p>Colectivo:<span>Otros</span></p>
                                 <p>Subcolectivo:<span>Otros</span></p>
                               </div>
@@ -973,9 +1064,9 @@
 
                                         <a  data-toggle="popover" data-placement="left" data-content="Gestionar" class="iconc icon-calendar_icon" data-trigger="hover"></a>
                                         <a  data-toggle="popover" data-placement="left" data-content="Cambiar respuesta" class="iconc icon-edit_icon" data-trigger="hover"></a>
-                                        <a  data-toggle="popover" data-placement="left" data-content="algo" class="iconc icon-historic_icon" data-trigger="hover"></a>
-                                        <a  data-toggle="popover" data-placement="left" data-content="algo" class="iconc icon-alert_icon" data-trigger="hover"></a>
-                                        <a  data-toggle="popover" data-placement="left" data-content="algo" class="iconc icon-return_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="Re planificar" class="iconc icon-historic_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="Sin asignar" class="iconc icon-alert_icon" data-trigger="hover"></a>
+                                        <a  data-toggle="popover" data-placement="left" data-content="Planificar" class="iconc icon-return_icon" data-trigger="hover"></a>
                                     </p:column>
                                 </p:dataTable>
                             </h:form>
